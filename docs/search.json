@@ -12,5 +12,19 @@
     "title": "AI Boot Camp - Change Log",
     "section": "",
     "text": "Created Quarto website structure with basic architecture\nSet up navigation bar with Home, Course Modules (1-7), and Resources\nAdded BYU-I logo to navbar and as favicon\nCreated placeholder pages for all 7 modules\n\n\n\n\n\nApplied Cosmo theme\nAdded custom blue navbar color (#4a90e2)\nAdjusted BYU-I logo size to 90px height\nAdded navbar shadow effect\n\n\n\n\n\n_quarto.yml - Main configuration file\nindex.qmd - Home page\nmodules/module1.qmd through modules/module7.qmd - Module pages\nstyles.css - Custom styling"
+  },
+  {
+    "objectID": "modules/jupyterlite-demo.html",
+    "href": "modules/jupyterlite-demo.html",
+    "title": "JupyterLite Interactive Demo",
+    "section": "",
+    "text": "Use this full Jupyter environment below for matplotlib visualizations and data science work. It supports notebooks, plots, and file management.\n\n \n\nTo create a notebook and test it: 1. Click the Python (Pyodide) tile to create a new notebook 2. Start with this simple test to verify execution works:\nprint(\"test\")\n\n\n\n\nFor quick Python code and calculations, use the console below:\n\n \n\nQuick examples to try:\n# Basic Python\nprint(\"Hello from JupyterLite!\")\nfor i in range(5):\n    print(f\"Number {i}: {i**2}\")\n# Calculation\nimport math\nradius = 5\narea = math.pi * radius ** 2\nprint(f\"Circle area: {area:.2f}\")"
+  },
+  {
+    "objectID": "modules/jupyterlite-demo.html#embedded-jupyterlite-notebook",
+    "href": "modules/jupyterlite-demo.html#embedded-jupyterlite-notebook",
+    "title": "JupyterLite Interactive Demo",
+    "section": "",
+    "text": "Use this full Jupyter environment below for matplotlib visualizations and data science work. It supports notebooks, plots, and file management.\n\n \n\nTo create a notebook and test it: 1. Click the Python (Pyodide) tile to create a new notebook 2. Start with this simple test to verify execution works:\nprint(\"test\")\n\n\n\n\nFor quick Python code and calculations, use the console below:\n\n \n\nQuick examples to try:\n# Basic Python\nprint(\"Hello from JupyterLite!\")\nfor i in range(5):\n    print(f\"Number {i}: {i**2}\")\n# Calculation\nimport math\nradius = 5\narea = math.pi * radius ** 2\nprint(f\"Circle area: {area:.2f}\")"
   }
 ]

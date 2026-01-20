@@ -26,6 +26,9 @@ website:
             href: modules/module6.qmd
           - text: "Module 7"
             href: modules/module7.qmd
+          - text: "---"
+          - text: "JupyterLite Demo"
+            href: modules/jupyterlite-demo.qmd
             
             
 

@@ -4,7 +4,14 @@
     "href": "CHANGELOG.html",
     "title": "AI Boot Camp - Change Log",
     "section": "",
-    "text": "Created Quarto website structure with basic architecture\nSet up navigation bar with Home, Course Modules (1-7), and Resources\nAdded BYU-I logo to navbar and as favicon\nCreated placeholder pages for all 7 modules\n\n\n\n\n\nApplied Cosmo theme\nAdded custom blue navbar color (#4a90e2)\nAdjusted BYU-I logo size to 90px height\nAdded navbar shadow effect\n\n\n\n\n\n_quarto.yml - Main configuration file\nindex.qmd - Home page\nmodules/module1.qmd through modules/module7.qmd - Module pages\nstyles.css - Custom styling"
+    "text": "Updated JupyterLite iframe source from demo site to more stable jupyter.org hosted version\nRemoved embedded REPL console due to persistent CSP and Pyodide errors\nAdded instructions for using console within JupyterLab (File → New → Console)\nAdded documentation on saving/downloading notebooks\nClarified that notebooks auto-save to browser local storage\n\n\n\n\n\nMarimo demo integration - Taking longer than expected due to requirement for locally running server to handle backend operations\n\n\n\n\n\nmodules/jupyterlite-demo.qmd - Updated iframe sources and added save instructions\n\n\n\n\n\n\n\n\n\nCreated Quarto website structure with basic architecture\nSet up navigation bar with Home, Course Modules (1-7), and Resources\nAdded BYU-I logo to navbar and as favicon\nCreated placeholder pages for all 7 modules\n\n\n\n\n\nApplied Cosmo theme\nAdded custom blue navbar color (#4a90e2)\nAdjusted BYU-I logo size to 90px height\nAdded navbar shadow effect\n\n\n\n\n\n_quarto.yml - Main configuration file\nindex.qmd - Home page\nmodules/module1.qmd through modules/module7.qmd - Module pages\nstyles.css - Custom styling"
+  },
+  {
+    "objectID": "CHANGELOG.html#january-20-2026",
+    "href": "CHANGELOG.html#january-20-2026",
+    "title": "AI Boot Camp - Change Log",
+    "section": "",
+    "text": "Updated JupyterLite iframe source from demo site to more stable jupyter.org hosted version\nRemoved embedded REPL console due to persistent CSP and Pyodide errors\nAdded instructions for using console within JupyterLab (File → New → Console)\nAdded documentation on saving/downloading notebooks\nClarified that notebooks auto-save to browser local storage\n\n\n\n\n\nMarimo demo integration - Taking longer than expected due to requirement for locally running server to handle backend operations\n\n\n\n\n\nmodules/jupyterlite-demo.qmd - Updated iframe sources and added save instructions"
   },
   {
     "objectID": "CHANGELOG.html#january-13-2026",
@@ -16,15 +23,15 @@
   {
     "objectID": "modules/jupyterlite-demo.html",
     "href": "modules/jupyterlite-demo.html",
-    "title": "JupyterLite Interactive Demo",
+    "title": "Interactive Marimo Notebook",
     "section": "",
-    "text": "Use this interactive Jupyter environment for Python code execution, matplotlib visualizations, and data science work. It supports notebooks, plots, and file management.\n\n \n\nGetting Started: 1. Click the Python (Pyodide) tile to create a new notebook 2. For quick calculations, you can also use File → New → Console to open a Python console 3. Test with a simple command:\nprint(\"Hello from JupyterLite!\")\nSaving Your Work: - Auto-save: Your notebooks are automatically saved to your browser’s local storage (they persist between visits to this page) - Download: Use File → Download to save a .ipynb file to your computer - Note: Files are stored in your browser only - clearing browser data will delete saved notebooks\n\n\n\n\n# Basic Python\nprint(\"Hello from JupyterLite!\")\nfor i in range(5):\n    print(f\"Number {i}: {i**2}\")\n# Calculation\nimport math\nradius = 5\narea = math.pi * radius ** 2\nprint(f\"Circle area: {area:.2f}\")"
+    "text": "Marimo is a reactive Python notebook that runs entirely in your browser using WebAssembly. Unlike traditional notebooks, when you change a value, all dependent cells automatically update!\n\n\n\n \n\n\n\n\n\nReactive Programming: Change a slider, and the plot automatically updates\nNo Backend Required: Everything runs in your browser via WebAssembly\nEdit & Run: Click any cell to edit the code and see results immediately\nStandard Libraries: Uses numpy, matplotlib, and other Python libraries\nGitHub Pages Ready: Works perfectly on static hosting\n\n\n\n\n\nInteract: Move the slider in the notebook above\nWatch: The sine wave plot automatically updates\nEdit: Click any code cell to modify it\nRun: Changes execute instantly in your browser\n\nAll computation happens locally in your browser - no server needed!"
   },
   {
-    "objectID": "modules/jupyterlite-demo.html#embedded-jupyterlite-notebook",
-    "href": "modules/jupyterlite-demo.html#embedded-jupyterlite-notebook",
-    "title": "JupyterLite Interactive Demo",
+    "objectID": "modules/jupyterlite-demo.html#marimo-interactive-environment",
+    "href": "modules/jupyterlite-demo.html#marimo-interactive-environment",
+    "title": "Interactive Marimo Notebook",
     "section": "",
-    "text": "Use this interactive Jupyter environment for Python code execution, matplotlib visualizations, and data science work. It supports notebooks, plots, and file management.\n\n \n\nGetting Started: 1. Click the Python (Pyodide) tile to create a new notebook 2. For quick calculations, you can also use File → New → Console to open a Python console 3. Test with a simple command:\nprint(\"Hello from JupyterLite!\")\nSaving Your Work: - Auto-save: Your notebooks are automatically saved to your browser’s local storage (they persist between visits to this page) - Download: Use File → Download to save a .ipynb file to your computer - Note: Files are stored in your browser only - clearing browser data will delete saved notebooks\n\n\n\n\n# Basic Python\nprint(\"Hello from JupyterLite!\")\nfor i in range(5):\n    print(f\"Number {i}: {i**2}\")\n# Calculation\nimport math\nradius = 5\narea = math.pi * radius ** 2\nprint(f\"Circle area: {area:.2f}\")"
+    "text": "Marimo is a reactive Python notebook that runs entirely in your browser using WebAssembly. Unlike traditional notebooks, when you change a value, all dependent cells automatically update!\n\n\n\n \n\n\n\n\n\nReactive Programming: Change a slider, and the plot automatically updates\nNo Backend Required: Everything runs in your browser via WebAssembly\nEdit & Run: Click any cell to edit the code and see results immediately\nStandard Libraries: Uses numpy, matplotlib, and other Python libraries\nGitHub Pages Ready: Works perfectly on static hosting\n\n\n\n\n\nInteract: Move the slider in the notebook above\nWatch: The sine wave plot automatically updates\nEdit: Click any code cell to modify it\nRun: Changes execute instantly in your browser\n\nAll computation happens locally in your browser - no server needed!"
   }
 ]

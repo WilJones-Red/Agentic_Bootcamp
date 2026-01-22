@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>JupyterLite Interactive Demo</title>
+<title>Interactive Marimo Notebook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -165,7 +130,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li><hr class="dropdown-divider"></li>
         <li>
     <a class="dropdown-item" href="../modules/jupyterlite-demo.html">
- <span class="dropdown-text">JupyterLite Demo</span></a>
+ <span class="dropdown-text">Interactive Marimo Notebook</span></a>
   </li>  
     </ul>
   </li>
@@ -180,21 +145,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul class="collapse">
-  <li><a href="#embedded-jupyterlite-notebook" id="toc-embedded-jupyterlite-notebook" class="nav-link active" data-scroll-target="#embedded-jupyterlite-notebook">Embedded JupyterLite Notebook</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">JupyterLite Interactive Demo</h1>
+<h1 class="title">Interactive Marimo Notebook</h1>
 </div>
 
 
@@ -211,34 +170,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="embedded-jupyterlite-notebook" class="level2">
-<h2 class="anchored" data-anchor-id="embedded-jupyterlite-notebook">Embedded JupyterLite Notebook</h2>
-<section id="full-jupyterlab-environment" class="level3">
-<h3 class="anchored" data-anchor-id="full-jupyterlab-environment">Full JupyterLab Environment</h3>
-<p>Use this interactive Jupyter environment for Python code execution, matplotlib visualizations, and data science work. It supports notebooks, plots, and file management.</p>
 <div style="margin: 20px 0;">
-<p><iframe src="https://jupyter.org/try-jupyter/lab/" width="100%" height="700px" style="border: 2px solid #ddd; border-radius: 5px;"> </iframe></p>
+<p><iframe src="../Assets/Interactive_Notebooks/demo_notebook.html" width="100%" height="800px" style="border: 2px solid #ddd; border-radius: 5px;"> </iframe></p>
 </div>
-<p><strong>Getting Started:</strong> 1. Click the <strong>Python (Pyodide)</strong> tile to create a new notebook 2. For quick calculations, you can also use <strong>File → New → Console</strong> to open a Python console 3. Test with a simple command:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello from JupyterLite!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Saving Your Work:</strong> - <strong>Auto-save</strong>: Your notebooks are automatically saved to your browser’s local storage (they persist between visits to this page) - <strong>Download</strong>: Use <strong>File → Download</strong> to save a <code>.ipynb</code> file to your computer - <strong>Note</strong>: Files are stored in your browser only - clearing browser data will delete saved notebooks</p>
-<hr>
-</section>
-<section id="example-code-to-try" class="level3">
-<h3 class="anchored" data-anchor-id="example-code-to-try">Example Code to Try</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic Python</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello from JupyterLite!"</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Number </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>i<span class="op">**</span><span class="dv">2</span><span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculation</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>radius <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> math.pi <span class="op">*</span> radius <span class="op">**</span> <span class="dv">2</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Circle area: </span><span class="sc">{</span>area<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

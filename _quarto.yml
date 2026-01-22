@@ -1,6 +1,11 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*.qmd"
+    - "*.md"
+    - "!Assets/Interactive_Notebooks/"
+    - "!docs/"
 
 website:
   favicon: Assets/Images/byui_logo.png
@@ -27,7 +32,7 @@ website:
           - text: "Module 7"
             href: modules/module7.qmd
           - text: "---"
-          - text: "JupyterLite Demo"
+          - text: "Interactive Marimo Notebook"
             href: modules/jupyterlite-demo.qmd
             
             

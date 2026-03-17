@@ -25,7 +25,7 @@ Anyone interested in learning agentic AI. All coursework is done in **Google Col
 - Google account (for Colab and Gemini API)
 - Willingness to learn through hands-on projects
 
-## 📖 Course Structure
+## Course Structure
 
 | Week | Topic | Focus |
 |------|-------|-------|

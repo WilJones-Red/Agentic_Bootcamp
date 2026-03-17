@@ -82,6 +82,3 @@ See [Contributors](https://your-username.github.io/AI_Boot_Camp/resources/contri
 
 Educational content - free to use for learning purposes.
 
----
-
-**Built with ❤️ for the BYU-I Data Science Society**

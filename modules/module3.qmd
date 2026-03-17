@@ -1,7 +1,247 @@
 ---
-title: "Module 3"
+title: "Week 3 - Tools and MCP Connections"
+subtitle: "Connecting AI Agents to External Services"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    theme: sandstone
+    highlight-style: github
+    code-fold: false
+    embed-resources: true
 ---
 
-## Module 3: 
+# Lesson Overview
 
+| Segment | Duration |
+|---|---|
+| Lecture: Tools vs MCP Connections | 10 minutes |
+| Guided Activity: Canvas MCP Setup | 20 minutes |
+| Hands-on Coding: Building an Agent with Tools | 30+ minutes |
 
+**Learning Objectives:** By the end of this lesson, students will be able to:
+
+- Explain the difference between Tools and MCP connections
+- Set up and use the Canvas MCP connection
+- Build an AI agent that uses tools to interact with external services
+- Understand the flow: User → AI → MCP Client → MCP Server → Tool → Result
+
+**Colab Notebook for Today:**
+
+> [Week 3 - MCP Lesson](https://colab.research.google.com/drive/1VqAAmSfB9W8xkZ2S5a8uK_3VwG7aupQo?usp=sharing)  
+> *(It is recommended to download a copy of the notebook to your own google colab)*
+
+---
+
+# What is an MCP?
+
+Simply put, **MCP is a protocol that standardizes how agents access tools and data.** MCP servers host the tools, and MCP clients connect agents to those servers.
+
+Here are some examples:
+
+Let's say that you are a malicious CIA agent who is trying to overthrow a foreign government with hundreds of agentic AI's meant to hack into a government's datacenter, or you are consulting for LinkedIn.
+
+In the CIA example, you could connect your agents to a MCP server so that all of your agents can have access to all the same tools and have a separate computer run the tools instead of whatever the agents are being run on.
+
+In the LinkedIn example, LinkedIn can create a MCP server with tools they made so that they can control the flow of sensitive data being sent to your agents (this may actually be coming soon).
+
+---
+
+# How are MCP's different from tools?
+
+A **tool** is some sort of logic that is executed by Python, in your file, on your computer. An **MCP** however exposes tools or in other words shows them to the agent.
+
+For example, let's say you had 3 agents running on your computer for some reason and you want them all to use a tool. You can locally host a MCP that all the agents connect to and can run. An agent can be connected to multiple MCP servers, and MCPs can be run remotely or locally.
+
+**Useful MCP Walkthrough:**  
+[Building your first MCP server with Python in 2026](https://dev-faizan.medium.com/building-your-first-mcp-server-with-python-in-2026-complete-tutorial-with-3-real-examples-49700e902656)
+
+---
+
+# TOOLS AND MCP CONNECTIONS
+
+## 1. WHAT is the difference between TOOLS and MCP CONNECTIONS?
+
+**A Tool is like a button and a MCP is like a USB-C port**
+
+We use a tool to perform a specific function or task within a software application or system. Tools are typically designed to help users accomplish specific goals, such as editing text, creating graphics, or managing data. 
+
+**Examples of tools:**
+
+- `search_google(query)`
+- `get_employee(id)`
+- `send_email(to, subject, body)`
+- `run_sql(query)`
+- `schedule_meeting(time, people)`
+
+**MCP (Model Context Protocol)** is the standardized way AI discovers and talks to tools.
+
+Without an MCP connection, if an AI like ChatGPT wanted to talk to gmail, it would need custom glue code to execute its goals. So lets say we wanted our AI agent to access data in LinkedIn. The company would need to create a MCP server connecton for AI's to talk to linkedIn. LinkedIn would then be able to control the access levels, data formats, and security protocols for AI's accessing its data. 
+
+**Examples of MCP connections:**
+
+- Canvas MCP connection
+- Google Search MCP connection
+- SQL Database MCP connection
+- Calendar MCP connection
+
+We will be using a Canvas MCP, which means we will need to establish a MCP connection and then use the MCP's tool to allow our agent to talk to canvas. 
+
+## 2. LET'S USE THEM
+
+**User → AI → MCP Client → MCP Server → Tool → Result → AI → User**
+
+---
+
+# Canvas MCP Setup
+
+## First install dependencies
+
+```python
+%pip install nest_asyncio
+%pip install langchain
+%pip install langchain-google-genai
+%pip install langchain-mcp-adapters
+%pip install nest_asyncio langchain langchain-google-genai langchain-mcp-adapters
+```
+
+## Import required libraries
+
+```python
+import os
+import asyncio
+import nest_asyncio
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain.agents import create_agent
+from langchain_mcp_adapters.client import MultiServerMCPClient
+```
+
+## Setup & Configure
+
+```python
+# 1. SETUP & FIX ASYNC (Required for Notebooks)
+# This fixes "RuntimeError: This event loop is already running"
+nest_asyncio.apply()
+
+from dotenv import load_dotenv
+load_dotenv()
+
+# 2. SETUP CREDENTIALS
+# Set CANVAS_API_TOKEN and GOOGLE_API_KEY (or GEMINI_API_KEY) as environment variables in your shell.
+# You need your Canvas URL and Token (from your school profile settings)
+os.environ["CANVAS_API_URL"] = ""
+os.environ["CANVAS_API_TOKEN"] = ""
+os.environ["GOOGLE_API_KEY"] = ""
+```
+
+### Load your API keys securely (Best Practice for Notebooks)
+
+Use `export GOOGLE_API_KEY='your_google_api_key_here'` in your terminal before running the notebook
+
+Then use `echo $GOOGLE_API_KEY` to verify it's set
+
+---
+
+# Building the MCP Agent
+
+## Load MCP Agent Function
+
+```python
+async def load_mcp_agent():
+    llm = ChatGoogleGenerativeAI(
+        model="gemini-2.5-flash",
+        temperature=0,
+        api_key=os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY")
+    )
+
+    mcp_client = MultiServerMCPClient({
+        "canvas": {
+            "command": "canvas-mcp-server",
+            "args": [],
+            "transport": "stdio"
+        }
+    })
+
+    mcp_tools = await mcp_client.get_tools()
+    all_tools = mcp_tools + [student_file_tool]
+
+    agent = create_agent(
+        llm,
+        tools=all_tools,
+        system_prompt="You are a helpful assistant for a student. Use the tools to assist with their requests."
+    )
+
+    return agent, mcp_client
+```
+
+## Create Custom Tool for Local Files
+
+```python
+from langchain_core.tools import Tool
+from pprint import pprint
+
+STUDENT_DATA_DIR = "student_data"
+
+def read_student_files(query: str) -> str:
+    """
+    Reads all files in student_data/ and returns their contents.
+    The query is ignored for now (simple version).
+    """
+    if not os.path.exists(STUDENT_DATA_DIR):
+        return "student_data folder not found."
+
+    all_text = []
+    for fname in os.listdir(STUDENT_DATA_DIR):
+        path = os.path.join(STUDENT_DATA_DIR, fname)
+
+        if not os.path.isfile(path):
+            continue
+
+        try:
+            with open(path, "r", encoding="utf-8", errors="ignore") as f:
+                content = f.read()
+            all_text.append(f"\n--- {fname} ---\n{content}")
+        except Exception as e:
+            all_text.append(f"\n--- {fname} ---\nERROR: {e}")
+
+    return "\n".join(all_text)
+
+# Defining tool
+student_file_tool = Tool(
+    name="student_data_reader",
+    func=read_student_files,
+    description="Use this to read files from the local student_data folder. Whenever the user wants to access local files, go here. User may call this folder 'my folder, the folder' or other general terms"
+)
+```
+
+## Run the Agent
+
+```python
+async def main():
+    agent, mcp_client = await load_mcp_agent()
+
+    user_prompt = "Go into my folder into the study guide and give me a 3 sentence summary of what I should study"
+
+    result = await agent.ainvoke({
+        "messages": [
+            {"role": "user", "content": user_prompt}
+        ]
+    })
+    
+    # Inspect full response to find the correct field to use
+    pprint(result)
+
+# Run the async main function in the notebook
+asyncio.run(main())
+```
+
+---
+
+# Exploration
+
+Now that you have a working MCP agent:
+
+1. Try modifying the system prompt to change the agent's behavior
+2. Experiment with different user prompts
+3. Create additional custom tools for other local resources
+4. Explore what Canvas tools are available through the MCP connection

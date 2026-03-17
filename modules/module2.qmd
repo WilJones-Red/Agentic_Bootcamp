@@ -1,6 +1,184 @@
 ---
-title: "Module 2"
+title: "Week 2 - Workflows and Agents"
+subtitle: "Understanding LLM Architecture Patterns"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    theme: sandstone
+    highlight-style: github
+    code-fold: false
+    embed-resources: true
 ---
 
-## Module 2: 
+# Lesson Overview
 
+| Segment | Duration |
+|---|---|
+| Lecture: Agents and Workflows | 5-10 minutes |
+| Activity: Workflow vs. Agents | 20 minutes |
+| Exploration: Workflows | 20+ minutes |
+
+**Learning Objectives:** By the end of this lesson, students will be able to:
+
+- Explain common features of LLM providers
+- Explain the difference between workflows and agents
+- Identify when to use one or the other
+- Plan workflows and agents conceptually
+- Translate workflows into code
+
+---
+
+# Lecture (5-10 min): Agents and Workflows
+
+- Show visually and explain the difference between a model, chat, agent, and workflow
+
+(Optionally:)
+
+- Most common features of LLM providers
+    - system instructions
+    - temperature
+    - function calling
+    - structured output
+    - multimodality
+    - image, audio, and video generation
+
+To get an idea of the breadth of what is offered, look through the left side of these pages
+
+- [OpenAI docs](https://platform.openai.com/docs/concepts)
+- [Gemini docs](https://ai.google.dev/gemini-api/docs/text-generation)
+- [Claude docs](https://platform.claude.com/docs/en/build-with-claude/overview)
+
+---
+
+# Activity (20 min): Workflow vs. Agents
+
+## Reading (5 min)
+
+Spend 5 minutes, pick an article or two from the links below and start glancing through it to introduce workflows and agents. We will reconvene to talk through the differences together.
+
+Guiding Questions:
+
+- What are the strengths and weaknesses of workflows vs agents?
+- In what situation is one better than the other?
+- When would a hybrid approach work best?
+
+[Prompt vs. Workflow vs. Agent](https://towardsdatascience.com/a-developers-guide-to-building-scalable-ai-workflows-vs-agents/): Great pro/con comparison, entertaining voice
+
+[Agent Patterns](https://www.philschmid.de/agentic-pattern): Great depth into diagramming and specific use cases, Gemini implementation
+
+[LangChain on workflows and agents](https://docs.langchain.com/oss/python/langgraph/workflows-agents): Specific LangGraph implementation, brief
+
+## Discussion (2 min): Workflow vs Agents
+
+Talk with the group about what you learned for the guiding questions.
+
+## Activity (10 min)
+
+After looking through the articles, identify how you would diagram the following use cases:
+
+- Self assesses its own responses and redelivers.
+
+- Changes tone based off of user's emotional state.
+
+- Database retrieval.
+
+- Extract text from a document, convert it to markdown, then summarize it. Return both the markdown and the summary.
+
+- Tiered LLM usage: Routing simple queries to faster, cheaper models (like Llama 3.1 8B) and complex or unusual questions to more capable models (like Gemini 3 Pro).
+
+- Generating multiple perspectives: Asking multiple LLMs the same question with different persona prompts and aggregating their responses.
+
+- Writing and refinement: Generating a draft, reflecting on its clarity and tone, and then revising it.
+
+- Booking appointments using a calendar API.
+
+- Controlling smart home devices.
+
+---
+
+# STOP
+
+Help someone that is behind catch up, either with the current lesson, or a past one.
+
+The exploration activity invites branching into one of two groups: Visual or Code. If you'd like to work together (or find help when it is needed), find someone branching in the same direction.
+
+When the people around you are ready, start exploring!
+
+---
+
+# Exploration: Workflows (20+ min)
+
+- **Option 1**: Workflow with Graphical Interface (n8n, LangFlow).
+
+- **Option 2**: Workflow with Code (LangGraph).
+
+- **Option 3**: Skip workflows and just dive into coding agents (next lesson).
+
+You can find the first two options below
+
+---
+
+## Option 1: Visual Workflow Editors (n8n, LangFlow)
+
+n8n and LangFlow are both free and popular. To choose between the two:
+
+- **n8n** is great for easy integration with products (Slack, Gmail, Salesforce, Notion) and for moving data between them.
+
+- **LangFlow** is similar but built on LangChain, letting you modify the code it creates and have finer control over the application.
+
+### n8n
+
+To get started: install it, open it, and play around.
+
+**If you have Node.js** installed already, this will get you up and running quick
+
+```python
+# The % means it is a terminal command
+%npm install n8n -g
+
+# Once installed, run it
+%n8n start
+```
+
+If not, you have two options:
+
+- **Use the [cloud version](https://n8n.io/)** (you will sign up for a free account by clicking "Get Started for Free")
+
+- **Install [Node.js](https://nodejs.org/en/download)** then run the above code (Node.js is Javascript outside a web browser)
+
+Either way, you can continue with these resources when you have explored it a little.
+
+- [Agent Quickstart](https://docs.n8n.io/advanced-ai/intro-tutorial/#what-you-will-need)
+- [n8n Academy](https://docs.n8n.io/learning-path/) (More learning paths)
+
+### LangFlow
+
+**Warning**: You may have to wait a while for the program to download if you go this route
+
+- **Step 1**: Install it as an app from their [website](https://www.langflow.org/)
+
+- **Step 2**: Go through a [Quickstart](https://docs.langflow.org/get-started-quickstart) tutorial
+
+
+There is an alternative installation route using the command line that you can find [here](https://docs.langflow.org/get-started-installation)
+
+## Option 2: LangGraph (Python)
+
+Try running the code from the earlier [LangChain article](https://docs.langchain.com/oss/python/langgraph/workflows-agents) or exploring their docs.
+
+Just replace their first two code chunks with this more relevant code:
+
+```python
+# Load environment variables from .env file
+from dotenv import load_dotenv
+load_dotenv()
+
+from langchain.chat_models import init_chat_model
+
+# Instantiate model
+llm = init_chat_model(
+    model="gemini-2.5-flash", 
+    model_provider="google_genai"
+)
+```

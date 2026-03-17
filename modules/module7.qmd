@@ -1,8 +1,352 @@
 ---
-title: "Module 7"
+title: "Week 7 - Model Drift and Retraining"
+subtitle: "Understanding Model Maintenance and Production AI"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    theme: sandstone
+    highlight-style: github
+    code-fold: false
+    embed-resources: true
 ---
 
-## Module 7: 
+# Lesson Overview
 
+| Segment | Duration |
+|---|---|
+| Lecture: Data Drift and Model Lifecycle | 15 minutes |
+| Discussion: Real-World Drift Examples | 10 minutes |
+| Coding Activity: Simulating and Detecting Drift | 35+ minutes |
 
+**Learning Objectives:** By the end of this lesson, students will be able to:
 
+- Explain what data drift is and why it occurs
+- Describe how drift affects model weights and performance
+- Identify different types of drift (concept drift, data drift, prediction drift)
+- Understand where retraining fits in the ML lifecycle
+- Implement basic drift detection and retraining workflows
+- Explain why retraining is necessary for production AI systems
+
+**Colab Notebook for Today:**
+
+> [Week 7 - Data Drift and Retraining Simulation](https://colab.research.google.com/drive/1NyLKwT7f76_msFzcdkZUDO3VtjPqN1Os?usp=sharing)  
+> *(It is recommended to download a copy of the notebook to your own Google Colab)*
+
+---
+
+# Lecture (15 min): Data Drift and Model Lifecycle
+
+## Models Are Snapshots of the Past
+
+When we train a machine learning model, we are creating a snapshot of patterns from historical data.
+
+**Key concepts:**
+
+- **Weights** encode patterns learned from training data
+- The model assumes future data will follow similar patterns
+- Training creates a "frozen" understanding of the world at a specific time
+
+Think of it like this: A model trained on 2020 data learned what the world looked like in 2020. If we use that model in 2026 without updates, it's making predictions based on 6-year-old assumptions.
+
+## What Are Model Weights?
+
+Model weights are the learned parameters that determine how a model makes predictions.
+
+**Example:** In a simple model predicting house prices:
+
+```python
+# Simplified representation
+price = (bedrooms × weight1) + (square_feet × weight2) + (age × weight3) + bias
+```
+
+These weights were learned from historical data. If housing market conditions change, these weights become outdated.
+
+## The Three Types of Drift
+
+### 1. Data Drift (Covariate Shift)
+
+The distribution of input features changes, but the relationship between inputs and outputs stays the same.
+
+**Example:**
+- A model trained on customer data from the US
+- Deployed to customers in Europe  
+- Features like income, age distribution differ
+- But the relationship (older customers → higher spending) remains
+
+### 2. Concept Drift
+
+The relationship between inputs and outputs changes over time.
+
+**Example:**
+- A model predicting app engagement
+- User behavior changes after a redesign
+- Same user demographics, different engagement patterns
+- The "concept" of what drives engagement has shifted
+
+### 3. Prediction Drift
+
+The distribution of model predictions changes over time.
+
+**Example:**
+- A credit risk model starts rejecting more applications
+- Not because applicants changed
+- But because economic conditions shifted
+- Model's confidence thresholds no longer align with reality
+
+---
+
+# Discussion (10 min): Real-World Drift Examples
+
+Let's explore some real-world scenarios where models experience drift:
+
+## Common Drift Scenarios
+
+**E-commerce Recommendation Systems:**
+- Training data: Pre-pandemic shopping behavior
+- Production reality: Post-pandemic preferences shifted dramatically
+- Result: Models recommending irrelevant products
+
+**Fraud Detection:**
+- Training data: Historical fraud patterns
+- Production reality: Fraudsters constantly evolve tactics
+- Result: New fraud types go undetected
+
+**Language Models:**
+- Training data: Text from 2020
+- Production reality: New slang, topics, events in 2026
+- Result: Model doesn't understand current references
+
+**Medical Diagnosis:**
+- Training data: Patient population from one hospital
+- Production reality: Different demographics at another location
+- Result: Biased or inaccurate diagnoses
+
+## Discussion Questions
+
+Turn to your neighbor and discuss:
+
+1. What happens if we ignore drift and never retrain?
+2. How often should models be retrained?
+3. What are the costs and risks of retraining too frequently vs. not frequently enough?
+
+---
+
+# Understanding the Model Lifecycle
+
+## Traditional ML Lifecycle (Without Drift Awareness)
+
+```
+1. Collect Data
+2. Train Model
+3. Deploy Model
+   ↓
+(Model sits in production forever, slowly degrading)
+```
+
+## Production ML Lifecycle (With Drift Awareness)
+
+```
+1. Collect Data
+2. Train Model
+3. Deploy Model
+4. Monitor Performance
+   ↓
+   Is drift detected? → NO → Continue monitoring
+   ↓ YES
+5. Collect New Data
+6. Retrain Model
+7. Evaluate & Validate
+8. Deploy Updated Model
+   ↓
+   (Return to step 4)
+```
+
+## Why Monitoring Matters
+
+**Silent failures** are the enemy of production AI:
+
+- Model continues making predictions
+- Confidence scores stay high
+- But accuracy is declining
+- Users lose trust without understanding why
+
+**Authentic AI requires:**
+- Continuous performance monitoring
+- Drift detection systems
+- Transparent model versioning
+- Responsible retraining practices
+
+---
+
+# STOP
+
+Before moving on to the coding activity, make sure you understand:
+
+1. The difference between the three types of drift
+2. Why a model's weights can become outdated
+3. How retraining fits into the ML lifecycle
+
+Help someone around you clarify these concepts if needed.
+
+When ready, open the Colab notebook and let's see drift in action!
+
+---
+
+# Coding Activity: Simulating and Detecting Drift
+
+Open the guided coding activity in Google Colab:
+
+> [Week 7 - Data Drift and Retraining Simulation](https://colab.research.google.com/drive/1NyLKwT7f76_msFzcdkZUDO3VtjPqN1Os?usp=sharing)
+
+## What You'll Build
+
+In this activity, you will:
+
+1. **Train a baseline model** on historical data
+2. **Simulate data drift** by changing input distributions
+3. **Observe performance degradation** as drift occurs
+4. **Implement drift detection** using statistical tests
+5. **Retrain the model** with updated data
+6. **Compare performance** before and after retraining
+
+## Key Concepts You'll Implement
+
+### Statistical Tests for Drift Detection
+
+```python
+# Example: Kolmogorov-Smirnov test
+from scipy.stats import ks_2samp
+
+# Compare training data distribution to production data
+statistic, p_value = ks_2samp(training_data, production_data)
+
+if p_value < 0.05:
+    print("Drift detected! Distributions are significantly different.")
+```
+
+### Performance Monitoring
+
+```python
+# Track model accuracy over time
+accuracies = []
+for batch in production_batches:
+    predictions = model.predict(batch)
+    accuracy = calculate_accuracy(predictions, batch.labels)
+    accuracies.append(accuracy)
+    
+    if accuracy < threshold:
+        trigger_retraining()
+```
+
+### Retraining Workflow
+
+```python
+# When drift is detected
+new_data = collect_recent_data()
+updated_model = retrain_model(new_data)
+validate_model(updated_model)
+deploy_model(updated_model)
+```
+
+## Expected Outcomes
+
+By the end of this activity, you will have:
+
+✅ Visualized how drift impacts model performance  
+✅ Implemented basic drift detection  
+✅ Practiced retraining workflows  
+✅ Understood when and why to update models
+
+---
+
+# Why This Matters for Production AI
+
+## The Cost of Ignoring Drift
+
+**Without retraining:**
+- Models slowly become misleading
+- Bias can increase over time
+- User trust erodes
+- Business decisions are based on outdated assumptions
+
+**Example:** A hiring model trained in 2020:
+- May reflect pre-pandemic job market
+- Misses new skill requirements
+- Perpetuates outdated criteria
+- Fails to adapt to remote work trends
+
+## Best Practices for Production Models
+
+1. **Set up monitoring from day one**
+   - Track prediction distributions
+   - Monitor performance metrics
+   - Log model versions
+
+2. **Establish retraining triggers**
+   - Performance drops below threshold
+   - Statistical drift tests fail
+   - Time-based schedule (e.g., quarterly)
+
+3. **Version everything**
+   - Data snapshots
+   - Model weights
+   - Training configurations
+
+4. **Document changes**
+   - Why was retraining triggered?
+   - What data was used?
+   - How did performance change?
+
+5. **Test before deployment**
+   - Validate on holdout data
+   - Check for bias shifts
+   - Compare to previous version
+
+---
+
+# Reflection Questions
+
+After completing the Colab activity, consider:
+
+1. **How often should your model be retrained?**
+   - Depends on how quickly your domain changes
+   - E-commerce: Weekly or monthly
+   - Medical diagnosis: Quarterly or yearly
+   - Fraud detection: Continuously
+
+2. **What are the tradeoffs?**
+   - More frequent retraining = more compute costs
+   - Less frequent retraining = higher drift risk
+   - Balance based on your use case
+
+3. **How do you know if retraining helped?**
+   - A/B test old model vs. new model
+   - Compare performance on recent data
+   - Monitor user feedback and business metrics
+
+---
+
+# Additional Resources
+
+**Drift Detection Libraries:**
+- [Evidently AI](https://www.evidentlyai.com/) - Drift detection and monitoring
+- [NannyML](https://www.nannyml.com/) - Post-deployment monitoring
+- [Alibi Detect](https://github.com/SeldonIO/alibi-detect) - Outlier and drift detection
+
+**Further Reading:**
+- [Google's MLOps Guide](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)
+- [Monitoring Machine Learning Models in Production](https://christophergs.com/machine%20learning/2020/03/14/how-to-monitor-machine-learning-models/)
+- [A Comprehensive Guide to Data Drift](https://towardsdatascience.com/understanding-dataset-shift-f2a5a262a766)
+
+---
+
+# Next Steps
+
+Now that you understand drift and retraining, you're ready to think about:
+
+- Building production-grade monitoring systems
+- Implementing automated retraining pipelines
+- Designing MLOps workflows for continuous delivery
+
+Congratulations on completing the bootcamp! You've built a foundation for creating authentic, production-ready AI systems.

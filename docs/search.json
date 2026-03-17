@@ -4,7 +4,63 @@
     "href": "CHANGELOG.html",
     "title": "AI Boot Camp - Change Log",
     "section": "",
-    "text": "Updated JupyterLite iframe source from demo site to more stable jupyter.org hosted version\nRemoved embedded REPL console due to persistent CSP and Pyodide errors\nAdded instructions for using console within JupyterLab (File → New → Console)\nAdded documentation on saving/downloading notebooks\nClarified that notebooks auto-save to browser local storage\n\n\n\n\n\nMarimo demo integration - Taking longer than expected due to requirement for locally running server to handle backend operations\n\n\n\n\n\nmodules/jupyterlite-demo.qmd - Updated iframe sources and added save instructions\n\n\n\n\n\n\n\n\n\nCreated Quarto website structure with basic architecture\nSet up navigation bar with Home, Course Modules (1-7), and Resources\nAdded BYU-I logo to navbar and as favicon\nCreated placeholder pages for all 7 modules\n\n\n\n\n\nApplied Cosmo theme\nAdded custom blue navbar color (#4a90e2)\nAdjusted BYU-I logo size to 90px height\nAdded navbar shadow effect\n\n\n\n\n\n_quarto.yml - Main configuration file\nindex.qmd - Home page\nmodules/module1.qmd through modules/module7.qmd - Module pages\nstyles.css - Custom styling"
+    "text": "Fixed TOC active item text color to use cosmo blue instead of sandstone green\nAdded Contributors page under Resources section\nCorrected Warren Buffett image path in Module 6\n\n\n\n\n\nToned down homepage introduction for more professional tone\nUpdated Module 4 subtitle to “Debugging, Tracing, and Evaluating AI Agents”\nClarified target audience on homepage to mention BYU-I Data Science Society\n\n\n\n\n\ncosmo-colors.css - TOC active item styling\nresources/contributors.qmd - New empty contributors page\nmodules/module6.qmd - Fixed image path\nindex.qmd - Updated intro and target audience\nmodules/module4.qmd - Updated subtitle\n\n\n\n\n\n\n\n\n\nCompletely rewrote Module 7 to match course formatting standards\nAdded comprehensive drift detection content (data drift, concept drift, prediction drift)\nIncluded real-world examples and discussion questions\nAdded coding activity instructions with statistical tests and retraining workflows\nExpanded learning objectives and best practices for production AI\n\n\n\n\n\nmodules/module7.qmd - Full content restructure\n\n\n\n\n\n\n\n\n\nImplemented hybrid sandstone/cosmo theme approach\nCreated cosmo-colors.css for color variable overrides\nChanged global theme from cosmo to sandstone while preserving cosmo colors\nUpdated all module files to use sandstone theme consistently\nMaintained sandstone structure with cosmo blue color scheme\n\n\n\n\n\n_quarto.yml - Updated theme and CSS files\ncosmo-colors.css - New CSS variable override file\nmodules/module1-7.qmd - Theme declarations updated\nresources/colabs.qmd - Theme updated\nresources/dictionary.qmd - Theme updated\n\n\n\n\n\n\n\n\n\nAdded spacing between sidebar navigation items (8px/12px margins)\nCompacted logo and navigation positioning with negative margins\nMoved logo up and reduced space between logo and search bar\nFine-tuned sidebar layout for cleaner appearance\n\n\n\n\n\nstyles.css - Sidebar item spacing, logo positioning adjustments\n\n\n\n\n\n\n\n\n\nCreated comprehensive Notebooks page documenting all 6 Google Colab projects\nBuilt Reference page with documentation links and 30+ terminology definitions\nAdded getting started guides and project descriptions\nOrganized documentation by LLM providers, frameworks, and tools\nHidden TOC on home, notebooks, and reference pages for cleaner layout\n\n\n\n\n\nresources/colabs.qmd - Notebooks documentation\nresources/dictionary.qmd - Reference and terminology\n\n\n\n\n\nindex.qmd - Added TOC: false\n_quarto.yml - Added Resources section to sidebar\n\n\n\n\n\n\n\n\n\nCreated complete landing page with hero section\nAdded course overview and learning outcomes\nBuilt prerequisite list focused on Google Colab (no local Python install)\nIncluded comprehensive weekly breakdown with descriptions\nStyled all links consistently with bold formatting and arrows\n\n\n\n\n\nindex.qmd - Complete homepage content\n\n\n\n\n\n\n\n\n\nReplaced BYUI logo with DS_Logo.png\nIncreased logo size from 120px to 250px\nAdded background-vector.png at 9% opacity\nFixed logo CSS selector specificity issue\nCentered logo with proper positioning\n\n\n\n\n\n_quarto.yml - Logo path updated\nstyles.css - Logo sizing and background image styling\n\n\n\n\n\n\n\n\n\nConverted top navbar to left sidebar navigation\nImplemented docked sidebar style with light background\nAdded logo to sidebar\nOrganized modules and resources in collapsible sections\nRemoved top navbar completely\n\n\n\n\n\n_quarto.yml - Sidebar navigation configuration\nstyles.css - Sidebar-specific styling\n\n\n\n\n\n\n\n\n\nUpdated JupyterLite iframe source from demo site to more stable jupyter.org hosted version\nRemoved embedded REPL console due to persistent CSP and Pyodide errors\nAdded instructions for using console within JupyterLab (File → New → Console)\nAdded documentation on saving/downloading notebooks\nClarified that notebooks auto-save to browser local storage\n\n\n\n\n\nMarimo demo integration - Taking longer than expected due to requirement for locally running server to handle backend operations\n\n\n\n\n\nmodules/jupyterlite-demo.qmd - Updated iframe sources and added save instructions\n\n\n\n\n\n\n\n\n\nCreated Quarto website structure with basic architecture\nSet up navigation bar with Home, Course Modules (1-7), and Resources\nAdded BYU-I logo to navbar and as favicon\nCreated placeholder pages for all 7 modules\n\n\n\n\n\nApplied Cosmo theme\nAdded custom blue navbar color (#4a90e2)\nAdjusted BYU-I logo size to 90px height\nAdded navbar shadow effect\n\n\n\n\n\n_quarto.yml - Main configuration file\nindex.qmd - Home page\nmodules/module1.qmd through modules/module7.qmd - Module pages\nstyles.css - Custom styling"
+  },
+  {
+    "objectID": "CHANGELOG.html#march-17-2026",
+    "href": "CHANGELOG.html#march-17-2026",
+    "title": "AI Boot Camp - Change Log",
+    "section": "",
+    "text": "Fixed TOC active item text color to use cosmo blue instead of sandstone green\nAdded Contributors page under Resources section\nCorrected Warren Buffett image path in Module 6\n\n\n\n\n\nToned down homepage introduction for more professional tone\nUpdated Module 4 subtitle to “Debugging, Tracing, and Evaluating AI Agents”\nClarified target audience on homepage to mention BYU-I Data Science Society\n\n\n\n\n\ncosmo-colors.css - TOC active item styling\nresources/contributors.qmd - New empty contributors page\nmodules/module6.qmd - Fixed image path\nindex.qmd - Updated intro and target audience\nmodules/module4.qmd - Updated subtitle"
+  },
+  {
+    "objectID": "CHANGELOG.html#march-10-2026",
+    "href": "CHANGELOG.html#march-10-2026",
+    "title": "AI Boot Camp - Change Log",
+    "section": "",
+    "text": "Completely rewrote Module 7 to match course formatting standards\nAdded comprehensive drift detection content (data drift, concept drift, prediction drift)\nIncluded real-world examples and discussion questions\nAdded coding activity instructions with statistical tests and retraining workflows\nExpanded learning objectives and best practices for production AI\n\n\n\n\n\nmodules/module7.qmd - Full content restructure"
+  },
+  {
+    "objectID": "CHANGELOG.html#february-28-2026",
+    "href": "CHANGELOG.html#february-28-2026",
+    "title": "AI Boot Camp - Change Log",
+    "section": "",
+    "text": "Implemented hybrid sandstone/cosmo theme approach\nCreated cosmo-colors.css for color variable overrides\nChanged global theme from cosmo to sandstone while preserving cosmo colors\nUpdated all module files to use sandstone theme consistently\nMaintained sandstone structure with cosmo blue color scheme\n\n\n\n\n\n_quarto.yml - Updated theme and CSS files\ncosmo-colors.css - New CSS variable override file\nmodules/module1-7.qmd - Theme declarations updated\nresources/colabs.qmd - Theme updated\nresources/dictionary.qmd - Theme updated"
+  },
+  {
+    "objectID": "CHANGELOG.html#february-22-2026",
+    "href": "CHANGELOG.html#february-22-2026",
+    "title": "AI Boot Camp - Change Log",
+    "section": "",
+    "text": "Added spacing between sidebar navigation items (8px/12px margins)\nCompacted logo and navigation positioning with negative margins\nMoved logo up and reduced space between logo and search bar\nFine-tuned sidebar layout for cleaner appearance\n\n\n\n\n\nstyles.css - Sidebar item spacing, logo positioning adjustments"
+  },
+  {
+    "objectID": "CHANGELOG.html#february-8-2026",
+    "href": "CHANGELOG.html#february-8-2026",
+    "title": "AI Boot Camp - Change Log",
+    "section": "",
+    "text": "Created comprehensive Notebooks page documenting all 6 Google Colab projects\nBuilt Reference page with documentation links and 30+ terminology definitions\nAdded getting started guides and project descriptions\nOrganized documentation by LLM providers, frameworks, and tools\nHidden TOC on home, notebooks, and reference pages for cleaner layout\n\n\n\n\n\nresources/colabs.qmd - Notebooks documentation\nresources/dictionary.qmd - Reference and terminology\n\n\n\n\n\nindex.qmd - Added TOC: false\n_quarto.yml - Added Resources section to sidebar"
+  },
+  {
+    "objectID": "CHANGELOG.html#january-28-2026",
+    "href": "CHANGELOG.html#january-28-2026",
+    "title": "AI Boot Camp - Change Log",
+    "section": "",
+    "text": "Created complete landing page with hero section\nAdded course overview and learning outcomes\nBuilt prerequisite list focused on Google Colab (no local Python install)\nIncluded comprehensive weekly breakdown with descriptions\nStyled all links consistently with bold formatting and arrows\n\n\n\n\n\nindex.qmd - Complete homepage content"
+  },
+  {
+    "objectID": "CHANGELOG.html#january-25-2026",
+    "href": "CHANGELOG.html#january-25-2026",
+    "title": "AI Boot Camp - Change Log",
+    "section": "",
+    "text": "Replaced BYUI logo with DS_Logo.png\nIncreased logo size from 120px to 250px\nAdded background-vector.png at 9% opacity\nFixed logo CSS selector specificity issue\nCentered logo with proper positioning\n\n\n\n\n\n_quarto.yml - Logo path updated\nstyles.css - Logo sizing and background image styling"
+  },
+  {
+    "objectID": "CHANGELOG.html#january-22-2026",
+    "href": "CHANGELOG.html#january-22-2026",
+    "title": "AI Boot Camp - Change Log",
+    "section": "",
+    "text": "Converted top navbar to left sidebar navigation\nImplemented docked sidebar style with light background\nAdded logo to sidebar\nOrganized modules and resources in collapsible sections\nRemoved top navbar completely\n\n\n\n\n\n_quarto.yml - Sidebar navigation configuration\nstyles.css - Sidebar-specific styling"
   },
   {
     "objectID": "CHANGELOG.html#january-20-2026",
@@ -21,17 +77,1129 @@
     "text": "Created Quarto website structure with basic architecture\nSet up navigation bar with Home, Course Modules (1-7), and Resources\nAdded BYU-I logo to navbar and as favicon\nCreated placeholder pages for all 7 modules\n\n\n\n\n\nApplied Cosmo theme\nAdded custom blue navbar color (#4a90e2)\nAdjusted BYU-I logo size to 90px height\nAdded navbar shadow effect\n\n\n\n\n\n_quarto.yml - Main configuration file\nindex.qmd - Home page\nmodules/module1.qmd through modules/module7.qmd - Module pages\nstyles.css - Custom styling"
   },
   {
-    "objectID": "modules/jupyterlite-demo.html",
-    "href": "modules/jupyterlite-demo.html",
-    "title": "Interactive Marimo Notebook",
+    "objectID": "modules/module7.html",
+    "href": "modules/module7.html",
+    "title": "Week 7 - Model Drift and Retraining",
     "section": "",
-    "text": "Marimo is a reactive Python notebook that runs entirely in your browser using WebAssembly. Unlike traditional notebooks, when you change a value, all dependent cells automatically update!\n\n\n\n \n\n\n\n\n\nReactive Programming: Change a slider, and the plot automatically updates\nNo Backend Required: Everything runs in your browser via WebAssembly\nEdit & Run: Click any cell to edit the code and see results immediately\nStandard Libraries: Uses numpy, matplotlib, and other Python libraries\nGitHub Pages Ready: Works perfectly on static hosting\n\n\n\n\n\nInteract: Move the slider in the notebook above\nWatch: The sine wave plot automatically updates\nEdit: Click any code cell to modify it\nRun: Changes execute instantly in your browser\n\nAll computation happens locally in your browser - no server needed!"
+    "text": "Segment\nDuration\n\n\n\n\nLecture: Data Drift and Model Lifecycle\n15 minutes\n\n\nDiscussion: Real-World Drift Examples\n10 minutes\n\n\nCoding Activity: Simulating and Detecting Drift\n35+ minutes\n\n\n\nLearning Objectives: By the end of this lesson, students will be able to:\n\nExplain what data drift is and why it occurs\nDescribe how drift affects model weights and performance\nIdentify different types of drift (concept drift, data drift, prediction drift)\nUnderstand where retraining fits in the ML lifecycle\nImplement basic drift detection and retraining workflows\nExplain why retraining is necessary for production AI systems\n\nColab Notebook for Today:\n\nWeek 7 - Data Drift and Retraining Simulation\n(It is recommended to download a copy of the notebook to your own Google Colab)",
+    "crumbs": [
+      "Course Modules",
+      "Module 7"
+    ]
   },
   {
-    "objectID": "modules/jupyterlite-demo.html#marimo-interactive-environment",
-    "href": "modules/jupyterlite-demo.html#marimo-interactive-environment",
-    "title": "Interactive Marimo Notebook",
+    "objectID": "modules/module7.html#models-are-snapshots-of-the-past",
+    "href": "modules/module7.html#models-are-snapshots-of-the-past",
+    "title": "Week 7 - Model Drift and Retraining",
+    "section": "Models Are Snapshots of the Past",
+    "text": "Models Are Snapshots of the Past\nWhen we train a machine learning model, we are creating a snapshot of patterns from historical data.\nKey concepts:\n\nWeights encode patterns learned from training data\nThe model assumes future data will follow similar patterns\nTraining creates a “frozen” understanding of the world at a specific time\n\nThink of it like this: A model trained on 2020 data learned what the world looked like in 2020. If we use that model in 2026 without updates, it’s making predictions based on 6-year-old assumptions.",
+    "crumbs": [
+      "Course Modules",
+      "Module 7"
+    ]
+  },
+  {
+    "objectID": "modules/module7.html#what-are-model-weights",
+    "href": "modules/module7.html#what-are-model-weights",
+    "title": "Week 7 - Model Drift and Retraining",
+    "section": "What Are Model Weights?",
+    "text": "What Are Model Weights?\nModel weights are the learned parameters that determine how a model makes predictions.\nExample: In a simple model predicting house prices:\n# Simplified representation\nprice = (bedrooms × weight1) + (square_feet × weight2) + (age × weight3) + bias\nThese weights were learned from historical data. If housing market conditions change, these weights become outdated.",
+    "crumbs": [
+      "Course Modules",
+      "Module 7"
+    ]
+  },
+  {
+    "objectID": "modules/module7.html#the-three-types-of-drift",
+    "href": "modules/module7.html#the-three-types-of-drift",
+    "title": "Week 7 - Model Drift and Retraining",
+    "section": "The Three Types of Drift",
+    "text": "The Three Types of Drift\n\n1. Data Drift (Covariate Shift)\nThe distribution of input features changes, but the relationship between inputs and outputs stays the same.\nExample: - A model trained on customer data from the US - Deployed to customers in Europe\n- Features like income, age distribution differ - But the relationship (older customers → higher spending) remains\n\n\n2. Concept Drift\nThe relationship between inputs and outputs changes over time.\nExample: - A model predicting app engagement - User behavior changes after a redesign - Same user demographics, different engagement patterns - The “concept” of what drives engagement has shifted\n\n\n3. Prediction Drift\nThe distribution of model predictions changes over time.\nExample: - A credit risk model starts rejecting more applications - Not because applicants changed - But because economic conditions shifted - Model’s confidence thresholds no longer align with reality",
+    "crumbs": [
+      "Course Modules",
+      "Module 7"
+    ]
+  },
+  {
+    "objectID": "modules/module7.html#common-drift-scenarios",
+    "href": "modules/module7.html#common-drift-scenarios",
+    "title": "Week 7 - Model Drift and Retraining",
+    "section": "Common Drift Scenarios",
+    "text": "Common Drift Scenarios\nE-commerce Recommendation Systems: - Training data: Pre-pandemic shopping behavior - Production reality: Post-pandemic preferences shifted dramatically - Result: Models recommending irrelevant products\nFraud Detection: - Training data: Historical fraud patterns - Production reality: Fraudsters constantly evolve tactics - Result: New fraud types go undetected\nLanguage Models: - Training data: Text from 2020 - Production reality: New slang, topics, events in 2026 - Result: Model doesn’t understand current references\nMedical Diagnosis: - Training data: Patient population from one hospital - Production reality: Different demographics at another location - Result: Biased or inaccurate diagnoses",
+    "crumbs": [
+      "Course Modules",
+      "Module 7"
+    ]
+  },
+  {
+    "objectID": "modules/module7.html#discussion-questions",
+    "href": "modules/module7.html#discussion-questions",
+    "title": "Week 7 - Model Drift and Retraining",
+    "section": "Discussion Questions",
+    "text": "Discussion Questions\nTurn to your neighbor and discuss:\n\nWhat happens if we ignore drift and never retrain?\nHow often should models be retrained?\nWhat are the costs and risks of retraining too frequently vs. not frequently enough?",
+    "crumbs": [
+      "Course Modules",
+      "Module 7"
+    ]
+  },
+  {
+    "objectID": "modules/module7.html#traditional-ml-lifecycle-without-drift-awareness",
+    "href": "modules/module7.html#traditional-ml-lifecycle-without-drift-awareness",
+    "title": "Week 7 - Model Drift and Retraining",
+    "section": "Traditional ML Lifecycle (Without Drift Awareness)",
+    "text": "Traditional ML Lifecycle (Without Drift Awareness)\n1. Collect Data\n2. Train Model\n3. Deploy Model\n   ↓\n(Model sits in production forever, slowly degrading)",
+    "crumbs": [
+      "Course Modules",
+      "Module 7"
+    ]
+  },
+  {
+    "objectID": "modules/module7.html#production-ml-lifecycle-with-drift-awareness",
+    "href": "modules/module7.html#production-ml-lifecycle-with-drift-awareness",
+    "title": "Week 7 - Model Drift and Retraining",
+    "section": "Production ML Lifecycle (With Drift Awareness)",
+    "text": "Production ML Lifecycle (With Drift Awareness)\n1. Collect Data\n2. Train Model\n3. Deploy Model\n4. Monitor Performance\n   ↓\n   Is drift detected? → NO → Continue monitoring\n   ↓ YES\n5. Collect New Data\n6. Retrain Model\n7. Evaluate & Validate\n8. Deploy Updated Model\n   ↓\n   (Return to step 4)",
+    "crumbs": [
+      "Course Modules",
+      "Module 7"
+    ]
+  },
+  {
+    "objectID": "modules/module7.html#why-monitoring-matters",
+    "href": "modules/module7.html#why-monitoring-matters",
+    "title": "Week 7 - Model Drift and Retraining",
+    "section": "Why Monitoring Matters",
+    "text": "Why Monitoring Matters\nSilent failures are the enemy of production AI:\n\nModel continues making predictions\nConfidence scores stay high\nBut accuracy is declining\nUsers lose trust without understanding why\n\nAuthentic AI requires: - Continuous performance monitoring - Drift detection systems - Transparent model versioning - Responsible retraining practices",
+    "crumbs": [
+      "Course Modules",
+      "Module 7"
+    ]
+  },
+  {
+    "objectID": "modules/module7.html#what-youll-build",
+    "href": "modules/module7.html#what-youll-build",
+    "title": "Week 7 - Model Drift and Retraining",
+    "section": "What You’ll Build",
+    "text": "What You’ll Build\nIn this activity, you will:\n\nTrain a baseline model on historical data\nSimulate data drift by changing input distributions\nObserve performance degradation as drift occurs\nImplement drift detection using statistical tests\nRetrain the model with updated data\nCompare performance before and after retraining",
+    "crumbs": [
+      "Course Modules",
+      "Module 7"
+    ]
+  },
+  {
+    "objectID": "modules/module7.html#key-concepts-youll-implement",
+    "href": "modules/module7.html#key-concepts-youll-implement",
+    "title": "Week 7 - Model Drift and Retraining",
+    "section": "Key Concepts You’ll Implement",
+    "text": "Key Concepts You’ll Implement\n\nStatistical Tests for Drift Detection\n# Example: Kolmogorov-Smirnov test\nfrom scipy.stats import ks_2samp\n\n# Compare training data distribution to production data\nstatistic, p_value = ks_2samp(training_data, production_data)\n\nif p_value &lt; 0.05:\n    print(\"Drift detected! Distributions are significantly different.\")\n\n\nPerformance Monitoring\n# Track model accuracy over time\naccuracies = []\nfor batch in production_batches:\n    predictions = model.predict(batch)\n    accuracy = calculate_accuracy(predictions, batch.labels)\n    accuracies.append(accuracy)\n    \n    if accuracy &lt; threshold:\n        trigger_retraining()\n\n\nRetraining Workflow\n# When drift is detected\nnew_data = collect_recent_data()\nupdated_model = retrain_model(new_data)\nvalidate_model(updated_model)\ndeploy_model(updated_model)",
+    "crumbs": [
+      "Course Modules",
+      "Module 7"
+    ]
+  },
+  {
+    "objectID": "modules/module7.html#expected-outcomes",
+    "href": "modules/module7.html#expected-outcomes",
+    "title": "Week 7 - Model Drift and Retraining",
+    "section": "Expected Outcomes",
+    "text": "Expected Outcomes\nBy the end of this activity, you will have:\n✅ Visualized how drift impacts model performance\n✅ Implemented basic drift detection\n✅ Practiced retraining workflows\n✅ Understood when and why to update models",
+    "crumbs": [
+      "Course Modules",
+      "Module 7"
+    ]
+  },
+  {
+    "objectID": "modules/module7.html#the-cost-of-ignoring-drift",
+    "href": "modules/module7.html#the-cost-of-ignoring-drift",
+    "title": "Week 7 - Model Drift and Retraining",
+    "section": "The Cost of Ignoring Drift",
+    "text": "The Cost of Ignoring Drift\nWithout retraining: - Models slowly become misleading - Bias can increase over time - User trust erodes - Business decisions are based on outdated assumptions\nExample: A hiring model trained in 2020: - May reflect pre-pandemic job market - Misses new skill requirements - Perpetuates outdated criteria - Fails to adapt to remote work trends",
+    "crumbs": [
+      "Course Modules",
+      "Module 7"
+    ]
+  },
+  {
+    "objectID": "modules/module7.html#best-practices-for-production-models",
+    "href": "modules/module7.html#best-practices-for-production-models",
+    "title": "Week 7 - Model Drift and Retraining",
+    "section": "Best Practices for Production Models",
+    "text": "Best Practices for Production Models\n\nSet up monitoring from day one\n\nTrack prediction distributions\nMonitor performance metrics\nLog model versions\n\nEstablish retraining triggers\n\nPerformance drops below threshold\nStatistical drift tests fail\nTime-based schedule (e.g., quarterly)\n\nVersion everything\n\nData snapshots\nModel weights\nTraining configurations\n\nDocument changes\n\nWhy was retraining triggered?\nWhat data was used?\nHow did performance change?\n\nTest before deployment\n\nValidate on holdout data\nCheck for bias shifts\nCompare to previous version",
+    "crumbs": [
+      "Course Modules",
+      "Module 7"
+    ]
+  },
+  {
+    "objectID": "modules/module5.html",
+    "href": "modules/module5.html",
+    "title": "Week 5",
     "section": "",
-    "text": "Marimo is a reactive Python notebook that runs entirely in your browser using WebAssembly. Unlike traditional notebooks, when you change a value, all dependent cells automatically update!\n\n\n\n \n\n\n\n\n\nReactive Programming: Change a slider, and the plot automatically updates\nNo Backend Required: Everything runs in your browser via WebAssembly\nEdit & Run: Click any cell to edit the code and see results immediately\nStandard Libraries: Uses numpy, matplotlib, and other Python libraries\nGitHub Pages Ready: Works perfectly on static hosting\n\n\n\n\n\nInteract: Move the slider in the notebook above\nWatch: The sine wave plot automatically updates\nEdit: Click any code cell to modify it\nRun: Changes execute instantly in your browser\n\nAll computation happens locally in your browser - no server needed!"
+    "text": "Week 5 Content",
+    "crumbs": [
+      "Course Modules",
+      "Module 5"
+    ]
+  },
+  {
+    "objectID": "modules/module3.html",
+    "href": "modules/module3.html",
+    "title": "Week 3 - Tools and MCP Connections",
+    "section": "",
+    "text": "Segment\nDuration\n\n\n\n\nLecture: Tools vs MCP Connections\n10 minutes\n\n\nGuided Activity: Canvas MCP Setup\n20 minutes\n\n\nHands-on Coding: Building an Agent with Tools\n30+ minutes\n\n\n\nLearning Objectives: By the end of this lesson, students will be able to:\n\nExplain the difference between Tools and MCP connections\nSet up and use the Canvas MCP connection\nBuild an AI agent that uses tools to interact with external services\nUnderstand the flow: User → AI → MCP Client → MCP Server → Tool → Result\n\nColab Notebook for Today:\n\nWeek 3 - MCP Lesson\n(It is recommended to download a copy of the notebook to your own google colab)",
+    "crumbs": [
+      "Course Modules",
+      "Module 3"
+    ]
+  },
+  {
+    "objectID": "modules/module3.html#what-is-the-difference-between-tools-and-mcp-connections",
+    "href": "modules/module3.html#what-is-the-difference-between-tools-and-mcp-connections",
+    "title": "Week 3 - Tools and MCP Connections",
+    "section": "1. WHAT is the difference between TOOLS and MCP CONNECTIONS?",
+    "text": "1. WHAT is the difference between TOOLS and MCP CONNECTIONS?\nA Tool is like a button and a MCP is like a USB-C port\nWe use a tool to perform a specific function or task within a software application or system. Tools are typically designed to help users accomplish specific goals, such as editing text, creating graphics, or managing data.\nExamples of tools:\n\nsearch_google(query)\nget_employee(id)\nsend_email(to, subject, body)\nrun_sql(query)\nschedule_meeting(time, people)\n\nMCP (Model Context Protocol) is the standardized way AI discovers and talks to tools.\nWithout an MCP connection, if an AI like ChatGPT wanted to talk to gmail, it would need custom glue code to execute its goals. So lets say we wanted our AI agent to access data in LinkedIn. The company would need to create a MCP server connecton for AI’s to talk to linkedIn. LinkedIn would then be able to control the access levels, data formats, and security protocols for AI’s accessing its data.\nExamples of MCP connections:\n\nCanvas MCP connection\nGoogle Search MCP connection\nSQL Database MCP connection\nCalendar MCP connection\n\nWe will be using a Canvas MCP, which means we will need to establish a MCP connection and then use the MCP’s tool to allow our agent to talk to canvas.",
+    "crumbs": [
+      "Course Modules",
+      "Module 3"
+    ]
+  },
+  {
+    "objectID": "modules/module3.html#lets-use-them",
+    "href": "modules/module3.html#lets-use-them",
+    "title": "Week 3 - Tools and MCP Connections",
+    "section": "2. LET’S USE THEM",
+    "text": "2. LET’S USE THEM\nUser → AI → MCP Client → MCP Server → Tool → Result → AI → User",
+    "crumbs": [
+      "Course Modules",
+      "Module 3"
+    ]
+  },
+  {
+    "objectID": "modules/module3.html#first-install-dependencies",
+    "href": "modules/module3.html#first-install-dependencies",
+    "title": "Week 3 - Tools and MCP Connections",
+    "section": "First install dependencies",
+    "text": "First install dependencies\n%pip install nest_asyncio\n%pip install langchain\n%pip install langchain-google-genai\n%pip install langchain-mcp-adapters\n%pip install nest_asyncio langchain langchain-google-genai langchain-mcp-adapters",
+    "crumbs": [
+      "Course Modules",
+      "Module 3"
+    ]
+  },
+  {
+    "objectID": "modules/module3.html#import-required-libraries",
+    "href": "modules/module3.html#import-required-libraries",
+    "title": "Week 3 - Tools and MCP Connections",
+    "section": "Import required libraries",
+    "text": "Import required libraries\nimport os\nimport asyncio\nimport nest_asyncio\nfrom langchain_google_genai import ChatGoogleGenerativeAI\nfrom langchain.agents import create_agent\nfrom langchain_mcp_adapters.client import MultiServerMCPClient",
+    "crumbs": [
+      "Course Modules",
+      "Module 3"
+    ]
+  },
+  {
+    "objectID": "modules/module3.html#setup-configure",
+    "href": "modules/module3.html#setup-configure",
+    "title": "Week 3 - Tools and MCP Connections",
+    "section": "Setup & Configure",
+    "text": "Setup & Configure\n# 1. SETUP & FIX ASYNC (Required for Notebooks)\n# This fixes \"RuntimeError: This event loop is already running\"\nnest_asyncio.apply()\n\nfrom dotenv import load_dotenv\nload_dotenv()\n\n# 2. SETUP CREDENTIALS\n# Set CANVAS_API_TOKEN and GOOGLE_API_KEY (or GEMINI_API_KEY) as environment variables in your shell.\n# You need your Canvas URL and Token (from your school profile settings)\nos.environ[\"CANVAS_API_URL\"] = \"\"\nos.environ[\"CANVAS_API_TOKEN\"] = \"\"\nos.environ[\"GOOGLE_API_KEY\"] = \"\"\n\nLoad your API keys securely (Best Practice for Notebooks)\nUse export GOOGLE_API_KEY='your_google_api_key_here' in your terminal before running the notebook\nThen use echo $GOOGLE_API_KEY to verify it’s set",
+    "crumbs": [
+      "Course Modules",
+      "Module 3"
+    ]
+  },
+  {
+    "objectID": "modules/module3.html#load-mcp-agent-function",
+    "href": "modules/module3.html#load-mcp-agent-function",
+    "title": "Week 3 - Tools and MCP Connections",
+    "section": "Load MCP Agent Function",
+    "text": "Load MCP Agent Function\nasync def load_mcp_agent():\n    llm = ChatGoogleGenerativeAI(\n        model=\"gemini-2.5-flash\",\n        temperature=0,\n        api_key=os.environ.get(\"GOOGLE_API_KEY\") or os.environ.get(\"GEMINI_API_KEY\")\n    )\n\n    mcp_client = MultiServerMCPClient({\n        \"canvas\": {\n            \"command\": \"canvas-mcp-server\",\n            \"args\": [],\n            \"transport\": \"stdio\"\n        }\n    })\n\n    mcp_tools = await mcp_client.get_tools()\n    all_tools = mcp_tools + [student_file_tool]\n\n    agent = create_agent(\n        llm,\n        tools=all_tools,\n        system_prompt=\"You are a helpful assistant for a student. Use the tools to assist with their requests.\"\n    )\n\n    return agent, mcp_client",
+    "crumbs": [
+      "Course Modules",
+      "Module 3"
+    ]
+  },
+  {
+    "objectID": "modules/module3.html#create-custom-tool-for-local-files",
+    "href": "modules/module3.html#create-custom-tool-for-local-files",
+    "title": "Week 3 - Tools and MCP Connections",
+    "section": "Create Custom Tool for Local Files",
+    "text": "Create Custom Tool for Local Files\nfrom langchain_core.tools import Tool\nfrom pprint import pprint\n\nSTUDENT_DATA_DIR = \"student_data\"\n\ndef read_student_files(query: str) -&gt; str:\n    \"\"\"\n    Reads all files in student_data/ and returns their contents.\n    The query is ignored for now (simple version).\n    \"\"\"\n    if not os.path.exists(STUDENT_DATA_DIR):\n        return \"student_data folder not found.\"\n\n    all_text = []\n    for fname in os.listdir(STUDENT_DATA_DIR):\n        path = os.path.join(STUDENT_DATA_DIR, fname)\n\n        if not os.path.isfile(path):\n            continue\n\n        try:\n            with open(path, \"r\", encoding=\"utf-8\", errors=\"ignore\") as f:\n                content = f.read()\n            all_text.append(f\"\\n--- {fname} ---\\n{content}\")\n        except Exception as e:\n            all_text.append(f\"\\n--- {fname} ---\\nERROR: {e}\")\n\n    return \"\\n\".join(all_text)\n\n# Defining tool\nstudent_file_tool = Tool(\n    name=\"student_data_reader\",\n    func=read_student_files,\n    description=\"Use this to read files from the local student_data folder. Whenever the user wants to access local files, go here. User may call this folder 'my folder, the folder' or other general terms\"\n)",
+    "crumbs": [
+      "Course Modules",
+      "Module 3"
+    ]
+  },
+  {
+    "objectID": "modules/module3.html#run-the-agent",
+    "href": "modules/module3.html#run-the-agent",
+    "title": "Week 3 - Tools and MCP Connections",
+    "section": "Run the Agent",
+    "text": "Run the Agent\nasync def main():\n    agent, mcp_client = await load_mcp_agent()\n\n    user_prompt = \"Go into my folder into the study guide and give me a 3 sentence summary of what I should study\"\n\n    result = await agent.ainvoke({\n        \"messages\": [\n            {\"role\": \"user\", \"content\": user_prompt}\n        ]\n    })\n    \n    # Inspect full response to find the correct field to use\n    pprint(result)\n\n# Run the async main function in the notebook\nasyncio.run(main())",
+    "crumbs": [
+      "Course Modules",
+      "Module 3"
+    ]
+  },
+  {
+    "objectID": "modules/module1.html",
+    "href": "modules/module1.html",
+    "title": "Week 1 - LLM Bootcamp",
+    "section": "",
+    "text": "Segment\nDuration\n\n\n\n\nLecture: Why, What, and How?\n15 minutes\n\n\nActivity: API Key Setup\n10 minutes\n\n\nGuided Coding: LangChain Basics\n15 minutes\n\n\nExploration: Prompt & Context Engineering\n20+ minutes\n\n\n\nLearning Objectives: By the end of this lesson, students will be able to:\n\nCreate a simple custom chat using API calls\nGet and secure a Gemini API key\nIntroduce LLM concepts and services\nStart exploring LangChain and LLM concepts generally",
+    "crumbs": [
+      "Course Modules",
+      "Module 1"
+    ]
+  },
+  {
+    "objectID": "modules/module1.html#about-api-keys",
+    "href": "modules/module1.html#about-api-keys",
+    "title": "Week 1 - LLM Bootcamp",
+    "section": "About API keys",
+    "text": "About API keys\nAn API key is a password for someone’s services. It opens the door of communication between your computer and their servers. In accessing Gemini with Python, you send your prompt and API key to their server; if the key is accepted, it will process your prompt and return its response (along with some other metadata). It is your first step to opening the AI door. Let’s get one!",
+    "crumbs": [
+      "Course Modules",
+      "Module 1"
+    ]
+  },
+  {
+    "objectID": "modules/module1.html#do-this",
+    "href": "modules/module1.html#do-this",
+    "title": "Week 1 - LLM Bootcamp",
+    "section": "Do This",
+    "text": "Do This\n\nAccess the developer’s site for Gemini here: Gemini API key\nYou will need to sign in\nA key should be created automatically. You can click on it and copy the large string of characters and numbers.\n\n\nIf it doesn’t work\n\nMake sure you are using a personal Google account, not your school email\nIf it says you don’t have access in your region, you may need to verify your age in your Google account settings\n\nIf this becomes too much of a hassle, you use an OpenAI API key instead, but you will have to pay $5 and become familiar with what code to change as you go through the course (slight added complexity, but really not that much)",
+    "crumbs": [
+      "Course Modules",
+      "Module 1"
+    ]
+  },
+  {
+    "objectID": "modules/module1.html#i-have-a-key-now-what",
+    "href": "modules/module1.html#i-have-a-key-now-what",
+    "title": "Week 1 - LLM Bootcamp",
+    "section": "I have a key, now what?",
+    "text": "I have a key, now what?\nDO NOT paste it in this file DO NOT paste it in .env.example\nDO:\n\nRename .env.example to .env\nPaste key in .env\nSave .env\n\nThis is safe only when the .gitignore file has .env listed.\n\nWhy .env?\nAPI keys are coveted (especially for LLM’s). If it gets published to GitHub, it will be stolen and used by strangers. To keep yours safe, store it in the .env file in the main directory. This environment variable file stays local to your machine and will not be pushed to GitHub (because the .gitignore file says to ignore it. You can open the .gitignore file to see .env listed as files it won’t publish to GitHub). The file .env.template is just a template. Please rename .env.template to .env before adding API keys.",
+    "crumbs": [
+      "Course Modules",
+      "Module 1"
+    ]
+  },
+  {
+    "objectID": "modules/module1.html#finally",
+    "href": "modules/module1.html#finally",
+    "title": "Week 1 - LLM Bootcamp",
+    "section": "Finally",
+    "text": "Finally\nYou can now run the below code to install needed packages and load the environment variables from .env into this file. (You will need to rerun load_dotenv() every time you open the file again, but not pip install, which is a one time run.)\n# This installs the dependencies you need\n# Windows:\n%pip install -q -U langchain langchain-google-genai python-dotenv\n\n# Mac:\n# %pip3 install -q -U langchain langchain-google-genai python-dotenv\n# Load environment variables from .env file\nfrom dotenv import load_dotenv\nload_dotenv()\nAfter saving your API key, you can run the below code to see if it worked.\n# Paste code here\nfrom langchain.chat_models import init_chat_model\n\nmodel = init_chat_model(\n    model=\"gemini-2.5-flash\", \n    model_provider=\"google_genai\"\n)\n\nmodel.invoke(\"Hello world!\")\nYou should see something like:\nAIMessage(content='Hello there! How can I help you today?', additional_kwargs={}, ...",
+    "crumbs": [
+      "Course Modules",
+      "Module 1"
+    ]
+  },
+  {
+    "objectID": "modules/module1.html#prompt-engineering",
+    "href": "modules/module1.html#prompt-engineering",
+    "title": "Week 1 - LLM Bootcamp",
+    "section": "Prompt Engineering",
+    "text": "Prompt Engineering\nIf you think you understand prompt engineering, consider the following quote speaking for more complicated agent systems.\n\nThe prompts for deep agents often span hundreds if not thousands of lines — usually containing a general persona, instructions on calling tools, important guidelines, and few-shot examples. - LangChain Blog\n\nPrompt engineering is the real meat of customizing LLM’s. Consider the impact of changing just a few words. Run these a few times, and try intentional word changes.\nfrom langchain_google_genai import ChatGoogleGenerativeAI\n\nmodel = ChatGoogleGenerativeAI(model=\"gemini-2.5-flash-lite\")\n\nprompt = \"What did you have for breakfast today?\"\n# Arnold 1\nmodel.invoke(\"You are Arnold Schwarzenegger. \" + prompt).content\n# Arnold 2\nmodel.invoke(\"Act like Arnold Schwarzenegger. \" + prompt).content\n# Arnold 3\nmodel.invoke(\"Speak in the tone of Arnold Schwarzenegger. \" + prompt).content\n# Arnold 4\nmodel.invoke(\"You are Arnold Schwarzenegger. Respond briefly.\" + prompt).content\nIn general, the best prompting advice is: be specific. It often helps to give examples.\nTo get a good feel of prompting best practices and types of prompts, look at these resources:\n\nClaude docs\nGemini docs\nGemini prompting with files\n\nfrom langchain_core.messages import HumanMessage, SystemMessage\n\nsystem_instr = \"You are Arnold Schwarzenegger\"\n\nprompt = \"What did you have for breakfast today?\"\n\nmodel.invoke([\n    SystemMessage(system_instr),\n    HumanMessage(prompt)]).content",
+    "crumbs": [
+      "Course Modules",
+      "Module 1"
+    ]
+  },
+  {
+    "objectID": "modules/module1.html#context-engineering",
+    "href": "modules/module1.html#context-engineering",
+    "title": "Week 1 - LLM Bootcamp",
+    "section": "Context Engineering",
+    "text": "Context Engineering\nBut perhaps a better way to think about this is context engineering. Consider this quote:\n\nWhy the shift from “prompts” to “context”? Early on, developers focused on phrasing prompts cleverly to coax better answers. But as applications grow more complex, it’s becoming clear that providing complete and structured context to the AI is far more important than any magic wording. - Harrison’s Hot Takes\n\nIt may be worth giving the above article a read.",
+    "crumbs": [
+      "Course Modules",
+      "Module 1"
+    ]
+  },
+  {
+    "objectID": "modules/module1.html#more-on-langchain",
+    "href": "modules/module1.html#more-on-langchain",
+    "title": "Week 1 - LLM Bootcamp",
+    "section": "More on LangChain",
+    "text": "More on LangChain\nYou may have noticed The model’s response was more than just text.\nfrom langchain.chat_models import init_chat_model\n\nmodel = init_chat_model(model=\"gemini-2.5-flash-lite\", model_provider=\"google-genai\")\n\nresponse = model.invoke(\"Be an angsty teen\")\n\nprint(response)\nYou can access just the text response with .content\nresponse.content\n…But there is a lot of other useful information, too. To see everything you can access with dot notation, you can use this function.\nresponse.model_dump()\nSome items are nested, like ‘usage_metadata’, and you may have to use bracket notation as well.\nresponse.usage_metadata['input_tokens']",
+    "crumbs": [
+      "Course Modules",
+      "Module 1"
+    ]
+  },
+  {
+    "objectID": "modules/module1.html#chaining",
+    "href": "modules/module1.html#chaining",
+    "title": "Week 1 - LLM Bootcamp",
+    "section": "Chaining",
+    "text": "Chaining\nSee what happens if you take the above response.content and throw it into another model call. This is called chaining. What use cases can you think of for it?",
+    "crumbs": [
+      "Course Modules",
+      "Module 1"
+    ]
+  },
+  {
+    "objectID": "modules/module1.html#model-parameters",
+    "href": "modules/module1.html#model-parameters",
+    "title": "Week 1 - LLM Bootcamp",
+    "section": "Model Parameters",
+    "text": "Model Parameters\nmodel = init_chat_model(\n    model=\"gemini-2.5-flash\", \n    model_provider=\"google_genai\",\n    temperature=0,\n    max_tokens=50,\n    timeout=60,\n    max_retries=3)\n\nmodel.invoke(\"Hello world!\")",
+    "crumbs": [
+      "Course Modules",
+      "Module 1"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AI Agentic Boot Camp",
+    "section": "",
+    "text": "This 7-week bootcamp teaches you how to build AI agents that can use tools, connect to external services, and solve real problems. You’ll learn practical development skills through hands-on projects.\n\n\nBy the end of this bootcamp, you’ll have hands-on experience creating:\n\nCustom AI Agents using LangChain and LangGraph\nTool-Enabled Systems that interact with external APIs and services\nProduction-Ready Applications with proper observability and scaling\nMCP-Connected Agents that leverage the Model Context Protocol\n\n\n\n\nThis bootcamp is for anyone interested in learning about agentic AI. It was especially created for the BYU-I Data Science Society, but all are welcome.\nIdeal participants:\n\nHave basic Python programming experience\nWant to build practical AI applications (not just theory)\nAre ready to dive deep into modern agent architectures\nUnderstand that AI development is about engineering, not just prompts",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#welcome-to-the-ai-agentic-boot-camp",
+    "href": "index.html#welcome-to-the-ai-agentic-boot-camp",
+    "title": "AI Agentic Boot Camp",
+    "section": "",
+    "text": "This 7-week bootcamp teaches you how to build AI agents that can use tools, connect to external services, and solve real problems. You’ll learn practical development skills through hands-on projects.\n\n\nBy the end of this bootcamp, you’ll have hands-on experience creating:\n\nCustom AI Agents using LangChain and LangGraph\nTool-Enabled Systems that interact with external APIs and services\nProduction-Ready Applications with proper observability and scaling\nMCP-Connected Agents that leverage the Model Context Protocol\n\n\n\n\nThis bootcamp is for anyone interested in learning about agentic AI. It was especially created for the BYU-I Data Science Society, but all are welcome.\nIdeal participants:\n\nHave basic Python programming experience\nWant to build practical AI applications (not just theory)\nAre ready to dive deep into modern agent architectures\nUnderstand that AI development is about engineering, not just prompts",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#course-overview",
+    "href": "index.html#course-overview",
+    "title": "AI Agentic Boot Camp",
+    "section": "Course Overview",
+    "text": "Course Overview\n\nLearning Path\nThis bootcamp follows a structured progression from fundamentals to production deployment:\nWeeks 1-3: Foundations\nMaster the core concepts of LLMs, agents vs. workflows, and tool integration through the Model Context Protocol.\nWeeks 4-5: Professional Development\nLearn production-grade practices including observability with LangSmith, debugging complex agents, and advanced topics.\nWeeks 6-7: Production & Beyond\nScale your agents for real users, manage context and costs, understand model maintenance, and prepare for long-term deployment.\n\n\nTechnologies You’ll Master\n\nLangChain - Framework for building LLM applications\nLangGraph - Stateful multi-step agent workflows\nLangSmith - Observability, tracing, and evaluation\nModel Context Protocol (MCP) - Standardized tool and data connections\nGoogle Gemini API - Primary LLM provider (OpenAI compatible)\nProduction Tools - Memory management, cost optimization, scaling strategies\n\n\n\nKey Learning Outcomes\nBy completing this bootcamp, you will be able to:\n✓ Design and implement custom AI agents with tool-calling capabilities\n✓ Build workflows that balance predictability and autonomy\n✓ Connect agents to external services using MCP servers\n✓ Debug and optimize agent behavior with LangSmith tracing\n✓ Deploy production-ready agents that scale to multiple users\n✓ Manage costs, context, and performance in real-world scenarios\n✓ Understand when to retrain models and maintain AI systems over time",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#quick-start-guide",
+    "href": "index.html#quick-start-guide",
+    "title": "AI Agentic Boot Camp",
+    "section": "Quick Start Guide",
+    "text": "Quick Start Guide\n\nPrerequisites\nBefore starting the bootcamp, make sure you have:\n\nGoogle Account - Required for Google Colab and Gemini API access\nBasic Python knowledge - Familiarity with functions, variables, and imports\nWeb browser - Chrome or Firefox recommended for Colab\nInternet connection - For accessing Colab notebooks and APIs\n\nNo local installation required! All coding happens in Google Colab, which provides a free cloud environment with Python pre-installed.\n\n\nGetting Your API Key\nThe bootcamp uses Google’s Gemini API (free tier available):\n\nVisit Google AI Studio\nSign in with a personal Google account (not school email)\nGenerate an API key\nStore it securely (we’ll use .env files in the course)\n\nAlternative: If Gemini isn’t available in your region, OpenAI’s API works with minor code adjustments ($5 minimum deposit required).\n\n\nWorking Environment\nAll coding is done in Google Colab notebooks:\n\nNo local setup required\nFree GPU access\nAutomatic dependency installation\nEasy sharing and collaboration\n\nAccess all notebooks on the Notebooks → page.\n\n\nYour First Steps\n\nWeek 1: Get your Gemini API key\nModule 1: Open the first Colab notebook\nSave a copy to your Google Drive\nFollow along with the lesson structure\nExperiment with code examples",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#weekly-breakdown",
+    "href": "index.html#weekly-breakdown",
+    "title": "AI Agentic Boot Camp",
+    "section": "Weekly Breakdown",
+    "text": "Weekly Breakdown\n\nWeek 1 - LLM Bootcamp\nFocus: Getting Started with AI Agents\n\nCreate custom chats using API calls\nSecure and use Gemini API keys\nUnderstand LLM concepts and services\nExplore LangChain basics\nLearn prompt and context engineering\n\nView Module 1 →\n\n\n\nWeek 2 - Workflows and Agents\nFocus: Understanding LLM Architecture Patterns\n\nDistinguish between workflows and agents\nLearn when to use each approach\nPlan and diagram agent behaviors\nTranslate conceptual workflows into code\nExplore no-code/low-code options (n8n, Langflow)\n\nView Module 2 →\n\n\n\nWeek 3 - Tools and MCP Connections\nFocus: Connecting AI Agents to External Services\n\nUnderstand the Model Context Protocol (MCP)\nSet up Canvas MCP connections\nBuild agents that use tools\nImplement User → AI → MCP → Tool flow\nCreate real-world integrations\n\nView Module 3 → | Open in Colab →\n\n\n\nWeek 4 - LangSmith Diagnostics\nFocus: Observability and Debugging\n\nUse LangSmith for agent observability\nTrace execution and identify bottlenecks\nDebug tool calls and agent decisions\nBuild evaluation datasets\nAnalyze trace trees for optimization\n\nView Module 4 → | Wellness Agent → | Canvas Tutor →\n\n\n\nWeek 5 - Advanced Topics\nView Module 5 →\n\n\n\nWeek 6 - Production & Scaling\nFocus: From Prototype to Production\n\nUnderstand production vs. development environments\nManage token costs at scale\nBuild multi-user stateful interfaces\nPrevent context overflow and runaway costs\nDesign resilient, scalable architectures\n\nView Module 6 → | Open in Colab →\n\n\n\nWeek 7 - Retraining and Weights\nFocus: Model Maintenance and Drift\n\nUnderstand data drift and model degradation\nDetect when retraining is necessary\nUpdate model weights responsibly\nBuild authentic, maintainable AI systems\nPlan long-term model lifecycle\n\nView Module 7 → | Open in Colab →",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#additional-resources",
+    "href": "index.html#additional-resources",
+    "title": "AI Agentic Boot Camp",
+    "section": "Additional Resources",
+    "text": "Additional Resources\n\nCourse Materials\n\nNotebooks - All Google Colab notebooks with project descriptions\nReference - Documentation links and key terms dictionary\n\n\n\nGetting Help\n\nReview error messages carefully—they often point directly to the solution\nCheck the Reference → page for unfamiliar terms\nRevisit earlier modules if concepts feel unclear\nExperiment with code variations to deepen understanding",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#ready-to-begin",
+    "href": "index.html#ready-to-begin",
+    "title": "AI Agentic Boot Camp",
+    "section": "Ready to Begin?",
+    "text": "Ready to Begin?\nStart with Module 1 - LLM Bootcamp → and work through each week sequentially. The course is designed to build progressively—each module assumes knowledge from previous weeks.\nLet’s build something intelligent.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "modules/module2.html",
+    "href": "modules/module2.html",
+    "title": "Week 2 - Workflows and Agents",
+    "section": "",
+    "text": "Segment\nDuration\n\n\n\n\nLecture: Agents and Workflows\n5-10 minutes\n\n\nActivity: Workflow vs. Agents\n20 minutes\n\n\nExploration: Workflows\n20+ minutes\n\n\n\nLearning Objectives: By the end of this lesson, students will be able to:\n\nExplain common features of LLM providers\nExplain the difference between workflows and agents\nIdentify when to use one or the other\nPlan workflows and agents conceptually\nTranslate workflows into code",
+    "crumbs": [
+      "Course Modules",
+      "Module 2"
+    ]
+  },
+  {
+    "objectID": "modules/module2.html#reading-5-min",
+    "href": "modules/module2.html#reading-5-min",
+    "title": "Week 2 - Workflows and Agents",
+    "section": "Reading (5 min)",
+    "text": "Reading (5 min)\nSpend 5 minutes, pick an article or two from the links below and start glancing through it to introduce workflows and agents. We will reconvene to talk through the differences together.\nGuiding Questions:\n\nWhat are the strengths and weaknesses of workflows vs agents?\nIn what situation is one better than the other?\nWhen would a hybrid approach work best?\n\nPrompt vs. Workflow vs. Agent: Great pro/con comparison, entertaining voice\nAgent Patterns: Great depth into diagramming and specific use cases, Gemini implementation\nLangChain on workflows and agents: Specific LangGraph implementation, brief",
+    "crumbs": [
+      "Course Modules",
+      "Module 2"
+    ]
+  },
+  {
+    "objectID": "modules/module2.html#discussion-2-min-workflow-vs-agents",
+    "href": "modules/module2.html#discussion-2-min-workflow-vs-agents",
+    "title": "Week 2 - Workflows and Agents",
+    "section": "Discussion (2 min): Workflow vs Agents",
+    "text": "Discussion (2 min): Workflow vs Agents\nTalk with the group about what you learned for the guiding questions.",
+    "crumbs": [
+      "Course Modules",
+      "Module 2"
+    ]
+  },
+  {
+    "objectID": "modules/module2.html#activity-10-min",
+    "href": "modules/module2.html#activity-10-min",
+    "title": "Week 2 - Workflows and Agents",
+    "section": "Activity (10 min)",
+    "text": "Activity (10 min)\nAfter looking through the articles, identify how you would diagram the following use cases:\n\nSelf assesses its own responses and redelivers.\nChanges tone based off of user’s emotional state.\nDatabase retrieval.\nExtract text from a document, convert it to markdown, then summarize it. Return both the markdown and the summary.\nTiered LLM usage: Routing simple queries to faster, cheaper models (like Llama 3.1 8B) and complex or unusual questions to more capable models (like Gemini 3 Pro).\nGenerating multiple perspectives: Asking multiple LLMs the same question with different persona prompts and aggregating their responses.\nWriting and refinement: Generating a draft, reflecting on its clarity and tone, and then revising it.\nBooking appointments using a calendar API.\nControlling smart home devices.",
+    "crumbs": [
+      "Course Modules",
+      "Module 2"
+    ]
+  },
+  {
+    "objectID": "modules/module2.html#option-1-visual-workflow-editors-n8n-langflow",
+    "href": "modules/module2.html#option-1-visual-workflow-editors-n8n-langflow",
+    "title": "Week 2 - Workflows and Agents",
+    "section": "Option 1: Visual Workflow Editors (n8n, LangFlow)",
+    "text": "Option 1: Visual Workflow Editors (n8n, LangFlow)\nn8n and LangFlow are both free and popular. To choose between the two:\n\nn8n is great for easy integration with products (Slack, Gmail, Salesforce, Notion) and for moving data between them.\nLangFlow is similar but built on LangChain, letting you modify the code it creates and have finer control over the application.\n\n\nn8n\nTo get started: install it, open it, and play around.\nIf you have Node.js installed already, this will get you up and running quick\n# The % means it is a terminal command\n%npm install n8n -g\n\n# Once installed, run it\n%n8n start\nIf not, you have two options:\n\nUse the cloud version (you will sign up for a free account by clicking “Get Started for Free”)\nInstall Node.js then run the above code (Node.js is Javascript outside a web browser)\n\nEither way, you can continue with these resources when you have explored it a little.\n\nAgent Quickstart\nn8n Academy (More learning paths)\n\n\n\nLangFlow\nWarning: You may have to wait a while for the program to download if you go this route\n\nStep 1: Install it as an app from their website\nStep 2: Go through a Quickstart tutorial\n\nThere is an alternative installation route using the command line that you can find here",
+    "crumbs": [
+      "Course Modules",
+      "Module 2"
+    ]
+  },
+  {
+    "objectID": "modules/module2.html#option-2-langgraph-python",
+    "href": "modules/module2.html#option-2-langgraph-python",
+    "title": "Week 2 - Workflows and Agents",
+    "section": "Option 2: LangGraph (Python)",
+    "text": "Option 2: LangGraph (Python)\nTry running the code from the earlier LangChain article or exploring their docs.\nJust replace their first two code chunks with this more relevant code:\n# Load environment variables from .env file\nfrom dotenv import load_dotenv\nload_dotenv()\n\nfrom langchain.chat_models import init_chat_model\n\n# Instantiate model\nllm = init_chat_model(\n    model=\"gemini-2.5-flash\", \n    model_provider=\"google_genai\"\n)",
+    "crumbs": [
+      "Course Modules",
+      "Module 2"
+    ]
+  },
+  {
+    "objectID": "modules/module4.html#review-mcps-tools",
+    "href": "modules/module4.html#review-mcps-tools",
+    "title": "AI Agents Diagnostics with LangSmith",
+    "section": "Review: MCPs & Tools",
+    "text": "Review: MCPs & Tools\nBefore we dive into observability, let’s revisit the building blocks that let agents do things.\n\nWhat is an MCP Server?\nAn MCP (Model Context Protocol) server is a standardized interface that exposes real-world capabilities file access, API calls, database lookups to an AI model. The model doesn’t “know” how to read a CSV or call a web API; it asks an MCP server to do the actual work.\nUser Prompt\n    │\n    ▼\nAI Model (LLM)\n    │  decides to call a tool\n    ▼\nMCP Server ──► External Service (Canvas API, Google Drive, etc)\n    │\n    ▼\nTool Result returns to model\n    │\n    ▼\nFinal Response to User\nThe model is the brain; MCP servers and tools are the hands.\n\n\nWhat are Tools?\nTools are the individual functions an agent can invoke. In LangChain, you create tools with the @tool decorator. Three things every tool must have:\n\nA name how the agent refers to it\nA description (the docstring) what the LLM reads to decide when to call it\nA schema the parameter types, inferred from the function signature\n\nfrom langchain_core.tools import tool\n\n@tool\ndef log_food(name: str, calories: int, protein: int = 0) -&gt; str:\n    \"\"\"Log a food item to the wellness tracker.\n    Use this whenever the user mentions eating something.\n    Estimate calories and macros if the user does not give exact numbers.\n    \"\"\"\n    # ... implementation\nThe docstring is not just documentation it is part of the prompt the model receives. Vague docstrings produce wrong tool choices, and the effect shows up immediately in LangSmith.",
+    "crumbs": [
+      "Course Modules",
+      "Module 4"
+    ]
+  },
+  {
+    "objectID": "modules/module4.html#langgraph-agent-architecture",
+    "href": "modules/module4.html#langgraph-agent-architecture",
+    "title": "AI Agents Diagnostics with LangSmith",
+    "section": "LangGraph Agent Architecture",
+    "text": "LangGraph Agent Architecture\nBoth agents use the same structure. The key import:\n# CORRECT: works with current LangChain/LangGraph\nfrom langgraph.prebuilt import create_react_agent\n\n# BROKEN: removed in LangChain v0.2\nfrom langchain.agents import create_react_agent\nNOTE: This is something AI will mess up a lot, if you are using AI you need to specify to use are using LangChain v1.x instead of v0.3\ncreate_react_agent builds a ReAct graph. The agent reasons step-by-step before every tool call, making behavior predictable and easy to trace. You invoke it with a messages list and read the final reply from result[\"messages\"][-1].content.",
+    "crumbs": [
+      "Course Modules",
+      "Module 4"
+    ]
+  },
+  {
+    "objectID": "modules/module4.html#langsmith-three-layers-of-observability",
+    "href": "modules/module4.html#langsmith-three-layers-of-observability",
+    "title": "AI Agents Diagnostics with LangSmith",
+    "section": "LangSmith: Three Layers of Observability",
+    "text": "LangSmith: Three Layers of Observability\n\nLayer 1 Automatic Tracing\nSet four environment variables before your agent runs. LangChain and LangGraph automatically send every run to LangSmith no code changes needed.\nos.environ[\"LANGCHAIN_TRACING_V2\"] = \"true\"\nos.environ[\"LANGCHAIN_ENDPOINT\"]   = \"https://api.smith.langchain.com\"\nos.environ[\"LANGCHAIN_API_KEY\"]    = LANGSMITH_API_KEY\nos.environ[\"LANGCHAIN_PROJECT\"]    = \"wellness-agent\"\nThis gives you traces for every agent.invoke() call, with LLM nodes and tool nodes visible.\n\n\nLayer 2 @traceable for Custom Functions\nAutomatic tracing captures LangChain objects, but what about your own Python functions like the Canvas API calls or the CSV writes? That’s where @traceable comes in.\nfrom langsmith import traceable\n\n@traceable(name=\"Canvas API: list_courses\")\ndef _get_all_courses_raw() -&gt; list:\n    # This HTTP call is now a named span in the trace\n    ...\nWith @traceable, the trace tree goes from flat to fully nested:\n# WITHOUT @traceable   opaque single node:\n▼ tools\n  ▼ get_upcoming_assignments     [2.1s] ✅\n\n# WITH @traceable   full call tree:\n▼ tools\n  ▼ get_upcoming_assignments              [2.1s] ✅\n    ▼ Canvas API: get_upcoming_assignments [2.0s] ✅\n      ▼ Canvas API: list_courses           [0.4s] ✅\n      ▼ Canvas API: list_assignments       [0.3s] ✅  ← CSE 490R\n      ▼ Canvas API: list_assignments       [0.3s] ✅  ← DS 460\n      ▼ Canvas API: list_assignments       [0.9s] ⚠️  ← MATH 488 (slow!)\nNow you can see which endpoint is slow, which API call returned a 404, and exactly how long each step took. This is the biggest diagnostic improvement from the original notebooks.\nThe pattern we use throughout both notebooks is: @traceable on the raw implementation, @tool on the wrapper the agent calls.\n@traceable(name=\"CSV: write_food_entry\")   # ← becomes a child span in LangSmith\ndef _write_food(name, calories, ...):\n    # actual CSV write\n    ...\n\n@tool\ndef log_food(name: str, calories: int, ...) -&gt; str:\n    \"\"\"Log a food item...\"\"\"\n    _write_food(name, calories, ...)        # ← calls the traceable helper\n    return \"✅ Logged...\"\n\n\nLayer 3 Evaluations with Datasets\nTracing tells you what happened in a single run. Evaluations tell you how well your agent performs repeatably, across many inputs at once.\nA LangSmith evaluation has three parts:\n1. A dataset input/output example pairs stored in LangSmith:\nfrom langsmith import Client\n\nclient = Client()\ndataset = client.create_dataset(\"wellness-agent-eval\")\nclient.create_examples(\n    inputs=[\n        {\"input\": \"I just ate oatmeal for breakfast\"},\n        {\"input\": \"I went for a 30-minute run\"},\n    ],\n    outputs=[\n        {\"expected_tool\": \"log_food\"},\n        {\"expected_tool\": \"log_workout\"},\n    ],\n    dataset_id=dataset.id,\n)\n2. An evaluator a function that scores each run:\ndef correct_tool_called(inputs, outputs, reference_outputs):\n    expected = reference_outputs.get(\"expected_tool\", \"\")\n    for msg in outputs.get(\"messages\", []):\n        if hasattr(msg, \"tool_calls\"):\n            for call in msg.tool_calls:\n                if call.get(\"name\") == expected:\n                    return {\"score\": 1, \"comment\": f\"Called '{expected}' ✅\"}\n    return {\"score\": 0, \"comment\": f\"Expected '{expected}' ❌\"}\n3. evaluate() runs every dataset example through your agent, scores the results, and saves the experiment to LangSmith:\nfrom langsmith.evaluation import evaluate\n\nresults = evaluate(\n    run_agent,                              # your agent wrapper function\n    data=\"wellness-agent-eval\",             # dataset name\n    evaluators=[correct_tool_called],\n    experiment_prefix=\"wellness-tool-selection\",\n)\nAfter evaluate() finishes, open LangSmith → your project → Experiments tab. You get a scored table for every input. Run it again after a fix and the two experiments appear side by side you now have data proving the fix worked.",
+    "crumbs": [
+      "Course Modules",
+      "Module 4"
+    ]
+  },
+  {
+    "objectID": "modules/module4.html#reading-a-full-trace",
+    "href": "modules/module4.html#reading-a-full-trace",
+    "title": "AI Agents Diagnostics with LangSmith",
+    "section": "Reading a Full Trace",
+    "text": "Reading a Full Trace\nHere is what a complete trace looks like in the Canvas tutor with all three layers active:\n▼ LangGraph                                           [4.3s] ✅\n  ▼ agent  (LLM: decides what tool to call)          [1.1s] ✅\n      input:  [user: \"What's due this week?\"]\n      output: [tool_call: get_upcoming_assignments({days_ahead: 7})]\n  ▼ tools                                             [3.1s] ✅\n    ▼ get_upcoming_assignments                        [3.1s] ✅\n      ▼ Canvas API: get_upcoming_assignments          [3.0s] ✅\n        ▼ Canvas API: list_courses                   [0.5s] ✅\n            output: 6 courses found\n        ▼ Canvas API: list_assignments               [0.4s] ✅  CSE 490R\n        ▼ Canvas API: list_assignments               [0.4s] ✅  DS 460\n        ▼ Canvas API: list_assignments               [0.3s] ✅  MATH 488\n  ▼ agent  (LLM: writes final reply)                 [1.1s] ✅\n      output: [ai: \"You have 3 assignments due this week...\"]\nWhat to look for on every trace:\n\nRed nodes unhandled exceptions with the exact error message right there\nDuration outliers one list_assignments span taking 3s when others take 0.3s\nTool inputs did the agent pass days_ahead: 7 or days_ahead: 30? The LLM’s extraction is visible\nMissing tool nodes if the agent answered without any tools node, the docstrings may be too vague",
+    "crumbs": [
+      "Course Modules",
+      "Module 4"
+    ]
+  },
+  {
+    "objectID": "modules/module4.html#common-bugs-and-their-trace-signatures",
+    "href": "modules/module4.html#common-bugs-and-their-trace-signatures",
+    "title": "AI Agents Diagnostics with LangSmith",
+    "section": "Common Bugs and Their Trace Signatures",
+    "text": "Common Bugs and Their Trace Signatures\n\n\n\n\n\n\n\nBug\nWhere to look\n\n\n\n\nWrong tool selected\nTool name in the tools node doesn’t match intent\n\n\nVague tool description\nLLM agent node shows reasoning that ignores the right tool\n\n\n404 from an API\n@traceable span for that endpoint is red with HTTP 404\n\n\nSlow response\nCompare durations across @traceable API spans\n\n\nAgent skips tools entirely\nNo tools node at all in the trace\n\n\nBad argument extraction\nTool input in the trace shows wrong parameter values\n\n\n\n\nThe Diagnostic Loop\n1. Reproduce the bug\n      │\n      ▼\n2. Open the trace in LangSmith\n      │\n      ▼\n3. Find the failing node (red, wrong tool, missing span)\n      │\n      ▼\n4. Inspect: inputs, outputs, duration, error message\n      │\n      ▼\n5. Fix in code → re-run → compare new trace to old\n      │\n      ▼\n6. Add the failing input to your eval dataset\n   so regressions are caught automatically next time",
+    "crumbs": [
+      "Course Modules",
+      "Module 4"
+    ]
+  },
+  {
+    "objectID": "modules/module4.html#setup",
+    "href": "modules/module4.html#setup",
+    "title": "AI Agents Diagnostics with LangSmith",
+    "section": "Setup",
+    "text": "Setup\nOpen both agents in Google Colab:\n\n\n\nNotebook\nLink\n\n\n\n\nWellness Agent\nOpen in Colab\n\n\nCanvas AI Tutor\nOpen in Colab\n\n\n\nLangSmith account: go to smith.langchain.com, sign up, create an API key under Settings → API Keys, and add it to your .env file:\nLANGSMITH_API_KEY=ls__your_key_here",
+    "crumbs": [
+      "Course Modules",
+      "Module 4"
+    ]
+  },
+  {
+    "objectID": "modules/module4.html#activity-1-observe-traceable-nested-spans",
+    "href": "modules/module4.html#activity-1-observe-traceable-nested-spans",
+    "title": "AI Agents Diagnostics with LangSmith",
+    "section": "Activity 1 Observe @traceable Nested Spans",
+    "text": "Activity 1 Observe @traceable Nested Spans\nRun Steps 1–7 in the Wellness Agent, then:\ndef ask(msg):\n    result = agent.invoke({\"messages\": [{\"role\": \"user\", \"content\": msg}]})\n    print(\"Assistant:\", result[\"messages\"][-1].content)\n\nask(\"I just ate oatmeal with banana for breakfast\")\nask(\"I went for a 30-minute run\")\nask(\"I had a big breakfast\")      # intentionally vague\nask(\"Show me today's summary\")\nOpen each trace in LangSmith → wellness-agent.\nFor the first prompt, expand the log_food tool node:\n\nDo you see a CSV: write_food_entry child span? What does its output say?\nHow long did the CSV write take compared to the LLM call?\nWhat values did the agent pass for protein, carbs, and fat? How did it estimate these?\n\nFor the vague prompt (“I had a big breakfast”):\n\nWhich tool was called? What calorie number was passed?\nIs this a reasonable estimate? Would you flag this run?",
+    "crumbs": [
+      "Course Modules",
+      "Module 4"
+    ]
+  },
+  {
+    "objectID": "modules/module4.html#activity-2-break-a-tool-description-read-the-trace",
+    "href": "modules/module4.html#activity-2-break-a-tool-description-read-the-trace",
+    "title": "AI Agents Diagnostics with LangSmith",
+    "section": "Activity 2 Break a Tool Description, Read the Trace",
+    "text": "Activity 2 Break a Tool Description, Read the Trace\nStep 1 In the Wellness Agent Step 5, change the log_food docstring:\n# ORIGINAL\n\"\"\"Log a food item to the wellness tracker.\nUse this whenever the user mentions eating something.\nEstimate calories and macros if the user does not give exact numbers.\n\"\"\"\n\n# BROKEN\n\"\"\"Does something with food data.\"\"\"\nRe-run Steps 5 and 6 to rebuild the agent.\nStep 2 Re-run two prompts:\nask(\"I just ate a chicken sandwich for lunch\")\nask(\"I had a big breakfast\")\nStep 3 Compare the old trace and new trace side-by-side in LangSmith.\nDiscuss as a class:\n\nDid the tools node appear in the broken trace, or did the agent skip it entirely?\nLook at the first agent node output. How did the reasoning change?\nIs there a CSV: write_food_entry child span? What does its presence or absence tell you?\n\nStep 4 Restore the original docstring before continuing.",
+    "crumbs": [
+      "Course Modules",
+      "Module 4"
+    ]
+  },
+  {
+    "objectID": "modules/module4.html#activity-3-run-the-evaluation-dataset",
+    "href": "modules/module4.html#activity-3-run-the-evaluation-dataset",
+    "title": "AI Agents Diagnostics with LangSmith",
+    "section": "Activity 3 Run the Evaluation Dataset",
+    "text": "Activity 3 Run the Evaluation Dataset\nIn the Wellness Agent, run Steps 9a, 9b, and 9c.\nWhile it runs, watch LangSmith you will see five new traces appear in the wellness-agent project, one per dataset example.\nAfter it finishes, go to LangSmith → wellness-agent → Experiments tab.\nAnswer:\n\nWhat was the overall correct_tool_called score (out of 5)?\nWhich example(s) scored 0? What tool did the agent call instead?\nNow break the log_workout docstring (same approach as Activity 2) and re-run the eval. How did the score change? Which examples were newly affected?",
+    "crumbs": [
+      "Course Modules",
+      "Module 4"
+    ]
+  },
+  {
+    "objectID": "modules/module4.html#your-turn-diagnose-and-evaluate-the-canvas-tutor",
+    "href": "modules/module4.html#your-turn-diagnose-and-evaluate-the-canvas-tutor",
+    "title": "AI Agents Diagnostics with LangSmith",
+    "section": "Your Turn: Diagnose and Evaluate the Canvas Tutor",
+    "text": "Your Turn: Diagnose and Evaluate the Canvas Tutor\nTask 1 Run the Canvas tutor and analyze the trace (3 min)\nRun Steps 1–7. Ask:\ndef ask(msg):\n    result = agent.invoke({\"messages\": [{\"role\": \"user\", \"content\": msg}]})\n    display(Markdown(f\"**Tutor:** {result['messages'][-1].content}\"))\n\nask(\"What assignments do I have due this week?\")\nOpen the trace in LangSmith → canvas-tutor. Fill in this table:\n\n\n\nSpan\nDuration\nWhat it returned\n\n\n\n\nCanvas API: list_courses\n\n\n\n\nCanvas API: list_assignments (first course)\n\n\n\n\nFull get_upcoming_assignments\n\n\n\n\nFull LangGraph run\n\n\n\n\n\nTask 2 Break a tool description and run the eval (5 min)\nChange get_upcoming_assignments’s docstring to:\n\"\"\"Retrieves some data from Canvas.\"\"\"\nRe-run Steps 5 and 6, then run the evaluation (Steps 8a and 8b):\nresults = evaluate(\n    run_agent,\n    data=\"canvas-tutor-eval\",\n    evaluators=[correct_tool_called],\n    experiment_prefix=\"canvas-broken-description\",\n)\nCompare the two experiments in LangSmith → canvas-tutor → Experiments.\nTask 3 Reflection (2 min)\nAnswer in 3–4 sentences:\n\nWhat advantage does running evaluate() give you over just reading traces manually?\nHow would you use eval datasets in a real project to prevent regressions when you change a tool description or system prompt?\n\nSubmit your duration table and reflection to Canvas before leaving class.",
+    "crumbs": [
+      "Course Modules",
+      "Module 4"
+    ]
+  },
+  {
+    "objectID": "modules/module6.html",
+    "href": "modules/module6.html",
+    "title": "Week 6 - Production & Scaling",
+    "section": "",
+    "text": "Key Quote:",
+    "crumbs": [
+      "Course Modules",
+      "Module 6"
+    ]
+  },
+  {
+    "objectID": "modules/module6.html#what-changes-when-you-go-to-production",
+    "href": "modules/module6.html#what-changes-when-you-go-to-production",
+    "title": "Week 6 - Production & Scaling",
+    "section": "What Changes When You Go to Production?",
+    "text": "What Changes When You Go to Production?\n\nThe Key Shift\nBuilding an agent in a notebook is fundamentally different from running it in production. Here’s the reality check:\n\n\n\n\n\n\n\nIn a Notebook\nIn Production\n\n\n\n\nOne user (you)\n50–10,000 users\n\n\nSmall context (few messages)\nPersistent conversations (hundreds of messages)\n\n\nNo cost pressure\nReal money per token\n\n\nNo concurrency\nInfrastructure bottlenecks\n\n\nNo legal constraints\nPrivacy, compliance, liability\n\n\n\nThe Wellness Agent notebook you’ve been working with is a prototype. This lesson is about making it production-ready.",
+    "crumbs": [
+      "Course Modules",
+      "Module 6"
+    ]
+  },
+  {
+    "objectID": "modules/module6.html#core-scaling-problems-in-agentic-ai",
+    "href": "modules/module6.html#core-scaling-problems-in-agentic-ai",
+    "title": "Week 6 - Production & Scaling",
+    "section": "Core Scaling Problems in Agentic AI",
+    "text": "Core Scaling Problems in Agentic AI\n\nProblem 1: Token Explosion\nContext grows linearly. Cost grows super-linearly.\nLet’s do the math:\nWithout context cap:\n- Message 1: Context = 1 message → Cost = 1x\n- Message 2: Context = 2 messages → Cost = 2x\n- Message 3: Context = 3 messages → Cost = 3x\n- ...\n- Message 100: Context = 100 messages → Cost = 100x\n\nCost per prompt = p × base_cost_factor\nCumulative cost after p prompts = p(p+1)/2 × base_cost_factor\nExample: 100 users, 20 prompts per day\n\nWithout cap: Cost per user = \\((20 \\times 21) / 2 = 210\\textrm{x base cost}\\)\nWith 10-message cap: Cost per user = \\(10 \\times 20 = 200\\textrm{x base cost}\\)\nSavings at 100 users: 5% immediate, grows exponentially with scale\n\nContext cap is not optional—it’s financial survival.\n\n\n\nProblem 2: Multi-User State\nOne notebook session ≠ 100 concurrent users.\nWhen you scale to multiple users, you must handle:\n\nUser sessions - Each user needs their own conversation history\nConversation storage - Where does the data live? Memory? Database?\nSession expiration - Do conversations last forever? 1 day? 30 days?\nIsolation between users - User A cannot see User B’s data\n\nIn production: You need persistent storage (SQLite/PostgreSQL), session isolation, and cleanup policies.\n\n\n\nProblem 3: Latency & UX\nUsers expect &lt; 2–3 second response times. Factors: LLM speed, tool execution, context size. Use streaming responses in production.\n\n\n\nProblem 4: Reliability\nAgents can: - Loop - Call the same tool 50 times in a row - Retry infinitely - Never give up on a failing API call - Hallucinate tool calls - Invent tools that don’t exist - Over-call APIs - Hit rate limits on external services - Chain tools inefficiently - Use 5 tools when 1 would suffice\nIn production: You must constrain behavior.\n# Production safety controls\nMAX_TOOL_CALLS_PER_TURN = 5\nMAX_RETRIES = 3\nTIMEOUT_SECONDS = 30\nMAX_RESPONSE_LENGTH = 2500\n\n# LangGraph recursion limit\nagent = create_react_agent(\n    llm,\n    tools,\n    state_modifier=\"system message here\",\n    max_iterations=MAX_TOOL_CALLS_PER_TURN  # Prevents infinite loops\n)\nWithout these limits, a single misbehaving agent can: - Drain your API budget - DOS your database - Block other users from getting responses",
+    "crumbs": [
+      "Course Modules",
+      "Module 6"
+    ]
+  },
+  {
+    "objectID": "modules/module6.html#context-as-a-budget",
+    "href": "modules/module6.html#context-as-a-budget",
+    "title": "Week 6 - Production & Scaling",
+    "section": "Context as a Budget",
+    "text": "Context as a Budget\nProduction rule: Never let context grow unbounded.\nThink of context as a limited resource like memory or disk space. You have three strategies:\nThree strategies:\n\nSliding Window - Keep last N messages (simple, predictable)\nSummary Memory - Compress old messages into summary (retains info, adds LLM cost)\nRetrieval-Based - Vector DB fetch relevant history (scales best, needs infrastructure)\n\n\n\nThe Wellness Agent Approach\nThe production Wellness Agent uses Sliding Window + Summary:\nclass AgentConfig(BaseModel):\n    max_messages_per_user: int = 30               # hard cap\n    summarize_after_messages: int = 18            # create summary at this point\n    max_summary_chars: int = 1200                # keep summaries small\nWhy this works for wellness tracking: - Recent meals/workouts are most important → sliding window - Long-term goals/preferences go in summary → summary memory - Most users don’t need more than 30-message history\nThe context_growth_cap = 50 in your simulation is not optional in production. It’s survival.",
+    "crumbs": [
+      "Course Modules",
+      "Module 6"
+    ]
+  },
+  {
+    "objectID": "modules/module6.html#context-cost-simulation",
+    "href": "modules/module6.html#context-cost-simulation",
+    "title": "Week 6 - Production & Scaling",
+    "section": "Context Cost Simulation",
+    "text": "Context Cost Simulation\nLet’s see the cost explosion in action. Run this simulation in a new Python cell:\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Simulation parameters\nnum_users = 50\ndays = 30\nprompts_per_day_per_user = 10\nbase_cost_per_1k_tokens = 0.002  # $0.002 per 1k tokens (example rate)\navg_tokens_per_message = 500\n\n# Scenario 1: No context cap (context grows forever)\ndef simulate_no_cap(num_users, days, prompts_per_day):\n    daily_costs = []\n    cumulative_cost = 0\n    \n    for day in range(days):\n        day_cost = 0\n        for user in range(num_users):\n            # Each user has sent (day * prompts_per_day) messages so far\n            context_size = day * prompts_per_day + prompts_per_day\n            \n            # Cost for this day's prompts (context grows with each prompt)\n            for prompt_num in range(1, prompts_per_day + 1):\n                current_context = context_size + prompt_num\n                tokens = current_context * avg_tokens_per_message\n                cost = (tokens / 1000) * base_cost_per_1k_tokens\n                day_cost += cost\n        \n        cumulative_cost += day_cost\n        daily_costs.append(cumulative_cost)\n    \n    return daily_costs\n\n# Scenario 2: Context cap at 50 messages\ndef simulate_with_cap(num_users, days, prompts_per_day, cap=50):\n    daily_costs = []\n    cumulative_cost = 0\n    \n    for day in range(days):\n        day_cost = 0\n        for user in range(num_users):\n            # Context is capped at 50 messages\n            context_size = min(cap, day * prompts_per_day + prompts_per_day)\n            \n            # Cost is constant after hitting the cap\n            for prompt_num in range(prompts_per_day):\n                tokens = context_size * avg_tokens_per_message\n                cost = (tokens / 1000) * base_cost_per_1k_tokens\n                day_cost += cost\n        \n        cumulative_cost += day_cost\n        daily_costs.append(cumulative_cost)\n    \n    return daily_costs\n\n# Run simulations\nno_cap_costs = simulate_no_cap(num_users, days, prompts_per_day_per_user)\ncapped_costs = simulate_with_cap(num_users, days, prompts_per_day_per_user, cap=50)\n\n# Plot results\nplt.figure(figsize=(12, 6))\nplt.plot(range(1, days + 1), no_cap_costs, label='No Context Cap', linewidth=2, color='red')\nplt.plot(range(1, days + 1), capped_costs, label='Context Cap = 50 messages', linewidth=2, color='green')\nplt.xlabel('Days', fontsize=12)\nplt.ylabel('Cumulative Cost ($)', fontsize=12)\nplt.title(f'Cumulative LLM Cost Over {days} Days ({num_users} users, {prompts_per_day_per_user} prompts/day)', fontsize=14)\nplt.legend(fontsize=11)\nplt.grid(True, alpha=0.3)\nplt.tight_layout()\nplt.show()\n\n# Print final costs\nprint(f\"\\n{'='*60}\")\nprint(f\"Final Cost Comparison (after {days} days):\")\nprint(f\"{'='*60}\")\nprint(f\"No Context Cap:        ${no_cap_costs[-1]:.2f}\")\nprint(f\"With Cap (50 msg):     ${capped_costs[-1]:.2f}\")\nprint(f\"Savings:               ${no_cap_costs[-1] - capped_costs[-1]:.2f} ({((no_cap_costs[-1] - capped_costs[-1]) / no_cap_costs[-1] * 100):.1f}%)\")\nprint(f\"{'='*60}\\n\")",
+    "crumbs": [
+      "Course Modules",
+      "Module 6"
+    ]
+  },
+  {
+    "objectID": "modules/module6.html#key-observations",
+    "href": "modules/module6.html#key-observations",
+    "title": "Week 6 - Production & Scaling",
+    "section": "Key Observations",
+    "text": "Key Observations\nDiscuss as a class:\n\nWhy does cost explode? - Red line is quadratic, not linear\nWhy does capping flatten it? - Cost per prompt becomes constant after hitting cap\nWhat’s the lesson? - Context cap is mandatory for production viability\n\nQuick exercise: Try num_users = 500. What happens to the gap?",
+    "crumbs": [
+      "Course Modules",
+      "Module 6"
+    ]
+  },
+  {
+    "objectID": "modules/module6.html#production-hardening-exercise",
+    "href": "modules/module6.html#production-hardening-exercise",
+    "title": "Week 6 - Production & Scaling",
+    "section": "Production Hardening Exercise",
+    "text": "Production Hardening Exercise\nObjective: You will analyze a production agent implementation that contains critical scaling vulnerabilities. Your task is to systematically identify these vulnerabilities, understand their impact on production systems, and implement robust fixes that ensure reliability and cost-effectiveness at scale.\n\nThe Broken Agent\nHere’s the starting code students receive:\n# BROKEN PRODUCTION AGENT - DO NOT USE IN REAL PRODUCTION\nimport os\nfrom langchain_google_genai import ChatGoogleGenerativeAI\nfrom langchain_core.messages import HumanMessage, AIMessage\nfrom langchain.tools import tool\n\n# LLM setup\nllm = ChatGoogleGenerativeAI(model=\"gemini-2.0-flash\", temperature=0.4)\n\n# Tools\n@tool\ndef log_food(name: str, calories: float) -&gt; str:\n    \"\"\"Log a food item.\"\"\"\n    return f\"Logged {name}: {calories} cal\"\n\n@tool\ndef log_workout(name: str, minutes: float) -&gt; str:\n    \"\"\"Log a workout.\"\"\"\n    return f\"Logged {name}: {minutes} min\"\n\ntools = [log_food, log_workout]\n\n# PROBLEM: Global conversation store (no user isolation)\nconversation_history = []\n\n# PROBLEM: No context cap\ndef chat(user_message: str):\n    conversation_history.append(HumanMessage(content=user_message))\n    \n    # PROBLEM: Sends entire conversation history every time\n    response = llm.invoke(conversation_history)\n    conversation_history.append(response)\n    \n    # PROBLEM: No token counting\n    # PROBLEM: No rate limiting\n    # PROBLEM: No logging\n    # PROBLEM: No error handling\n    \n    return response.content\n\n# Usage (pretend this is multiple users)\nprint(chat(\"I ate a salad\"))\nprint(chat(\"I went for a run\"))",
+    "crumbs": [
+      "Course Modules",
+      "Module 6"
+    ]
+  },
+  {
+    "objectID": "modules/module6.html#task-1-identify-scaling-risks-8-min",
+    "href": "modules/module6.html#task-1-identify-scaling-risks-8-min",
+    "title": "Week 6 - Production & Scaling",
+    "section": "Task 1 – Identify Scaling Risks (8 min)",
+    "text": "Task 1 – Identify Scaling Risks (8 min)\nStudents must list:\n\nWhere money is wasted\n\nHint: Look at what gets sent to the LLM on each call\n\nWhere memory grows\n\nHint: What happens to conversation_history over time?\n\nWhere failure could occur\n\nHint: What if the LLM call times out? What if it returns an error?\n\nWhere multiple users would collide\n\nHint: What if two users call chat() at the same time?\n\n\nDeliverable: List of 4-6 specific vulnerabilities in the code.",
+    "crumbs": [
+      "Course Modules",
+      "Module 6"
+    ]
+  },
+  {
+    "objectID": "modules/module6.html#task-2-add-production-controls-20-min",
+    "href": "modules/module6.html#task-2-add-production-controls-20-min",
+    "title": "Week 6 - Production & Scaling",
+    "section": "Task 2 – Add Production Controls (20 min)",
+    "text": "Task 2 – Add Production Controls (20 min)\nStudents implement these fixes:\n\nFix 1: Add Context Cap\nMAX_MESSAGES = 20\n\ndef cap_context(messages):\n    if len(messages) &gt; MAX_MESSAGES:\n        return messages[-MAX_MESSAGES:]\n    return messages\n\n\nFix 2: Add User Isolation\nsessions = {}  # {user_id: [messages]}\n\ndef get_or_create_session(user_id: str):\n    if user_id not in sessions:\n        sessions[user_id] = []\n    return sessions[user_id]\n\n\nFix 3: Add Token Counting\ndef estimate_tokens(messages):\n    \"\"\"Rough estimate: 1 token ≈ 4 characters.\"\"\"\n    total_chars = sum(len(m.content) for m in messages)\n    return total_chars // 4\n\ndef chat(user_id: str, user_message: str):\n    messages = get_or_create_session(user_id)\n    messages.append(HumanMessage(content=user_message))\n    messages = cap_context(messages)\n    \n    # Log token count\n    token_count = estimate_tokens(messages)\n    print(f\"[INFO] user={user_id}, tokens={token_count}\")\n    \n    response = llm.invoke(messages)\n    messages.append(response)\n    \n    return response.content\n\n\nFix 4: Add Basic Rate Limiting\nfrom collections import defaultdict, deque\nfrom time import time\n\nrequest_times = defaultdict(lambda: deque(maxlen=100))\n\ndef check_rate_limit(user_id: str, max_per_minute: int = 20):\n    now = time()\n    request_times[user_id].append(now)\n    \n    # Count requests in last 60 seconds\n    recent = [t for t in request_times[user_id] if now - t &lt;= 60]\n    \n    if len(recent) &gt; max_per_minute:\n        raise Exception(f\"Rate limit exceeded: {len(recent)}/{max_per_minute} per minute\")\n\n\nFix 5: Add Logging\nimport logging\n\nlogging.basicConfig(level=logging.INFO, format=\"%(asctime)s %(levelname)s %(message)s\")\nlogger = logging.getLogger(\"wellness_agent\")\n\ndef chat(user_id: str, user_message: str):\n    check_rate_limit(user_id)\n    \n    messages = get_or_create_session(user_id)\n    messages.append(HumanMessage(content=user_message))\n    messages = cap_context(messages)\n    \n    token_count = estimate_tokens(messages)\n    logger.info(f\"user={user_id} tokens={token_count} msg='{user_message[:30]}...'\")\n    \n    response = llm.invoke(messages)\n    messages.append(response)\n    \n    return response.content",
+    "crumbs": [
+      "Course Modules",
+      "Module 6"
+    ]
+  },
+  {
+    "objectID": "modules/module6.html#deliverable",
+    "href": "modules/module6.html#deliverable",
+    "title": "Week 6 - Production & Scaling",
+    "section": "Deliverable",
+    "text": "Deliverable\nPeer Discussion: Talk with the peers around you and discuss which of the 5 fixes you implemented and why each one is relevant to production systems. Share insights on which fix you believe prevents the biggest failure and why.",
+    "crumbs": [
+      "Course Modules",
+      "Module 6"
+    ]
+  },
+  {
+    "objectID": "modules/module6.html#task-3-test-multi-user-isolation-2-min",
+    "href": "modules/module6.html#task-3-test-multi-user-isolation-2-min",
+    "title": "Week 6 - Production & Scaling",
+    "section": "Task 3 – Test Multi-User Isolation (2 min)",
+    "text": "Task 3 – Test Multi-User Isolation (2 min)\nQuick test of your fixes:\n# Test with 3 different users\nprint(chat(\"alice\", \"I ate a salad\"))\nprint(chat(\"bob\", \"I went for a run\"))\nprint(chat(\"alice\", \"What did I eat?\"))  # Should only see Alice's data\nprint(chat(\"bob\", \"What did I do?\"))    # Should only see Bob's data\nVerify: Alice and Bob have separate conversation histories.",
+    "crumbs": [
+      "Course Modules",
+      "Module 6"
+    ]
+  },
+  {
+    "objectID": "modules/module6.html#production-responsibility",
+    "href": "modules/module6.html#production-responsibility",
+    "title": "Week 6 - Production & Scaling",
+    "section": "Production = Responsibility",
+    "text": "Production = Responsibility\nYour Wellness Agent stores health data. That means:\n\nPrivacy risks - Health info is sensitive (HIPAA/GDPR compliance)\nTechnical risks - Bad calorie advice could harm users\nBusiness risks - Runaway costs can kill your service\n\nAt scale, your agent’s failures affect real people.\nProduction is not just making it work—it’s making it work safely, reliably, and ethically.",
+    "crumbs": [
+      "Course Modules",
+      "Module 6"
+    ]
+  },
+  {
+    "objectID": "modules/module6.html#every-token-is-a-cost",
+    "href": "modules/module6.html#every-token-is-a-cost",
+    "title": "Week 6 - Production & Scaling",
+    "section": "1. Every Token Is a Cost",
+    "text": "1. Every Token Is a Cost\nTrack it. Log every request, count every token, monitor every user.",
+    "crumbs": [
+      "Course Modules",
+      "Module 6"
+    ]
+  },
+  {
+    "objectID": "modules/module6.html#context-is-liability",
+    "href": "modules/module6.html#context-is-liability",
+    "title": "Week 6 - Production & Scaling",
+    "section": "2. Context Is Liability",
+    "text": "2. Context Is Liability\nSummarize or cap it. Never let context grow unbounded. Context = memory = money = legal risk.",
+    "crumbs": [
+      "Course Modules",
+      "Module 6"
+    ]
+  },
+  {
+    "objectID": "modules/module6.html#agents-must-be-constrained",
+    "href": "modules/module6.html#agents-must-be-constrained",
+    "title": "Week 6 - Production & Scaling",
+    "section": "3. Agents Must Be Constrained",
+    "text": "3. Agents Must Be Constrained\n\nTool call limits\nRetry limits\nTime limits\nResponse length limits",
+    "crumbs": [
+      "Course Modules",
+      "Module 6"
+    ]
+  },
+  {
+    "objectID": "modules/module6.html#memory-must-be-designed",
+    "href": "modules/module6.html#memory-must-be-designed",
+    "title": "Week 6 - Production & Scaling",
+    "section": "4. Memory Must Be Designed",
+    "text": "4. Memory Must Be Designed\nNot appended forever. Choose a strategy: sliding window, summary, retrieval.",
+    "crumbs": [
+      "Course Modules",
+      "Module 6"
+    ]
+  },
+  {
+    "objectID": "modules/module6.html#observability-is-mandatory",
+    "href": "modules/module6.html#observability-is-mandatory",
+    "title": "Week 6 - Production & Scaling",
+    "section": "5. Observability Is Mandatory",
+    "text": "5. Observability Is Mandatory\n\nLogging - What happened?\nMetrics - How much did it cost?\nMonitoring - Is it still working?",
+    "crumbs": [
+      "Course Modules",
+      "Module 6"
+    ]
+  },
+  {
+    "objectID": "modules/module6.html#cost-simulation-analysis",
+    "href": "modules/module6.html#cost-simulation-analysis",
+    "title": "Week 6 - Production & Scaling",
+    "section": "Cost Simulation Analysis",
+    "text": "Cost Simulation Analysis\n\nRun the cost simulation with:\n\nnum_users = 200\nprompts_per_day_per_user = 15\ndays = 30\n\nTest caps of: 20, 50, 100 messages\nAnswer these questions:\n\nWhat’s the total cost difference between no cap and 20-message cap?\nAt what day does the capped version reach 50% savings?\nIf you charged users $10/month, what cap size keeps you profitable?\n\n\nQuestion: What insights did you gain about context management from this simulation?",
+    "crumbs": [
+      "Course Modules",
+      "Module 6"
+    ]
+  },
+  {
+    "objectID": "modules/module6.html#production-checklist-challenge",
+    "href": "modules/module6.html#production-checklist-challenge",
+    "title": "Week 6 - Production & Scaling",
+    "section": "Production Checklist / Challenge",
+    "text": "Production Checklist / Challenge\nTake your hardened agent from today’s activity. Add ONE more production feature:\nOption A: Cost monitoring - Track and display total cost per user\nOption B: Session persistence - Save/load sessions from JSON files\nOption C: Summary memory - Implement the summarization strategy\nPersonal Test: Code snippet (5-15 lines) + 2-3 sentences explaining what it does",
+    "crumbs": [
+      "Course Modules",
+      "Module 6"
+    ]
+  },
+  {
+    "objectID": "resources/colabs.html",
+    "href": "resources/colabs.html",
+    "title": "Google Colab Notebooks",
+    "section": "",
+    "text": "If you’re new to Google Colab, here are some tips:\n\nSave a Copy: Always use “File → Save a copy in Drive” before editing\nRuntime: Make sure you select the appropriate runtime (usually Python 3)\nAPI Keys: Store sensitive keys in Colab Secrets, never hardcode them\nDependencies: Run the pip install cells at the beginning of each notebook\nExecution: Run cells in order from top to bottom for best results",
+    "crumbs": [
+      "Resources",
+      "Notebooks"
+    ]
+  },
+  {
+    "objectID": "resources/colabs.html#getting-started-with-colab",
+    "href": "resources/colabs.html#getting-started-with-colab",
+    "title": "Google Colab Notebooks",
+    "section": "",
+    "text": "If you’re new to Google Colab, here are some tips:\n\nSave a Copy: Always use “File → Save a copy in Drive” before editing\nRuntime: Make sure you select the appropriate runtime (usually Python 3)\nAPI Keys: Store sensitive keys in Colab Secrets, never hardcode them\nDependencies: Run the pip install cells at the beginning of each notebook\nExecution: Run cells in order from top to bottom for best results",
+    "crumbs": [
+      "Resources",
+      "Notebooks"
+    ]
+  },
+  {
+    "objectID": "resources/colabs.html#course-colab-notebooks",
+    "href": "resources/colabs.html#course-colab-notebooks",
+    "title": "Google Colab Notebooks",
+    "section": "Course Colab Notebooks",
+    "text": "Course Colab Notebooks\nAll notebooks are hosted on Google Colab for easy access and execution. It’s recommended to save a copy to your own Google Drive before making changes.\n\n\nWeek 3 - MCP Lesson\nProject: Building AI Agents with Model Context Protocol (MCP)\nDescription: Learn how to connect AI agents to external services using the Model Context Protocol (MCP). This hands-on notebook teaches you to set up Canvas MCP connections, build agents that use tools, and understand the complete flow from user input to tool execution and back. You’ll create an agent that can interact with Canvas API and other external services.\nTopics Covered: - MCP Server setup and configuration - Creating and using tools within an agent - Canvas MCP integration - Understanding the User → AI → MCP Client → MCP Server → Tool flow\nOpen in Colab →\n\n\n\nWeek 4 - Wellness Agent (LangSmith Diagnostics)\nProject: Health and Wellness Tracking Agent with Observability\nDescription: Build a wellness tracking agent that logs food intake, exercise, and sleep patterns while learning production-level observability with LangSmith. This notebook demonstrates how to trace agent execution, identify bottlenecks, and debug complex agent behaviors. Perfect for understanding how to monitor AI systems in production.\nTopics Covered: - LangSmith tracing and observability - Building stateful agents with memory - Creating custom tools for wellness tracking - Debugging agent tool calls and responses - Using @traceable decorators for visibility\nOpen in Colab →\n\n\n\nWeek 4 - Canvas AI Tutor (LangSmith Diagnostics)\nProject: Intelligent Canvas Integration Agent\nDescription: Create an AI tutor that integrates with Canvas LMS using MCP to help students access assignments, grades, and course materials. This notebook focuses on real-world agent diagnostics, showing how to trace complex MCP interactions and optimize agent performance using LangSmith’s evaluation tools.\nTopics Covered: - Canvas API integration via MCP - Multi-step agent workflows - LangSmith evaluation datasets - Trace tree analysis for debugging - Production-ready error handling\nOpen in Colab →\n\n\n\nWeek 6 - Wellness Agent (Production & Scaling - BROKEN)\nProject: Production-Ready Multi-User Wellness Agent (Debugging Exercise)\nDescription: This is an intentionally broken production deployment of the Wellness Agent designed as a hands-on debugging and scaling exercise. Learn to identify and fix common production issues including token explosion, context overflow, memory leaks, and concurrency problems. Experience real-world challenges of scaling AI agents from prototype to production.\nTopics Covered: - Context management at scale - Token cost optimization - Multi-user state management - Production hardening techniques - Identifying scaling bottlenecks - Memory management strategies\nOpen in Colab →\n\n\n\nWeek 7 - Data Drift and Retraining Simulation\nProject: Understanding Model Drift and Weight Updates\nDescription: Simulate data drift scenarios and learn when and how to retrain machine learning models. This notebook demonstrates how model weights become outdated as data distributions change over time, and teaches you systematic approaches to detecting drift and maintaining model accuracy in production environments.\n**T",
+    "crumbs": [
+      "Resources",
+      "Notebooks"
+    ]
+  },
+  {
+    "objectID": "resources/colabs.html#getting-started-with-colab-1",
+    "href": "resources/colabs.html#getting-started-with-colab-1",
+    "title": "Google Colab Notebooks",
+    "section": "Getting Started with Colab",
+    "text": "Getting Started with Colab\nIf you’re new to Google Colab, here are some tips:\n\nSave a Copy: Always use “File → Save a copy in Drive” before editing\nRuntime: Make sure you select the appropriate runtime (usually Python 3)\nAPI Keys: Store sensitive keys in Colab Secrets, never hardcode them\nDependencies: Run the pip install cells at the beginning of each notebook\nExecution: Run cells in order from top to bottom for best results",
+    "crumbs": [
+      "Resources",
+      "Notebooks"
+    ]
+  },
+  {
+    "objectID": "resources/colabs.html#support",
+    "href": "resources/colabs.html#support",
+    "title": "Google Colab Notebooks",
+    "section": "Support",
+    "text": "Support\nIf you encounter issues with any notebook: - Check that all dependencies are installed - Verify your API keys are correctly configured - Review the error messages carefully - Consult the course modules for additional context",
+    "crumbs": [
+      "Resources",
+      "Notebooks"
+    ]
+  },
+  {
+    "objectID": "resources/dictionary.html",
+    "href": "resources/dictionary.html",
+    "title": "Course Dictionary",
+    "section": "",
+    "text": "Essential documentation and resources used throughout the course.\n\n\n\n\n\nOpenAI API Concepts - Core concepts, models, and API usage\nOpenAI Platform Overview - Main documentation hub\n\n\n\n\n\nGemini API Key Setup - Get your API key\nGemini Models - Available models and specifications\nGemini Text Generation - Working with text generation\nGemini Prompting Strategies - Best practices for prompts\nPrompting with Files - File handling and multimodal inputs\n\n\n\n\n\nClaude Overview - Getting started with Claude\nClaude 4 Best Practices - Prompt engineering guide\n\n\n\n\n\n\n\n\n\nLangChain Messages - Understanding message types\nWorkflows and Agents - Architecture patterns\nShort-Term Memory - Memory management strategies\n\n\n\n\n\nLangSmith Platform - Sign up and access dashboard\nLangSmith Documentation - Complete documentation\n@traceable Decorator - Code annotation for tracing\nEvaluation Quickstart - Building evaluation datasets\nDeployment Guide - Production deployment\n\n\n\n\n\ncreate_react_agent Docs - React agent pattern\n\n\n\n\n\n\n\nMCP Specification - Official protocol specification\nBuilding Your First MCP Server (2026) - Complete Python tutorial\nAwesome MCP Servers - Community MCP server collection\n\n\n\n\n\n\n\n\nn8n Cloud Platform - Get started with cloud version\nAgent Quickstart - Build your first agent\nn8n Academy - Learning paths and tutorials\n\n\n\n\n\nLangflow Website - Download and installation\nLangflow Quickstart - First workflow tutorial\nLangflow Installation - Alternative installation methods\n\n\n\n\n\n\n\n\n\nA Developer’s Guide to Building Scalable AI - Workflows vs Agents comparison\nAgentic Pattern Guide - Diagramming and use cases\n\n\n\n\n\nDebugging Deep Agents with LangSmith - LangChain blog\nThe Rise of Context Engineering - Harrison’s Hot Takes\n\n\n\n\n\n\n\nLangSmith 101 for AI Observability - James Briggs - Complete LangSmith walkthrough\nBusiness Mindset on Scaling - Understanding scalability\n\n\n\n\n\n\nNode.js - Required for n8n local installation",
+    "crumbs": [
+      "Resources",
+      "Reference"
+    ]
+  },
+  {
+    "objectID": "resources/dictionary.html#llm-provider-documentation",
+    "href": "resources/dictionary.html#llm-provider-documentation",
+    "title": "Course Dictionary",
+    "section": "",
+    "text": "OpenAI API Concepts - Core concepts, models, and API usage\nOpenAI Platform Overview - Main documentation hub\n\n\n\n\n\nGemini API Key Setup - Get your API key\nGemini Models - Available models and specifications\nGemini Text Generation - Working with text generation\nGemini Prompting Strategies - Best practices for prompts\nPrompting with Files - File handling and multimodal inputs\n\n\n\n\n\nClaude Overview - Getting started with Claude\nClaude 4 Best Practices - Prompt engineering guide",
+    "crumbs": [
+      "Resources",
+      "Reference"
+    ]
+  },
+  {
+    "objectID": "resources/dictionary.html#langchain-langgraph",
+    "href": "resources/dictionary.html#langchain-langgraph",
+    "title": "Course Dictionary",
+    "section": "",
+    "text": "LangChain Messages - Understanding message types\nWorkflows and Agents - Architecture patterns\nShort-Term Memory - Memory management strategies\n\n\n\n\n\nLangSmith Platform - Sign up and access dashboard\nLangSmith Documentation - Complete documentation\n@traceable Decorator - Code annotation for tracing\nEvaluation Quickstart - Building evaluation datasets\nDeployment Guide - Production deployment\n\n\n\n\n\ncreate_react_agent Docs - React agent pattern",
+    "crumbs": [
+      "Resources",
+      "Reference"
+    ]
+  },
+  {
+    "objectID": "resources/dictionary.html#model-context-protocol-mcp",
+    "href": "resources/dictionary.html#model-context-protocol-mcp",
+    "title": "Course Dictionary",
+    "section": "",
+    "text": "MCP Specification - Official protocol specification\nBuilding Your First MCP Server (2026) - Complete Python tutorial\nAwesome MCP Servers - Community MCP server collection",
+    "crumbs": [
+      "Resources",
+      "Reference"
+    ]
+  },
+  {
+    "objectID": "resources/dictionary.html#no-codelow-code-workflow-tools",
+    "href": "resources/dictionary.html#no-codelow-code-workflow-tools",
+    "title": "Course Dictionary",
+    "section": "",
+    "text": "n8n Cloud Platform - Get started with cloud version\nAgent Quickstart - Build your first agent\nn8n Academy - Learning paths and tutorials\n\n\n\n\n\nLangflow Website - Download and installation\nLangflow Quickstart - First workflow tutorial\nLangflow Installation - Alternative installation methods",
+    "crumbs": [
+      "Resources",
+      "Reference"
+    ]
+  },
+  {
+    "objectID": "resources/dictionary.html#articles-learning-resources",
+    "href": "resources/dictionary.html#articles-learning-resources",
+    "title": "Course Dictionary",
+    "section": "",
+    "text": "A Developer’s Guide to Building Scalable AI - Workflows vs Agents comparison\nAgentic Pattern Guide - Diagramming and use cases\n\n\n\n\n\nDebugging Deep Agents with LangSmith - LangChain blog\nThe Rise of Context Engineering - Harrison’s Hot Takes",
+    "crumbs": [
+      "Resources",
+      "Reference"
+    ]
+  },
+  {
+    "objectID": "resources/dictionary.html#video-resources",
+    "href": "resources/dictionary.html#video-resources",
+    "title": "Course Dictionary",
+    "section": "",
+    "text": "LangSmith 101 for AI Observability - James Briggs - Complete LangSmith walkthrough\nBusiness Mindset on Scaling - Understanding scalability",
+    "crumbs": [
+      "Resources",
+      "Reference"
+    ]
+  },
+  {
+    "objectID": "resources/dictionary.html#development-tools",
+    "href": "resources/dictionary.html#development-tools",
+    "title": "Course Dictionary",
+    "section": "",
+    "text": "Node.js - Required for n8n local installation",
+    "crumbs": [
+      "Resources",
+      "Reference"
+    ]
+  },
+  {
+    "objectID": "resources/dictionary.html#a",
+    "href": "resources/dictionary.html#a",
+    "title": "Course Dictionary",
+    "section": "A",
+    "text": "A\n\nAgent\n\nAn AI system that can autonomously choose which tools to call and when, based on user input and context. Unlike workflows, agents make dynamic decisions rather than following predetermined paths.\n\nAI Message\n\nA message type in LangChain representing responses from the language model. Part of the conversation history structure.\n\nAPI Key\n\nA secure credential that authenticates your application to external services. Acts as a password for accessing LLM providers like OpenAI, Gemini, or Claude.\n\nAgentic Pattern\n\nDesign patterns for building AI agents, including reflection, planning, tool use, and multi-agent collaboration.",
+    "crumbs": [
+      "Resources",
+      "Reference"
+    ]
+  },
+  {
+    "objectID": "resources/dictionary.html#c",
+    "href": "resources/dictionary.html#c",
+    "title": "Course Dictionary",
+    "section": "C",
+    "text": "C\n\nChat Model\n\nA language model specifically designed for conversational interactions, accepting a sequence of messages and returning a response.\n\nContext Engineering\n\nThe practice of structuring and managing the information provided to a language model to optimize its outputs. Includes prompt engineering, RAG, and memory management.\n\nContext Window\n\nThe maximum amount of text (measured in tokens) that a language model can process at once, including both input and output.",
+    "crumbs": [
+      "Resources",
+      "Reference"
+    ]
+  },
+  {
+    "objectID": "resources/dictionary.html#d",
+    "href": "resources/dictionary.html#d",
+    "title": "Course Dictionary",
+    "section": "D",
+    "text": "D\n\nData Drift\n\nWhen the statistical properties of input data change over time, causing model performance to degrade if weights aren’t updated.\n\nDocstring\n\nDocumentation within a function that describes its purpose and parameters. For AI tools, docstrings are critical because the LLM reads them to decide when to call the tool.",
+    "crumbs": [
+      "Resources",
+      "Reference"
+    ]
+  },
+  {
+    "objectID": "resources/dictionary.html#e",
+    "href": "resources/dictionary.html#e",
+    "title": "Course Dictionary",
+    "section": "E",
+    "text": "E\n\nEmbedding\n\nA numerical representation of text that captures semantic meaning, used for similarity search and retrieval.\n\nEnvironment Variable\n\nConfiguration values stored outside of code (like in .env files) to keep sensitive information like API keys secure.\n\nEvaluation Dataset\n\nA collection of test cases used to measure agent performance systematically. Used with LangSmith to validate agent behavior.",
+    "crumbs": [
+      "Resources",
+      "Reference"
+    ]
+  },
+  {
+    "objectID": "resources/dictionary.html#f",
+    "href": "resources/dictionary.html#f",
+    "title": "Course Dictionary",
+    "section": "F",
+    "text": "F\n\nFunction Calling\n\nThe ability of an LLM to output structured requests to execute specific functions or tools based on the conversation context.",
+    "crumbs": [
+      "Resources",
+      "Reference"
+    ]
+  },
+  {
+    "objectID": "resources/dictionary.html#l",
+    "href": "resources/dictionary.html#l",
+    "title": "Course Dictionary",
+    "section": "L",
+    "text": "L\n\nLangChain\n\nA Python framework for building applications with large language models, providing abstractions for prompts, chains, agents, and memory.\n\nLangGraph\n\nA library for building stateful, multi-step agent workflows with cycles and conditional logic.\n\nLangSmith\n\nAn observability and evaluation platform for AI applications, providing tracing, debugging, and monitoring capabilities.",
+    "crumbs": [
+      "Resources",
+      "Reference"
+    ]
+  },
+  {
+    "objectID": "resources/dictionary.html#m",
+    "href": "resources/dictionary.html#m",
+    "title": "Course Dictionary",
+    "section": "M",
+    "text": "M\n\nMemory\n\nThe ability of an agent to retain information across multiple turns of conversation. Can be short-term (within a session) or long-term (persistent across sessions).\n\nMessage\n\nThe fundamental unit of conversation in chat models. Types include System, Human, AI, Tool, and Function messages.\n\nMCP (Model Context Protocol)\n\nA standardized protocol for connecting AI agents to external tools and data sources through client-server architecture.\n\nMCP Client\n\nThe component that runs alongside your AI agent, translating tool calls into MCP protocol requests.\n\nMCP Server\n\nA service that exposes tools and data to AI agents through the MCP protocol. Can run locally or remotely.\n\nMultimodality\n\nThe ability of a model to work with multiple types of input (text, images, audio, video) and/or generate multiple types of output.",
+    "crumbs": [
+      "Resources",
+      "Reference"
+    ]
+  },
+  {
+    "objectID": "resources/dictionary.html#o",
+    "href": "resources/dictionary.html#o",
+    "title": "Course Dictionary",
+    "section": "O",
+    "text": "O\n\nObservability\n\nThe ability to understand what’s happening inside your AI system through logs, traces, and metrics. Critical for production deployments.",
+    "crumbs": [
+      "Resources",
+      "Reference"
+    ]
+  },
+  {
+    "objectID": "resources/dictionary.html#p",
+    "href": "resources/dictionary.html#p",
+    "title": "Course Dictionary",
+    "section": "P",
+    "text": "P\n\nPrompt Engineering\n\nThe practice of crafting effective prompts to elicit desired behaviors from language models.\n\nProduction\n\nThe live environment where your AI agent serves real users, as opposed to development or testing environments.",
+    "crumbs": [
+      "Resources",
+      "Reference"
+    ]
+  },
+  {
+    "objectID": "resources/dictionary.html#r",
+    "href": "resources/dictionary.html#r",
+    "title": "Course Dictionary",
+    "section": "R",
+    "text": "R\n\nRAG (Retrieval-Augmented Generation)\n\nA technique that enhances LLM responses by retrieving relevant information from external knowledge sources before generating an answer.\n\nReact Agent\n\nA common agent pattern that follows a Reasoning-Acting loop: the agent reasons about what to do, acts by calling tools, observes results, and repeats.\n\nRetraining\n\nThe process of updating a machine learning model’s weights using new data to account for data drift or improve performance.",
+    "crumbs": [
+      "Resources",
+      "Reference"
+    ]
+  },
+  {
+    "objectID": "resources/dictionary.html#s",
+    "href": "resources/dictionary.html#s",
+    "title": "Course Dictionary",
+    "section": "S",
+    "text": "S\n\nSchema\n\nThe structure defining what parameters a tool accepts, including types and descriptions. Automatically generated from function signatures.\n\nSystem Instruction\n\nThe initial prompt that sets the behavior, personality, and constraints for an AI agent. Also called system prompt or system message.",
+    "crumbs": [
+      "Resources",
+      "Reference"
+    ]
+  },
+  {
+    "objectID": "resources/dictionary.html#t",
+    "href": "resources/dictionary.html#t",
+    "title": "Course Dictionary",
+    "section": "T",
+    "text": "T\n\nTemperature\n\nA parameter controlling randomness in LLM outputs. Lower values (0.0-0.3) produce more deterministic responses; higher values (0.7-1.0) produce more creative/varied outputs.\n\nToken\n\nThe basic unit of text processing for LLMs. Roughly 3-4 characters or 0.75 words per token. Both input and output are measured in tokens for billing.\n\nTool\n\nA function that an AI agent can execute to perform specific tasks like searching, retrieving data, or interacting with external APIs.\n\nTraceable\n\nA decorator (@traceable) that exposes function calls as named spans in LangSmith traces, making internal logic visible for debugging.\n\nTrace Tree\n\nA hierarchical visualization in LangSmith showing the sequence of LLM calls, tool invocations, and other operations during agent execution.",
+    "crumbs": [
+      "Resources",
+      "Reference"
+    ]
+  },
+  {
+    "objectID": "resources/dictionary.html#w",
+    "href": "resources/dictionary.html#w",
+    "title": "Course Dictionary",
+    "section": "W",
+    "text": "W\n\nWeights\n\nThe learned parameters in a neural network that encode patterns from training data. Updated during training or retraining.\n\nWorkflow\n\nA predetermined sequence of steps for processing information, as opposed to an agent that makes dynamic decisions. More predictable but less flexible than agents.",
+    "crumbs": [
+      "Resources",
+      "Reference"
+    ]
+  },
+  {
+    "objectID": "resources/dictionary.html#additional-resources",
+    "href": "resources/dictionary.html#additional-resources",
+    "title": "Course Dictionary",
+    "section": "Additional Resources",
+    "text": "Additional Resources\nFor terms not listed here, consult: - The official documentation links above - Course module content - LangChain glossary - Provider-specific documentation",
+    "crumbs": [
+      "Resources",
+      "Reference"
+    ]
   }
 ]

@@ -1,5 +1,21 @@
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('Assets/background-vector.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.09;
+  z-index: -1;
 }
 
 .navbar {
@@ -8,8 +24,39 @@ body {
 }
 
 .navbar-brand img,
-.navbar-logo img {
-  height: 90px !important;
+.navbar-logo img,
+img.sidebar-logo {
+  height: 250px !important;
   width: auto !important;
-  max-height: 90px !important;
+  max-height: 250px !important;
+  max-width: none !important;
+  object-fit: contain !important;
+}
+
+.sidebar-logo-link {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-top: -35px !important;
+  margin-bottom: -20px !important;
+  padding: 0 !important;
+}
+
+/* Move search bar and navigation up */
+.sidebar-search {
+  margin-top: -30px !important;
+  margin-bottom: 18px !important; /* Add some space below the search bar */
+}
+
+.sidebar-menu-container {
+  margin-top: -25px !important;
+}
+
+/* Spacing between sidebar navigation tabs */
+.sidebar-item {
+  margin-bottom: 8px !important;
+}
+
+.sidebar-item-container {
+  margin-bottom: 12px !important;
 }

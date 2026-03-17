@@ -1,0 +1,247 @@
+---
+title: "Course Dictionary"
+subtitle: "Documentation & Key Terms for AI Agent Development"
+format:
+  html:
+    toc: false
+    toc-depth: 3
+    theme: sandstone
+---
+
+# Documentation References
+
+Essential documentation and resources used throughout the course.
+
+## LLM Provider Documentation
+
+### OpenAI
+- [**OpenAI API Concepts**](https://platform.openai.com/docs/concepts) - Core concepts, models, and API usage
+- [**OpenAI Platform Overview**](https://platform.openai.com/) - Main documentation hub
+
+### Google Gemini
+- [**Gemini API Key Setup**](https://aistudio.google.com/api-keys) - Get your API key
+- [**Gemini Models**](https://ai.google.dev/gemini-api/docs/models) - Available models and specifications
+- [**Gemini Text Generation**](https://ai.google.dev/gemini-api/docs/text-generation) - Working with text generation
+- [**Gemini Prompting Strategies**](https://ai.google.dev/gemini-api/docs/prompting-strategies) - Best practices for prompts
+- [**Prompting with Files**](https://ai.google.dev/gemini-api/docs/files#prompt-guide) - File handling and multimodal inputs
+
+### Anthropic Claude
+- [**Claude Overview**](https://platform.claude.com/docs/en/build-with-claude/overview) - Getting started with Claude
+- [**Claude 4 Best Practices**](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-4-best-practices) - Prompt engineering guide
+
+---
+
+## LangChain & LangGraph
+
+### LangChain Core
+- [**LangChain Messages**](https://docs.langchain.com/oss/python/langchain/messages) - Understanding message types
+- [**Workflows and Agents**](https://docs.langchain.com/oss/python/langgraph/workflows-agents) - Architecture patterns
+- [**Short-Term Memory**](https://docs.langchain.com/oss/python/langchain/short-term-memory) - Memory management strategies
+
+### LangSmith (Observability & Diagnostics)
+- [**LangSmith Platform**](https://smith.langchain.com) - Sign up and access dashboard
+- [**LangSmith Documentation**](https://docs.smith.langchain.com) - Complete documentation
+- [**@traceable Decorator**](https://docs.smith.langchain.com/observability/how_to_guides/tracing/annotate_code) - Code annotation for tracing
+- [**Evaluation Quickstart**](https://docs.smith.langchain.com/evaluation/quickstart) - Building evaluation datasets
+- [**Deployment Guide**](https://docs.langchain.com/langsmith/deployments) - Production deployment
+
+### LangGraph
+- [**create_react_agent Docs**](https://langchain-ai.github.io/langgraph/reference/prebuilt/#create_react_agent) - React agent pattern
+
+---
+
+## Model Context Protocol (MCP)
+
+- [**MCP Specification**](https://spec.modelcontextprotocol.io) - Official protocol specification
+- [**Building Your First MCP Server (2026)**](https://dev-faizan.medium.com/building-your-first-mcp-server-with-python-in-2026-complete-tutorial-with-3-real-examples-49700e902656) - Complete Python tutorial
+- [**Awesome MCP Servers**](https://github.com/wong2/awesome-mcp-servers) - Community MCP server collection
+
+---
+
+## No-Code/Low-Code Workflow Tools
+
+### n8n
+- [**n8n Cloud Platform**](https://n8n.io/) - Get started with cloud version
+- [**Agent Quickstart**](https://docs.n8n.io/advanced-ai/intro-tutorial/#what-you-will-need) - Build your first agent
+- [**n8n Academy**](https://docs.n8n.io/learning-path/) - Learning paths and tutorials
+
+### Langflow
+- [**Langflow Website**](https://www.langflow.org/) - Download and installation
+- [**Langflow Quickstart**](https://docs.langflow.org/get-started-quickstart) - First workflow tutorial
+- [**Langflow Installation**](https://docs.langflow.org/get-started-installation) - Alternative installation methods
+
+---
+
+## Articles & Learning Resources
+
+### Workflows vs Agents
+- [**A Developer's Guide to Building Scalable AI**](https://towardsdatascience.com/a-developers-guide-to-building-scalable-ai-workflows-vs-agents/) - Workflows vs Agents comparison
+- [**Agentic Pattern Guide**](https://www.philschmid.de/agentic-pattern) - Diagramming and use cases
+
+### Best Practices & Advanced Topics
+- [**Debugging Deep Agents with LangSmith**](https://www.blog.langchain.com/debugging-deep-agents-with-langsmith/) - LangChain blog
+- [**The Rise of Context Engineering**](https://www.blog.langchain.com/the-rise-of-context-engineering/) - Harrison's Hot Takes
+
+---
+
+## Video Resources
+
+- [**LangSmith 101 for AI Observability - James Briggs**](https://www.youtube.com/watch?v=Iyc80hY2yYk) - Complete LangSmith walkthrough
+- [**Business Mindset on Scaling**](https://www.youtube.com/watch?v=DNF87O_kF-k) - Understanding scalability
+
+---
+
+## Development Tools
+
+- [**Node.js**](https://nodejs.org/en/download) - Required for n8n local installation
+
+---
+
+# Key Terms & Definitions
+
+## A
+
+**Agent**
+: An AI system that can autonomously choose which tools to call and when, based on user input and context. Unlike workflows, agents make dynamic decisions rather than following predetermined paths.
+
+**AI Message**
+: A message type in LangChain representing responses from the language model. Part of the conversation history structure.
+
+**API Key**
+: A secure credential that authenticates your application to external services. Acts as a password for accessing LLM providers like OpenAI, Gemini, or Claude.
+
+**Agentic Pattern**
+: Design patterns for building AI agents, including reflection, planning, tool use, and multi-agent collaboration.
+
+## C
+
+**Chat Model**
+: A language model specifically designed for conversational interactions, accepting a sequence of messages and returning a response.
+
+**Context Engineering**
+: The practice of structuring and managing the information provided to a language model to optimize its outputs. Includes prompt engineering, RAG, and memory management.
+
+**Context Window**
+: The maximum amount of text (measured in tokens) that a language model can process at once, including both input and output.
+
+## D
+
+**Data Drift**
+: When the statistical properties of input data change over time, causing model performance to degrade if weights aren't updated.
+
+**Docstring**
+: Documentation within a function that describes its purpose and parameters. For AI tools, docstrings are critical because the LLM reads them to decide when to call the tool.
+
+## E
+
+**Embedding**
+: A numerical representation of text that captures semantic meaning, used for similarity search and retrieval.
+
+**Environment Variable**
+: Configuration values stored outside of code (like in `.env` files) to keep sensitive information like API keys secure.
+
+**Evaluation Dataset**
+: A collection of test cases used to measure agent performance systematically. Used with LangSmith to validate agent behavior.
+
+## F
+
+**Function Calling**
+: The ability of an LLM to output structured requests to execute specific functions or tools based on the conversation context.
+
+## L
+
+**LangChain**
+: A Python framework for building applications with large language models, providing abstractions for prompts, chains, agents, and memory.
+
+**LangGraph**
+: A library for building stateful, multi-step agent workflows with cycles and conditional logic.
+
+**LangSmith**
+: An observability and evaluation platform for AI applications, providing tracing, debugging, and monitoring capabilities.
+
+## M
+
+**Memory**
+: The ability of an agent to retain information across multiple turns of conversation. Can be short-term (within a session) or long-term (persistent across sessions).
+
+**Message**
+: The fundamental unit of conversation in chat models. Types include System, Human, AI, Tool, and Function messages.
+
+**MCP (Model Context Protocol)**
+: A standardized protocol for connecting AI agents to external tools and data sources through client-server architecture.
+
+**MCP Client**
+: The component that runs alongside your AI agent, translating tool calls into MCP protocol requests.
+
+**MCP Server**
+: A service that exposes tools and data to AI agents through the MCP protocol. Can run locally or remotely.
+
+**Multimodality**
+: The ability of a model to work with multiple types of input (text, images, audio, video) and/or generate multiple types of output.
+
+## O
+
+**Observability**
+: The ability to understand what's happening inside your AI system through logs, traces, and metrics. Critical for production deployments.
+
+## P
+
+**Prompt Engineering**
+: The practice of crafting effective prompts to elicit desired behaviors from language models.
+
+**Production**
+: The live environment where your AI agent serves real users, as opposed to development or testing environments.
+
+## R
+
+**RAG (Retrieval-Augmented Generation)**
+: A technique that enhances LLM responses by retrieving relevant information from external knowledge sources before generating an answer.
+
+**React Agent**
+: A common agent pattern that follows a Reasoning-Acting loop: the agent reasons about what to do, acts by calling tools, observes results, and repeats.
+
+**Retraining**
+: The process of updating a machine learning model's weights using new data to account for data drift or improve performance.
+
+## S
+
+**Schema**
+: The structure defining what parameters a tool accepts, including types and descriptions. Automatically generated from function signatures.
+
+**System Instruction**
+: The initial prompt that sets the behavior, personality, and constraints for an AI agent. Also called system prompt or system message.
+
+## T
+
+**Temperature**
+: A parameter controlling randomness in LLM outputs. Lower values (0.0-0.3) produce more deterministic responses; higher values (0.7-1.0) produce more creative/varied outputs.
+
+**Token**
+: The basic unit of text processing for LLMs. Roughly 3-4 characters or 0.75 words per token. Both input and output are measured in tokens for billing.
+
+**Tool**
+: A function that an AI agent can execute to perform specific tasks like searching, retrieving data, or interacting with external APIs.
+
+**Traceable**
+: A decorator (`@traceable`) that exposes function calls as named spans in LangSmith traces, making internal logic visible for debugging.
+
+**Trace Tree**
+: A hierarchical visualization in LangSmith showing the sequence of LLM calls, tool invocations, and other operations during agent execution.
+
+## W
+
+**Weights**
+: The learned parameters in a neural network that encode patterns from training data. Updated during training or retraining.
+
+**Workflow**
+: A predetermined sequence of steps for processing information, as opposed to an agent that makes dynamic decisions. More predictable but less flexible than agents.
+
+---
+
+## Additional Resources
+
+For terms not listed here, consult:
+- The official documentation links above
+- Course module content
+- LangChain glossary
+- Provider-specific documentation

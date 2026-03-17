@@ -1,0 +1,73 @@
+/* Override sandstone colors with cosmo-inspired palette */
+
+:root {
+  /* Primary colors - Cosmo blue instead of sandstone tan */
+  --bs-primary: #2780e3;
+  --bs-primary-rgb: 39, 128, 227;
+  
+  /* Links */
+  --bs-link-color: #2780e3;
+  --bs-link-hover-color: #1a6bc7;
+  
+  /* Body and text */
+  --bs-body-bg: #ffffff;
+  --bs-body-color: #373a3c;
+  
+  /* Headings */
+  --bs-heading-color: #373a3c;
+  
+  /* Code blocks */
+  --bs-code-color: #c7254e;
+  
+  /* Borders */
+  --bs-border-color: #dee2e6;
+  
+  /* Navigation/navbar */
+  --bs-navbar-bg: #ffffff;
+  --bs-navbar-color: #373a3c;
+  --bs-navbar-hover-color: #2780e3;
+  
+  /* Sidebar */
+  --bs-sidebar-bg: #f8f9fa;
+  --bs-sidebar-fg: #373a3c;
+}
+
+/* Force right sidebar (TOC) background to white like cosmo */
+.sidebar-toc, #quarto-margin-sidebar, .margin-sidebar {
+  background-color: #ffffff !important;
+}
+
+/* TOC active item highlight - cosmo blue instead of sandstone green */
+.sidebar nav[role=doc-toc] ul > li > a.active,
+.sidebar nav[role=doc-toc] ul > li > ul > li > a.active {
+  color: #2780e3 !important;
+  border-left-color: #2780e3 !important;
+}
+
+/* Additional overrides for specific elements */
+h1, h2, h3, h4, h5, h6 {
+  color: #373a3c;
+}
+
+a {
+  color: #2780e3;
+}
+
+a:hover {
+  color: #1a6bc7;
+}
+
+/* Code blocks with cosmo styling */
+pre code {
+  background-color: #f7f7f9;
+}
+
+/* Tables */
+table {
+  border-color: #dee2e6;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left-color: #2780e3;
+}

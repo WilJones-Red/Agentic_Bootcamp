@@ -1,8 +1,596 @@
 ---
-title: "Module 6"
+title: "Week 6 - Production & Scaling"
+subtitle: "Deploying AI Agents at Scale"
+format:
+    html:
+        toc: true
+        toc-depth: 3
+        theme: sandstone
+        highlight-style: github
+        code-fold: true
+        embed-resources: true
 ---
 
-## Module 6: 
 
+---
+
+**Key Quote:**
+
+![Warren Buffett](../Assets/warren-buffett-smiling-black-and-white-photography-k1tc6h0rkyfzmaby.jpg){width=180px style="float: right; margin-left: 15px;"}
+
+> *“When the tide goes out, the truth appears.”* <br> — Warren Buffett
+
+<br>
+<br>
+<br>
+
+# Lesson Overview
+
+| Segment | Duration |
+|---|---|
+| Lecture: What Changes When You Go to ProductionKK? | 10 minutes |
+| Live Demo: Context Cost Simulation | 10 minutes |
+| Activity: Production Hardening Exercise | 30 minutes |
+| Wrap-up: Principles & Ethics | 10 minutes |
+
+**Learning Objectives:** By the end of this lesson, students will be able to:
+
+- Understand cost dynamics at scale (token economics)
+- Design context management strategies for production
+- Build a stateful multi-user interface
+- Prevent runaway token growth
+- Think in terms of reliability, concurrency, and infrastructure
+- Identify scaling failure modes before they happen
+
+**Colab Notebook for Today:**
+
+> [Wellness Agent - BROKEN (Activity Notebook)](https://colab.research.google.com/drive/1J6j0KAN3gWNgizbEiVdiTtlQ5Sha8GNw?usp=sharing)  
+> *(It is recommended to download a copy of the notebook to your own google colab)*
+
+**Reference Video/Material:**
+
+> [Advanced LangChain Memory](https://docs.langchain.com/oss/python/langchain/short-term-memory)
+> This lesson introduces various basic memory management strategies. This resource will provide a deeper dive into memory types and how to implement them into your agents via LangChain.
+
+> [Business Mindset on Scaling](https://www.youtube.com/watch?v=DNF87O_kF-k)
+> This video connects a proper mindset on scalable businesses to our discussion on production-ready agents. You will see how resilience, discipline, and strong fundamentals apply not just to companies, but to AI systems built to last.
+
+> [LangSmith Deployment - Reference Docs](https://docs.langchain.com/langsmith/deployments)
+> This documentation provides an overview of deploying LangSmith in production environments, which is relevant for understanding how to make production-ready agents like the Wellness Agent - for our purposes it is still in a non-production state.
+
+> [LangSmith 101 for AI Observability - James Briggs](https://www.youtube.com/watch?v=Iyc80hY2yYk)  
+> This lesson applies LangSmith observability concepts specifically to the production-ready Wellness Agent. You will remember this video as it was referenced previously in the diagnostics lesson.
+
+---
+
+# Lecture (10 Minutes)
+
+## What Changes When You Go to Production?
+
+### The Key Shift
+
+Building an agent in a notebook is **fundamentally different** from running it in production. Here's the reality check:
+
+| In a Notebook | In Production |
+|---|---|
+| One user (you) | 50–10,000 users |
+| Small context (few messages) | Persistent conversations (hundreds of messages) |
+| No cost pressure | Real money per token |
+| No concurrency | Infrastructure bottlenecks |
+| No legal constraints | Privacy, compliance, liability |
+
+**The Wellness Agent notebook you've been working with is a prototype. This lesson is about making it production-ready.**
+
+---
+
+## Core Scaling Problems in Agentic AI
+
+### Problem 1: Token Explosion
+
+**Context grows linearly. Cost grows super-linearly.**
+
+Let's do the math:
+
+```
+Without context cap:
+- Message 1: Context = 1 message → Cost = 1x
+- Message 2: Context = 2 messages → Cost = 2x
+- Message 3: Context = 3 messages → Cost = 3x
+- ...
+- Message 100: Context = 100 messages → Cost = 100x
+
+Cost per prompt = p × base_cost_factor
+Cumulative cost after p prompts = p(p+1)/2 × base_cost_factor
+```
+
+**Example:** 100 users, 20 prompts per day
+
+- **Without cap:** Cost per user = $(20 \times 21) / 2 = 210\textrm{x base cost}$
+- **With 10-message cap:** Cost per user = $10 \times 20 = 200\textrm{x base cost}$
+- **Savings at 100 users:** 5% immediate, grows exponentially with scale
+
+**Context cap is not optional—it's financial survival.**
+
+---
+
+### Problem 2: Multi-User State
+
+**One notebook session ≠ 100 concurrent users.**
+
+When you scale to multiple users, you must handle:
+
+1. **User sessions** - Each user needs their own conversation history
+2. **Conversation storage** - Where does the data live? Memory? Database?
+3. **Session expiration** - Do conversations last forever? 1 day? 30 days?
+4. **Isolation between users** - User A cannot see User B's data
+
+**In production:** You need persistent storage (SQLite/PostgreSQL), session isolation, and cleanup policies.
+
+---
+
+### Problem 3: Latency & UX
+
+**Users expect < 2–3 second response times.** Factors: LLM speed, tool execution, context size. Use streaming responses in production.
+
+---
+
+### Problem 4: Reliability
+
+**Agents can:**
+- **Loop** - Call the same tool 50 times in a row
+- **Retry infinitely** - Never give up on a failing API call
+- **Hallucinate tool calls** - Invent tools that don't exist
+- **Over-call APIs** - Hit rate limits on external services
+- **Chain tools inefficiently** - Use 5 tools when 1 would suffice
+
+**In production: You must constrain behavior.**
+
+```python
+# Production safety controls
+MAX_TOOL_CALLS_PER_TURN = 5
+MAX_RETRIES = 3
+TIMEOUT_SECONDS = 30
+MAX_RESPONSE_LENGTH = 2500
+
+# LangGraph recursion limit
+agent = create_react_agent(
+    llm,
+    tools,
+    state_modifier="system message here",
+    max_iterations=MAX_TOOL_CALLS_PER_TURN  # Prevents infinite loops
+)
+```
+
+**Without these limits, a single misbehaving agent can:**
+- Drain your API budget
+- DOS your database
+- Block other users from getting responses
+
+---
+
+## Context as a Budget
+
+**Production rule: Never let context grow unbounded.**
+
+Think of context as a **limited resource** like memory or disk space. You have three strategies:
+
+**Three strategies:**
+
+1. **Sliding Window** - Keep last N messages (simple, predictable)
+2. **Summary Memory** - Compress old messages into summary (retains info, adds LLM cost)
+3. **Retrieval-Based** - Vector DB fetch relevant history (scales best, needs infrastructure)
+
+---
+
+### The Wellness Agent Approach
+
+The production Wellness Agent uses **Sliding Window + Summary**:
+
+```python
+class AgentConfig(BaseModel):
+    max_messages_per_user: int = 30               # hard cap
+    summarize_after_messages: int = 18            # create summary at this point
+    max_summary_chars: int = 1200                # keep summaries small
+```
+
+**Why this works for wellness tracking:**
+- Recent meals/workouts are most important → sliding window
+- Long-term goals/preferences go in summary → summary memory
+- Most users don't need more than 30-message history
+
+**The `context_growth_cap = 50` in your simulation is not optional in production. It's survival.**
+
+---
+
+# Live Demo (10 Minutes)
+
+## Context Cost Simulation
+
+Let's see the cost explosion in action. Run this simulation in a new Python cell:
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Simulation parameters
+num_users = 50
+days = 30
+prompts_per_day_per_user = 10
+base_cost_per_1k_tokens = 0.002  # $0.002 per 1k tokens (example rate)
+avg_tokens_per_message = 500
+
+# Scenario 1: No context cap (context grows forever)
+def simulate_no_cap(num_users, days, prompts_per_day):
+    daily_costs = []
+    cumulative_cost = 0
+    
+    for day in range(days):
+        day_cost = 0
+        for user in range(num_users):
+            # Each user has sent (day * prompts_per_day) messages so far
+            context_size = day * prompts_per_day + prompts_per_day
+            
+            # Cost for this day's prompts (context grows with each prompt)
+            for prompt_num in range(1, prompts_per_day + 1):
+                current_context = context_size + prompt_num
+                tokens = current_context * avg_tokens_per_message
+                cost = (tokens / 1000) * base_cost_per_1k_tokens
+                day_cost += cost
+        
+        cumulative_cost += day_cost
+        daily_costs.append(cumulative_cost)
+    
+    return daily_costs
+
+# Scenario 2: Context cap at 50 messages
+def simulate_with_cap(num_users, days, prompts_per_day, cap=50):
+    daily_costs = []
+    cumulative_cost = 0
+    
+    for day in range(days):
+        day_cost = 0
+        for user in range(num_users):
+            # Context is capped at 50 messages
+            context_size = min(cap, day * prompts_per_day + prompts_per_day)
+            
+            # Cost is constant after hitting the cap
+            for prompt_num in range(prompts_per_day):
+                tokens = context_size * avg_tokens_per_message
+                cost = (tokens / 1000) * base_cost_per_1k_tokens
+                day_cost += cost
+        
+        cumulative_cost += day_cost
+        daily_costs.append(cumulative_cost)
+    
+    return daily_costs
+
+# Run simulations
+no_cap_costs = simulate_no_cap(num_users, days, prompts_per_day_per_user)
+capped_costs = simulate_with_cap(num_users, days, prompts_per_day_per_user, cap=50)
+
+# Plot results
+plt.figure(figsize=(12, 6))
+plt.plot(range(1, days + 1), no_cap_costs, label='No Context Cap', linewidth=2, color='red')
+plt.plot(range(1, days + 1), capped_costs, label='Context Cap = 50 messages', linewidth=2, color='green')
+plt.xlabel('Days', fontsize=12)
+plt.ylabel('Cumulative Cost ($)', fontsize=12)
+plt.title(f'Cumulative LLM Cost Over {days} Days ({num_users} users, {prompts_per_day_per_user} prompts/day)', fontsize=14)
+plt.legend(fontsize=11)
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.show()
+
+# Print final costs
+print(f"\n{'='*60}")
+print(f"Final Cost Comparison (after {days} days):")
+print(f"{'='*60}")
+print(f"No Context Cap:        ${no_cap_costs[-1]:.2f}")
+print(f"With Cap (50 msg):     ${capped_costs[-1]:.2f}")
+print(f"Savings:               ${no_cap_costs[-1] - capped_costs[-1]:.2f} ({((no_cap_costs[-1] - capped_costs[-1]) / no_cap_costs[-1] * 100):.1f}%)")
+print(f"{'='*60}\n")
+```
+
+---
+
+## Key Observations
+
+**Discuss as a class:**
+
+1. **Why does cost explode?** - Red line is quadratic, not linear
+2. **Why does capping flatten it?** - Cost per prompt becomes constant after hitting cap
+3. **What's the lesson?** - Context cap is mandatory for production viability
+
+**Quick exercise:** Try `num_users = 500`. What happens to the gap?
+
+---
+
+# Activity (30 Minutes)
+
+## Production Hardening Exercise
+
+**Objective:** You will analyze a production agent implementation that contains critical scaling vulnerabilities. Your task is to systematically identify these vulnerabilities, understand their impact on production systems, and implement robust fixes that ensure reliability and cost-effectiveness at scale.
+
+### The Broken Agent
+
+Here's the starting code students receive:
+
+```python
+# BROKEN PRODUCTION AGENT - DO NOT USE IN REAL PRODUCTION
+import os
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_core.messages import HumanMessage, AIMessage
+from langchain.tools import tool
+
+# LLM setup
+llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=0.4)
+
+# Tools
+@tool
+def log_food(name: str, calories: float) -> str:
+    """Log a food item."""
+    return f"Logged {name}: {calories} cal"
+
+@tool
+def log_workout(name: str, minutes: float) -> str:
+    """Log a workout."""
+    return f"Logged {name}: {minutes} min"
+
+tools = [log_food, log_workout]
+
+# PROBLEM: Global conversation store (no user isolation)
+conversation_history = []
+
+# PROBLEM: No context cap
+def chat(user_message: str):
+    conversation_history.append(HumanMessage(content=user_message))
+    
+    # PROBLEM: Sends entire conversation history every time
+    response = llm.invoke(conversation_history)
+    conversation_history.append(response)
+    
+    # PROBLEM: No token counting
+    # PROBLEM: No rate limiting
+    # PROBLEM: No logging
+    # PROBLEM: No error handling
+    
+    return response.content
+
+# Usage (pretend this is multiple users)
+print(chat("I ate a salad"))
+print(chat("I went for a run"))
+```
+
+---
+
+## Task 1 – Identify Scaling Risks (8 min)
+
+Students must list:
+
+1. **Where money is wasted**
+   - Hint: Look at what gets sent to the LLM on each call
+
+2. **Where memory grows**
+   - Hint: What happens to `conversation_history` over time?
+
+3. **Where failure could occur**
+   - Hint: What if the LLM call times out? What if it returns an error?
+
+4. **Where multiple users would collide**
+   - Hint: What if two users call `chat()` at the same time?
+
+**Deliverable:** List of 4-6 specific vulnerabilities in the code.
+
+---
+
+## Task 2 – Add Production Controls (20 min)
+
+Students implement these fixes:
+
+### Fix 1: Add Context Cap
+
+```python
+MAX_MESSAGES = 20
+
+def cap_context(messages):
+    if len(messages) > MAX_MESSAGES:
+        return messages[-MAX_MESSAGES:]
+    return messages
+```
+
+### Fix 2: Add User Isolation
+
+```python
+sessions = {}  # {user_id: [messages]}
+
+def get_or_create_session(user_id: str):
+    if user_id not in sessions:
+        sessions[user_id] = []
+    return sessions[user_id]
+```
+
+### Fix 3: Add Token Counting
+
+```python
+def estimate_tokens(messages):
+    """Rough estimate: 1 token ≈ 4 characters."""
+    total_chars = sum(len(m.content) for m in messages)
+    return total_chars // 4
+
+def chat(user_id: str, user_message: str):
+    messages = get_or_create_session(user_id)
+    messages.append(HumanMessage(content=user_message))
+    messages = cap_context(messages)
+    
+    # Log token count
+    token_count = estimate_tokens(messages)
+    print(f"[INFO] user={user_id}, tokens={token_count}")
+    
+    response = llm.invoke(messages)
+    messages.append(response)
+    
+    return response.content
+```
+
+### Fix 4: Add Basic Rate Limiting
+
+```python
+from collections import defaultdict, deque
+from time import time
+
+request_times = defaultdict(lambda: deque(maxlen=100))
+
+def check_rate_limit(user_id: str, max_per_minute: int = 20):
+    now = time()
+    request_times[user_id].append(now)
+    
+    # Count requests in last 60 seconds
+    recent = [t for t in request_times[user_id] if now - t <= 60]
+    
+    if len(recent) > max_per_minute:
+        raise Exception(f"Rate limit exceeded: {len(recent)}/{max_per_minute} per minute")
+```
+
+### Fix 5: Add Logging
+
+```python
+import logging
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
+logger = logging.getLogger("wellness_agent")
+
+def chat(user_id: str, user_message: str):
+    check_rate_limit(user_id)
+    
+    messages = get_or_create_session(user_id)
+    messages.append(HumanMessage(content=user_message))
+    messages = cap_context(messages)
+    
+    token_count = estimate_tokens(messages)
+    logger.info(f"user={user_id} tokens={token_count} msg='{user_message[:30]}...'")
+    
+    response = llm.invoke(messages)
+    messages.append(response)
+    
+    return response.content
+```
+
+---
+
+## Deliverable
+
+**Peer Discussion:** Talk with the peers around you and discuss which of the 5 fixes you implemented and why each one is relevant to production systems. Share insights on which fix you believe prevents the biggest failure and why.
+
+---
+
+## Task 3 – Test Multi-User Isolation (2 min)
+
+Quick test of your fixes:
+
+```python
+# Test with 3 different users
+print(chat("alice", "I ate a salad"))
+print(chat("bob", "I went for a run"))
+print(chat("alice", "What did I eat?"))  # Should only see Alice's data
+print(chat("bob", "What did I do?"))    # Should only see Bob's data
+```
+
+**Verify:** Alice and Bob have separate conversation histories.
+
+---
+
+# Wrap-up (10 Minutes)
+
+## Production = Responsibility
+
+**Your Wellness Agent stores health data. That means:**
+
+1. **Privacy risks** - Health info is sensitive (HIPAA/GDPR compliance)
+2. **Technical risks** - Bad calorie advice could harm users
+3. **Business risks** - Runaway costs can kill your service
+
+**At scale, your agent's failures affect real people.**
+
+**Production is not just making it work—it's making it work safely, reliably, and ethically.**
+
+---
+
+# Scaling Principles (Summary)
+
+## 1. Every Token Is a Cost
+
+**Track it.** Log every request, count every token, monitor every user.
+
+## 2. Context Is Liability
+
+**Summarize or cap it.** Never let context grow unbounded. Context = memory = money = legal risk.
+
+## 3. Agents Must Be Constrained
+
+- Tool call limits
+- Retry limits
+- Time limits
+- Response length limits
+
+## 4. Memory Must Be Designed
+
+**Not appended forever.** Choose a strategy: sliding window, summary, retrieval.
+
+## 5. Observability Is Mandatory
+
+- **Logging** - What happened?
+- **Metrics** - How much did it cost?
+- **Monitoring** - Is it still working?
+
+---
+
+# Milestones
+
+Students must be able to answer:
+
+1. **Why does cost grow quadratically without context cap?**
+   - Answer: Because each prompt includes all previous messages, so cost per prompt grows linearly, and cumulative cost is the sum of 1+2+3+...+N = N(N+1)/2
+
+2. **What is one way to limit context growth?**
+   - Answer: Sliding window (keep last N messages), summary memory (compress old messages), or retrieval (fetch only relevant messages)
+
+3. **What production failure is most likely in an unconstrained agent?**
+   - Answer: Cost explosion from unbounded context, or infinite tool call loops
+
+4. **How would you prevent a 10,000 user system from bankrupting you?**
+   - Answer: Context cap, tool call limits, rate limiting per user, cost monitoring, budget alerts
+
+---
+
+# Test your Knowledge (Optional)
+
+## Cost Simulation Analysis
+
+1. Run the cost simulation with:
+   - `num_users = 200`
+   - `prompts_per_day_per_user = 15`
+   - `days = 30`
+
+2. Test caps of: 20, 50, 100 messages
+
+3. Answer these questions:
+   - What's the total cost difference between no cap and 20-message cap?
+   - At what day does the capped version reach 50% savings?
+   - If you charged users $10/month, what cap size keeps you profitable?
+
+**Question:** What insights did you gain about context management from this simulation?
+
+---
+
+## Production Checklist / Challenge
+
+Take your hardened agent from today's activity. Add ONE more production feature:
+
+**Option A:** Cost monitoring - Track and display total cost per user  
+**Option B:** Session persistence - Save/load sessions from JSON files  
+**Option C:** Summary memory - Implement the summarization strategy  
+
+**Personal Test:** Code snippet (5-15 lines) + 2-3 sentences explaining what it does
+
+---
 
 

@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Assets/Images/byui_logo.png" rel="icon" type="image/png">
+<link href="./Assets/Images/DS_Logo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -40,13 +40,13 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b3aed8deb8408878d0e4e165d993d59e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6ce5dfd48cb1cfe890c0e36b1d58bc48.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -71,79 +71,135 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="cosmo-colors.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./Assets/Images/byui_logo.png" alt="" class="navbar-logo">
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-course-modules" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Course Modules</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-course-modules">    
-        <li>
-    <a class="dropdown-item" href="./modules/module1.html">
- <span class="dropdown-text">Module 1</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./modules/module2.html">
- <span class="dropdown-text">Module 2</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./modules/module3.html">
- <span class="dropdown-text">Module 3</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./modules/module4.html">
- <span class="dropdown-text">Module 4</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./modules/module5.html">
- <span class="dropdown-text">Module 5</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./modules/module6.html">
- <span class="dropdown-text">Module 6</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./modules/module7.html">
- <span class="dropdown-text">Module 7</span></a>
-  </li>  
-        <li><hr class="dropdown-divider"></li>
-        <li>
-    <a class="dropdown-item" href="./modules/jupyterlite-demo.html">
- <span class="dropdown-text">Interactive Marimo Notebook</span></a>
-  </li>  
-    </ul>
-  </li>
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./Assets/Images/DS_Logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Course Modules</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modules/module1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modules/module2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modules/module3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modules/module4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modules/module5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modules/module6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modules/module7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module 7</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resources/colabs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notebooks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resources/dictionary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reference</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resources/contributors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contributors</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -152,6 +208,14 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#ai-boot-camp---change-log" id="toc-ai-boot-camp---change-log" class="nav-link active" data-scroll-target="#ai-boot-camp---change-log">AI Boot Camp - Change Log</a>
   <ul class="collapse">
+  <li><a href="#march-17-2026" id="toc-march-17-2026" class="nav-link" data-scroll-target="#march-17-2026">March 17, 2026</a></li>
+  <li><a href="#march-10-2026" id="toc-march-10-2026" class="nav-link" data-scroll-target="#march-10-2026">March 10, 2026</a></li>
+  <li><a href="#february-28-2026" id="toc-february-28-2026" class="nav-link" data-scroll-target="#february-28-2026">February 28, 2026</a></li>
+  <li><a href="#february-22-2026" id="toc-february-22-2026" class="nav-link" data-scroll-target="#february-22-2026">February 22, 2026</a></li>
+  <li><a href="#february-8-2026" id="toc-february-8-2026" class="nav-link" data-scroll-target="#february-8-2026">February 8, 2026</a></li>
+  <li><a href="#january-28-2026" id="toc-january-28-2026" class="nav-link" data-scroll-target="#january-28-2026">January 28, 2026</a></li>
+  <li><a href="#january-25-2026" id="toc-january-25-2026" class="nav-link" data-scroll-target="#january-25-2026">January 25, 2026</a></li>
+  <li><a href="#january-22-2026" id="toc-january-22-2026" class="nav-link" data-scroll-target="#january-22-2026">January 22, 2026</a></li>
   <li><a href="#january-20-2026" id="toc-january-20-2026" class="nav-link" data-scroll-target="#january-20-2026">January 20, 2026</a></li>
   <li><a href="#january-13-2026" id="toc-january-13-2026" class="nav-link" data-scroll-target="#january-13-2026">January 13, 2026</a></li>
   </ul></li>
@@ -166,6 +230,189 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="ai-boot-camp---change-log" class="level1">
 <h1>AI Boot Camp - Change Log</h1>
+<section id="march-17-2026" class="level2">
+<h2 class="anchored" data-anchor-id="march-17-2026">March 17, 2026</h2>
+<section id="theme-refinements" class="level3">
+<h3 class="anchored" data-anchor-id="theme-refinements">Theme Refinements</h3>
+<ul>
+<li>Fixed TOC active item text color to use cosmo blue instead of sandstone green</li>
+<li>Added Contributors page under Resources section</li>
+<li>Corrected Warren Buffett image path in Module 6</li>
+</ul>
+</section>
+<section id="content-updates" class="level3">
+<h3 class="anchored" data-anchor-id="content-updates">Content Updates</h3>
+<ul>
+<li>Toned down homepage introduction for more professional tone</li>
+<li>Updated Module 4 subtitle to “Debugging, Tracing, and Evaluating AI Agents”</li>
+<li>Clarified target audience on homepage to mention BYU-I Data Science Society</li>
+</ul>
+</section>
+<section id="files-modified" class="level3">
+<h3 class="anchored" data-anchor-id="files-modified">Files Modified</h3>
+<ul>
+<li><code>cosmo-colors.css</code> - TOC active item styling</li>
+<li><code>resources/contributors.qmd</code> - New empty contributors page</li>
+<li><code>modules/module6.qmd</code> - Fixed image path</li>
+<li><code>index.qmd</code> - Updated intro and target audience</li>
+<li><code>modules/module4.qmd</code> - Updated subtitle</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="march-10-2026" class="level2">
+<h2 class="anchored" data-anchor-id="march-10-2026">March 10, 2026</h2>
+<section id="module-7-restructure" class="level3">
+<h3 class="anchored" data-anchor-id="module-7-restructure">Module 7 Restructure</h3>
+<ul>
+<li>Completely rewrote Module 7 to match course formatting standards</li>
+<li>Added comprehensive drift detection content (data drift, concept drift, prediction drift)</li>
+<li>Included real-world examples and discussion questions</li>
+<li>Added coding activity instructions with statistical tests and retraining workflows</li>
+<li>Expanded learning objectives and best practices for production AI</li>
+</ul>
+</section>
+<section id="files-modified-1" class="level3">
+<h3 class="anchored" data-anchor-id="files-modified-1">Files Modified</h3>
+<ul>
+<li><code>modules/module7.qmd</code> - Full content restructure</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="february-28-2026" class="level2">
+<h2 class="anchored" data-anchor-id="february-28-2026">February 28, 2026</h2>
+<section id="theme-customization" class="level3">
+<h3 class="anchored" data-anchor-id="theme-customization">Theme Customization</h3>
+<ul>
+<li>Implemented hybrid sandstone/cosmo theme approach</li>
+<li>Created <code>cosmo-colors.css</code> for color variable overrides</li>
+<li>Changed global theme from cosmo to sandstone while preserving cosmo colors</li>
+<li>Updated all module files to use sandstone theme consistently</li>
+<li>Maintained sandstone structure with cosmo blue color scheme</li>
+</ul>
+</section>
+<section id="files-modified-2" class="level3">
+<h3 class="anchored" data-anchor-id="files-modified-2">Files Modified</h3>
+<ul>
+<li><code>_quarto.yml</code> - Updated theme and CSS files</li>
+<li><code>cosmo-colors.css</code> - New CSS variable override file</li>
+<li><code>modules/module1-7.qmd</code> - Theme declarations updated</li>
+<li><code>resources/colabs.qmd</code> - Theme updated</li>
+<li><code>resources/dictionary.qmd</code> - Theme updated</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="february-22-2026" class="level2">
+<h2 class="anchored" data-anchor-id="february-22-2026">February 22, 2026</h2>
+<section id="sidebar-spacing-and-layout" class="level3">
+<h3 class="anchored" data-anchor-id="sidebar-spacing-and-layout">Sidebar Spacing and Layout</h3>
+<ul>
+<li>Added spacing between sidebar navigation items (8px/12px margins)</li>
+<li>Compacted logo and navigation positioning with negative margins</li>
+<li>Moved logo up and reduced space between logo and search bar</li>
+<li>Fine-tuned sidebar layout for cleaner appearance</li>
+</ul>
+</section>
+<section id="files-modified-3" class="level3">
+<h3 class="anchored" data-anchor-id="files-modified-3">Files Modified</h3>
+<ul>
+<li><code>styles.css</code> - Sidebar item spacing, logo positioning adjustments</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="february-8-2026" class="level2">
+<h2 class="anchored" data-anchor-id="february-8-2026">February 8, 2026</h2>
+<section id="resource-pages-implementation" class="level3">
+<h3 class="anchored" data-anchor-id="resource-pages-implementation">Resource Pages Implementation</h3>
+<ul>
+<li>Created comprehensive Notebooks page documenting all 6 Google Colab projects</li>
+<li>Built Reference page with documentation links and 30+ terminology definitions</li>
+<li>Added getting started guides and project descriptions</li>
+<li>Organized documentation by LLM providers, frameworks, and tools</li>
+<li>Hidden TOC on home, notebooks, and reference pages for cleaner layout</li>
+</ul>
+</section>
+<section id="files-created" class="level3">
+<h3 class="anchored" data-anchor-id="files-created">Files Created</h3>
+<ul>
+<li><code>resources/colabs.qmd</code> - Notebooks documentation</li>
+<li><code>resources/dictionary.qmd</code> - Reference and terminology</li>
+</ul>
+</section>
+<section id="files-modified-4" class="level3">
+<h3 class="anchored" data-anchor-id="files-modified-4">Files Modified</h3>
+<ul>
+<li><code>index.qmd</code> - Added TOC: false</li>
+<li><code>_quarto.yml</code> - Added Resources section to sidebar</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="january-28-2026" class="level2">
+<h2 class="anchored" data-anchor-id="january-28-2026">January 28, 2026</h2>
+<section id="homepage-development" class="level3">
+<h3 class="anchored" data-anchor-id="homepage-development">Homepage Development</h3>
+<ul>
+<li>Created complete landing page with hero section</li>
+<li>Added course overview and learning outcomes</li>
+<li>Built prerequisite list focused on Google Colab (no local Python install)</li>
+<li>Included comprehensive weekly breakdown with descriptions</li>
+<li>Styled all links consistently with bold formatting and arrows</li>
+</ul>
+</section>
+<section id="files-modified-5" class="level3">
+<h3 class="anchored" data-anchor-id="files-modified-5">Files Modified</h3>
+<ul>
+<li><code>index.qmd</code> - Complete homepage content</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="january-25-2026" class="level2">
+<h2 class="anchored" data-anchor-id="january-25-2026">January 25, 2026</h2>
+<section id="visual-branding-updates" class="level3">
+<h3 class="anchored" data-anchor-id="visual-branding-updates">Visual Branding Updates</h3>
+<ul>
+<li>Replaced BYUI logo with DS_Logo.png</li>
+<li>Increased logo size from 120px to 250px</li>
+<li>Added background-vector.png at 9% opacity</li>
+<li>Fixed logo CSS selector specificity issue</li>
+<li>Centered logo with proper positioning</li>
+</ul>
+</section>
+<section id="files-modified-6" class="level3">
+<h3 class="anchored" data-anchor-id="files-modified-6">Files Modified</h3>
+<ul>
+<li><code>_quarto.yml</code> - Logo path updated</li>
+<li><code>styles.css</code> - Logo sizing and background image styling</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="january-22-2026" class="level2">
+<h2 class="anchored" data-anchor-id="january-22-2026">January 22, 2026</h2>
+<section id="navigation-redesign" class="level3">
+<h3 class="anchored" data-anchor-id="navigation-redesign">Navigation Redesign</h3>
+<ul>
+<li>Converted top navbar to left sidebar navigation</li>
+<li>Implemented docked sidebar style with light background</li>
+<li>Added logo to sidebar</li>
+<li>Organized modules and resources in collapsible sections</li>
+<li>Removed top navbar completely</li>
+</ul>
+</section>
+<section id="files-modified-7" class="level3">
+<h3 class="anchored" data-anchor-id="files-modified-7">Files Modified</h3>
+<ul>
+<li><code>_quarto.yml</code> - Sidebar navigation configuration</li>
+<li><code>styles.css</code> - Sidebar-specific styling</li>
+</ul>
+<hr>
+</section>
+</section>
 <section id="january-20-2026" class="level2">
 <h2 class="anchored" data-anchor-id="january-20-2026">January 20, 2026</h2>
 <section id="jupyterlite-integration-improvements" class="level3">
@@ -184,8 +431,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Marimo demo integration - Taking longer than expected due to requirement for locally running server to handle backend operations</li>
 </ul>
 </section>
-<section id="files-modified" class="level3">
-<h3 class="anchored" data-anchor-id="files-modified">Files Modified</h3>
+<section id="files-modified-8" class="level3">
+<h3 class="anchored" data-anchor-id="files-modified-8">Files Modified</h3>
 <ul>
 <li><code>modules/jupyterlite-demo.qmd</code> - Updated iframe sources and added save instructions</li>
 </ul>
@@ -212,8 +459,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Added navbar shadow effect</li>
 </ul>
 </section>
-<section id="files-created" class="level3">
-<h3 class="anchored" data-anchor-id="files-created">Files Created</h3>
+<section id="files-created-1" class="level3">
+<h3 class="anchored" data-anchor-id="files-created-1">Files Created</h3>
 <ul>
 <li><code>_quarto.yml</code> - Main configuration file</li>
 <li><code>index.qmd</code> - Home page</li>

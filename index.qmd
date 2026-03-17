@@ -1,5 +1,225 @@
 ---
-title: AI Agentic Boot Camp
+title: "AI Agentic Boot Camp"
+subtitle: "Build Production-Ready AI Agents from Scratch"
+format:
+  html:
+    toc: false
+    toc-depth: 2
 ---
 
+## Welcome to the AI Agentic Boot Camp
 
+This 7-week bootcamp teaches you how to build AI agents that can use tools, connect to external services, and solve real problems. You'll learn practical development skills through hands-on projects.
+
+### What You'll Build
+
+By the end of this bootcamp, you'll have hands-on experience creating:
+
+- **Custom AI Agents** using LangChain and LangGraph
+- **Tool-Enabled Systems** that interact with external APIs and services
+- **Production-Ready Applications** with proper observability and scaling
+- **MCP-Connected Agents** that leverage the Model Context Protocol
+
+### Who This Is For
+
+This bootcamp is for anyone interested in learning about agentic AI. It was especially created for the **BYU-I Data Science Society**, but all are welcome.
+
+Ideal participants:
+
+- Have basic Python programming experience
+- Want to build practical AI applications (not just theory)
+- Are ready to dive deep into modern agent architectures
+- Understand that AI development is about engineering, not just prompts
+
+---
+
+## Course Overview
+
+### Learning Path
+
+This bootcamp follows a structured progression from fundamentals to production deployment:
+
+**Weeks 1-3: Foundations**  
+Master the core concepts of LLMs, agents vs. workflows, and tool integration through the Model Context Protocol.
+
+**Weeks 4-5: Professional Development**  
+Learn production-grade practices including observability with LangSmith, debugging complex agents, and advanced topics.
+
+**Weeks 6-7: Production & Beyond**  
+Scale your agents for real users, manage context and costs, understand model maintenance, and prepare for long-term deployment.
+
+### Technologies You'll Master
+
+- **LangChain** - Framework for building LLM applications
+- **LangGraph** - Stateful multi-step agent workflows
+- **LangSmith** - Observability, tracing, and evaluation
+- **Model Context Protocol (MCP)** - Standardized tool and data connections
+- **Google Gemini API** - Primary LLM provider (OpenAI compatible)
+- **Production Tools** - Memory management, cost optimization, scaling strategies
+
+### Key Learning Outcomes
+
+By completing this bootcamp, you will be able to:
+
+✓ Design and implement custom AI agents with tool-calling capabilities  
+✓ Build workflows that balance predictability and autonomy  
+✓ Connect agents to external services using MCP servers  
+✓ Debug and optimize agent behavior with LangSmith tracing  
+✓ Deploy production-ready agents that scale to multiple users  
+✓ Manage costs, context, and performance in real-world scenarios  
+✓ Understand when to retrain models and maintain AI systems over time
+
+---
+
+## Quick Start Guide
+
+### Prerequisites
+
+Before starting the bootcamp, make sure you have:
+
+1. **Google Account** - Required for Google Colab and Gemini API access
+2. **Basic Python knowledge** - Familiarity with functions, variables, and imports
+3. **Web browser** - Chrome or Firefox recommended for Colab
+4. **Internet connection** - For accessing Colab notebooks and APIs
+
+**No local installation required!** All coding happens in Google Colab, which provides a free cloud environment with Python pre-installed.
+
+### Getting Your API Key
+
+The bootcamp uses Google's Gemini API (free tier available):
+
+1. Visit [Google AI Studio](https://aistudio.google.com/api-keys)
+2. Sign in with a personal Google account (not school email)
+3. Generate an API key
+4. Store it securely (we'll use `.env` files in the course)
+
+**Alternative:** If Gemini isn't available in your region, OpenAI's API works with minor code adjustments ($5 minimum deposit required).
+
+### Working Environment
+
+All coding is done in **Google Colab** notebooks:
+
+- No local setup required
+- Free GPU access
+- Automatic dependency installation
+- Easy sharing and collaboration
+
+Access all notebooks on the [**Notebooks →**](resources/colabs.qmd) page.
+
+### Your First Steps
+
+1. **Week 1:** Get your Gemini API key
+2. **Module 1:** Open the first Colab notebook
+3. **Save a copy** to your Google Drive
+4. **Follow along** with the lesson structure
+5. **Experiment** with code examples
+
+---
+
+## Weekly Breakdown
+
+### Week 1 - LLM Bootcamp
+**Focus:** Getting Started with AI Agents
+
+- Create custom chats using API calls
+- Secure and use Gemini API keys
+- Understand LLM concepts and services
+- Explore LangChain basics
+- Learn prompt and context engineering
+
+[**View Module 1 →**](modules/module1.qmd)
+
+---
+
+### Week 2 - Workflows and Agents
+**Focus:** Understanding LLM Architecture Patterns
+
+- Distinguish between workflows and agents
+- Learn when to use each approach
+- Plan and diagram agent behaviors
+- Translate conceptual workflows into code
+- Explore no-code/low-code options (n8n, Langflow)
+
+[**View Module 2 →**](modules/module2.qmd)
+
+---
+
+### Week 3 - Tools and MCP Connections
+**Focus:** Connecting AI Agents to External Services
+
+- Understand the Model Context Protocol (MCP)
+- Set up Canvas MCP connections
+- Build agents that use tools
+- Implement User → AI → MCP → Tool flow
+- Create real-world integrations
+
+[**View Module 3 →**](modules/module3.qmd) | [**Open in Colab →**](https://colab.research.google.com/drive/1VqAAmSfB9W8xkZ2S5a8uK_3VwG7aupQo?usp=sharing)
+
+---
+
+### Week 4 - LangSmith Diagnostics
+**Focus:** Observability and Debugging
+
+- Use LangSmith for agent observability
+- Trace execution and identify bottlenecks
+- Debug tool calls and agent decisions
+- Build evaluation datasets
+- Analyze trace trees for optimization
+
+[**View Module 4 →**](modules/module4.qmd) | [**Wellness Agent →**](https://drive.google.com/file/d/1Qn4HPOvW30CWQJCCondY8bDYw-RmQDPF/view?usp=sharing) | [**Canvas Tutor →**](https://drive.google.com/file/d/1uyP9BbDNVTBBQ7lmsEIqh47DkS-U4-O_/view?usp=sharing)
+
+---
+
+### Week 5 - Advanced Topics
+
+[**View Module 5 →**](modules/module5.qmd)
+
+---
+
+### Week 6 - Production & Scaling
+**Focus:** From Prototype to Production
+
+- Understand production vs. development environments
+- Manage token costs at scale
+- Build multi-user stateful interfaces
+- Prevent context overflow and runaway costs
+- Design resilient, scalable architectures
+
+[**View Module 6 →**](modules/module6.qmd) | [**Open in Colab →**](https://colab.research.google.com/drive/1J6j0KAN3gWNgizbEiVdiTtlQ5Sha8GNw?usp=sharing)
+
+---
+
+### Week 7 - Retraining and Weights
+**Focus:** Model Maintenance and Drift
+
+- Understand data drift and model degradation
+- Detect when retraining is necessary
+- Update model weights responsibly
+- Build authentic, maintainable AI systems
+- Plan long-term model lifecycle
+
+[**View Module 7 →**](modules/module7.qmd) | [**Open in Colab →**](https://colab.research.google.com/drive/1NyLKwT7f76_msFzcdkZUDO3VtjPqN1Os?usp=sharing)
+
+---
+
+## Additional Resources
+
+### Course Materials
+
+- [**Notebooks**](resources/colabs.qmd) - All Google Colab notebooks with project descriptions
+- [**Reference**](resources/dictionary.qmd) - Documentation links and key terms dictionary
+
+### Getting Help
+
+- Review error messages carefully—they often point directly to the solution
+- Check the [**Reference →**](resources/dictionary.qmd) page for unfamiliar terms
+- Revisit earlier modules if concepts feel unclear
+- Experiment with code variations to deepen understanding
+
+---
+
+## Ready to Begin?
+
+Start with [**Module 1 - LLM Bootcamp →**](modules/module1.qmd) and work through each week sequentially. The course is designed to build progressively—each module assumes knowledge from previous weeks.
+
+**Let's build something intelligent.**

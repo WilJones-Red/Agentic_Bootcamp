@@ -1,0 +1,121 @@
+---
+title: "Google Colab Notebooks"
+subtitle: "Hands-on Coding Resources for AI Agent Development"
+format:
+  html:
+    toc: false
+    toc-depth: 2
+    theme: sandstone
+---
+
+## Getting Started with Colab
+
+If you're new to Google Colab, here are some tips:
+
+1. **Save a Copy:** Always use "File → Save a copy in Drive" before editing
+2. **Runtime:** Make sure you select the appropriate runtime (usually Python 3)
+3. **API Keys:** Store sensitive keys in Colab Secrets, never hardcode them
+4. **Dependencies:** Run the pip install cells at the beginning of each notebook
+5. **Execution:** Run cells in order from top to bottom for best results
+
+---
+
+## Course Colab Notebooks
+
+All notebooks are hosted on Google Colab for easy access and execution. It's recommended to save a copy to your own Google Drive before making changes.
+
+---
+
+### Week 3 - MCP Lesson
+
+**Project:** Building AI Agents with Model Context Protocol (MCP)
+
+**Description:** Learn how to connect AI agents to external services using the Model Context Protocol (MCP). This hands-on notebook teaches you to set up Canvas MCP connections, build agents that use tools, and understand the complete flow from user input to tool execution and back. You'll create an agent that can interact with Canvas API and other external services.
+
+**Topics Covered:**
+- MCP Server setup and configuration
+- Creating and using tools within an agent
+- Canvas MCP integration
+- Understanding the User → AI → MCP Client → MCP Server → Tool flow
+
+[**Open in Colab →**](https://colab.research.google.com/drive/1VqAAmSfB9W8xkZ2S5a8uK_3VwG7aupQo?usp=sharing)
+
+---
+
+### Week 4 - Wellness Agent (LangSmith Diagnostics)
+
+**Project:** Health and Wellness Tracking Agent with Observability
+
+**Description:** Build a wellness tracking agent that logs food intake, exercise, and sleep patterns while learning production-level observability with LangSmith. This notebook demonstrates how to trace agent execution, identify bottlenecks, and debug complex agent behaviors. Perfect for understanding how to monitor AI systems in production.
+
+**Topics Covered:**
+- LangSmith tracing and observability
+- Building stateful agents with memory
+- Creating custom tools for wellness tracking
+- Debugging agent tool calls and responses
+- Using `@traceable` decorators for visibility
+
+[**Open in Colab →**](https://drive.google.com/file/d/1Qn4HPOvW30CWQJCCondY8bDYw-RmQDPF/view?usp=sharing)
+
+---
+
+### Week 4 - Canvas AI Tutor (LangSmith Diagnostics)
+
+**Project:** Intelligent Canvas Integration Agent
+
+**Description:** Create an AI tutor that integrates with Canvas LMS using MCP to help students access assignments, grades, and course materials. This notebook focuses on real-world agent diagnostics, showing how to trace complex MCP interactions and optimize agent performance using LangSmith's evaluation tools.
+
+**Topics Covered:**
+- Canvas API integration via MCP
+- Multi-step agent workflows
+- LangSmith evaluation datasets
+- Trace tree analysis for debugging
+- Production-ready error handling
+
+[**Open in Colab →**](https://drive.google.com/file/d/1uyP9BbDNVTBBQ7lmsEIqh47DkS-U4-O_/view?usp=sharing)
+
+---
+
+### Week 6 - Wellness Agent (Production & Scaling - BROKEN)
+
+**Project:** Production-Ready Multi-User Wellness Agent (Debugging Exercise)
+
+**Description:** This is an intentionally broken production deployment of the Wellness Agent designed as a hands-on debugging and scaling exercise. Learn to identify and fix common production issues including token explosion, context overflow, memory leaks, and concurrency problems. Experience real-world challenges of scaling AI agents from prototype to production.
+
+**Topics Covered:**
+- Context management at scale
+- Token cost optimization
+- Multi-user state management
+- Production hardening techniques
+- Identifying scaling bottlenecks
+- Memory management strategies
+
+[**Open in Colab →**](https://colab.research.google.com/drive/1J6j0KAN3gWNgizbEiVdiTtlQ5Sha8GNw?usp=sharing)
+
+---
+
+### Week 7 - Data Drift and Retraining Simulation
+
+**Project:** Understanding Model Drift and Weight Updates
+
+**Description:** Simulate data drift scenarios and learn when and how to retrain machine learning models. This notebook demonstrates how model weights become outdated as data distributions change over time, and teaches you systematic approaches to detecting drift and maintaining model accuracy in production environments.
+
+**T
+
+## Getting Started with Colab
+
+If you're new to Google Colab, here are some tips:
+
+1. **Save a Copy:** Always use "File → Save a copy in Drive" before editing
+2. **Runtime:** Make sure you select the appropriate runtime (usually Python 3)
+3. **API Keys:** Store sensitive keys in Colab Secrets, never hardcode them
+4. **Dependencies:** Run the pip install cells at the beginning of each notebook
+5. **Execution:** Run cells in order from top to bottom for best results
+
+## Support
+
+If you encounter issues with any notebook:
+- Check that all dependencies are installed
+- Verify your API keys are correctly configured
+- Review the error messages carefully
+- Consult the course modules for additional context

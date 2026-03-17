@@ -1,8 +1,15 @@
 ---
-title: "Module 5"
+title: "Week 5"
+subtitle: "AI"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    theme: sandstone
+    highlight-style: github
+    code-fold: false
+    embed-resources: true
 ---
 
-## Module 5: 
-
-
+# Week 5 Content
 

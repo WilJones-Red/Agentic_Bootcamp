@@ -1,7 +1,295 @@
 ---
-title: "Module 1"
+title: "Week 1 - LLM Bootcamp"
+subtitle: "Getting Started with AI Agents"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    theme: sandstone
+    highlight-style: github
+    code-fold: false
+    embed-resources: true
 ---
 
-## Module 1: 
+# Lesson Overview
 
+| Segment | Duration |
+|---|---|
+| Lecture: Why, What, and How? | 15 minutes |
+| Activity: API Key Setup | 10 minutes |
+| Guided Coding: LangChain Basics | 15 minutes |
+| Exploration: Prompt & Context Engineering | 20+ minutes |
 
+**Learning Objectives:** By the end of this lesson, students will be able to:
+
+- Create a simple custom chat using API calls
+- Get and secure a Gemini API key
+- Introduce LLM concepts and services
+- Start exploring LangChain and LLM concepts generally
+
+---
+
+# Lecture (15 min): Why, What, and How?
+
+- Why code custom LLM agents?
+    - Ask them about their interests
+    - Code vs. Interface
+
+- Course overview
+    - Units
+    - What you'll walk away with
+
+- Week 1 overview (scroll through lesson)
+
+- API key
+    - What is an API and why use it?
+    - Explain danger of revealing API key
+    - Show step by step how to access Gemini API key
+    - Emphasize the use of `.env`
+
+---
+
+# Getting Started: Gemini API Setup
+
+## About API keys
+
+An API key is a password for someone's services. It opens the door of communication between your computer and their servers. In accessing Gemini with Python, you send your prompt and API key to their server; if the key is accepted, it will process your prompt and return its response (along with some other metadata). It is your first step to opening the AI door. Let's get one!
+
+## Do This
+
+1. Access the developer's site for Gemini here: [Gemini API key](https://aistudio.google.com/api-keys)
+
+2. You will need to sign in
+
+3. A key should be created automatically. You can click on it and copy the large string of characters and numbers.
+
+### If it doesn't work
+    
+1. Make sure you are using a personal Google account, not your school email
+
+2. If it says you don't have access in your region, you may need to verify your age in your Google account settings
+    - If this becomes too much of a hassle, you use an OpenAI API key instead, but you will have to pay $5 and become familiar with what code to change as you go through the course (slight added complexity, but really not that much)
+
+## I have a key, now what?
+
+**DO NOT** paste it in this file
+**DO NOT** paste it in `.env.example`
+
+**DO**:
+
+1. Rename `.env.example` to `.env`
+
+2. Paste key in `.env`
+
+3. Save `.env`
+
+This is safe only when the `.gitignore` file has `.env` listed.
+
+### Why `.env`?
+
+API keys are coveted (especially for LLM's). If it gets published to GitHub, it will be stolen and used by strangers. To keep yours safe, store it in the `.env` file in the main directory. This environment variable file stays local to your machine and will not be pushed to GitHub (because the `.gitignore` file says to ignore it. You can open the `.gitignore` file to see `.env` listed as files it won't publish to GitHub). The file `.env.template` is just a template. **Please rename `.env.template` to `.env` before adding API keys.**
+
+## Finally
+
+You can now run the below code to install needed packages and load the environment variables from `.env` into this file. (You will need to rerun `load_dotenv()` every time you open the file again, but not `pip install`, which is a one time run.)
+
+```python
+# This installs the dependencies you need
+# Windows:
+%pip install -q -U langchain langchain-google-genai python-dotenv
+
+# Mac:
+# %pip3 install -q -U langchain langchain-google-genai python-dotenv
+```
+
+```python
+# Load environment variables from .env file
+from dotenv import load_dotenv
+load_dotenv()
+```
+
+After saving your API key, you can run the below code to see if it worked. 
+
+```python
+# Paste code here
+from langchain.chat_models import init_chat_model
+
+model = init_chat_model(
+    model="gemini-2.5-flash", 
+    model_provider="google_genai"
+)
+
+model.invoke("Hello world!")
+```
+
+You should see something like:
+
+`AIMessage(content='Hello there! How can I help you today?', additional_kwargs={}, ...`
+
+---
+
+# STOP
+
+If you got things working, rejoice! 
+
+Make sure to help your neighbor gets there too. Then you can continue.
+
+---
+
+# LangChain Basics
+
+Start going through [this tutorial](https://docs.langchain.com/oss/python/langchain/messages) from LangChain. Stop after reading the section "AI Message".
+
+In the space below, write down what you want to remember.
+
+```python
+
+```
+
+---
+
+# STOP
+
+Again, make sure those around you are caught up. Teach and learn from them.
+
+Then you can have fun with the next part together.
+
+---
+
+# Play Around
+
+Now that you have the basics, it is time to explore! Below are some ideas, but you can branch out and tackle anything you'd like. Tell the people around you about what you are learning while you learn it. It will help you remember, and they may be interested, too.
+
+Here are some exploration options here in the notebook:
+
+- **Prompt/Context Engineering**: This is the meat of agents and customizing LLM's. Learn how to do it well.
+
+- **LangChain**: Keep going, either by changing things in the code or learning about tool calling in the same tutorial
+    - **model**: Try changing the model. Each model has a unique text string that can be found in the provider's docs. For Gemini, that is [here](https://ai.google.dev/gemini-api/docs/models). 
+    - **prompt**: Adjust the prompt in `contents`. See how small changes can effect the output (sometimes dramatically).
+    - **chaining**: Try taking the ouput from the previous call and passing it as the contents for another call.
+    - **tool calling**: This is where the rubber starts to meet the road and get exciting. You can continue the previous tutorial for this.
+
+- **Chainlit**: We will go over this in week 6, but if you are excited to use a nice interface, you can try out Chainlit. While it does make things simpler, it still requires knowing some web development concepts such as stateful development and async functionality.
+
+- **Visual Editors**: Python not your thing? You can try some visual editors. There is a guide under the "Explore" folder in this repository.
+
+## Prompt Engineering
+
+If you think you understand prompt engineering, consider the following quote speaking for more complicated agent systems.
+
+> The prompts for deep agents often span hundreds if not thousands of lines — usually containing a general persona, instructions on calling tools, important guidelines, and few-shot examples.
+> \- [LangChain Blog](https://www.blog.langchain.com/debugging-deep-agents-with-langsmith/)
+
+Prompt engineering is the real meat of customizing LLM's. Consider the impact of changing just a few words. Run these a few times, and try intentional word changes.
+
+```python
+from langchain_google_genai import ChatGoogleGenerativeAI
+
+model = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite")
+
+prompt = "What did you have for breakfast today?"
+```
+
+```python
+# Arnold 1
+model.invoke("You are Arnold Schwarzenegger. " + prompt).content
+```
+
+```python
+# Arnold 2
+model.invoke("Act like Arnold Schwarzenegger. " + prompt).content
+```
+
+```python
+# Arnold 3
+model.invoke("Speak in the tone of Arnold Schwarzenegger. " + prompt).content
+```
+
+```python
+# Arnold 4
+model.invoke("You are Arnold Schwarzenegger. Respond briefly." + prompt).content
+```
+
+In general, the best prompting advice is: be specific. It often helps to give examples.
+
+To get a good feel of prompting best practices and types of prompts, look at these resources:
+
+- [Claude docs](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-4-best-practices)
+- [Gemini docs](https://ai.google.dev/gemini-api/docs/prompting-strategies)
+- [Gemini prompting with files](https://ai.google.dev/gemini-api/docs/files#prompt-guide)
+
+```python
+from langchain_core.messages import HumanMessage, SystemMessage
+
+system_instr = "You are Arnold Schwarzenegger"
+
+prompt = "What did you have for breakfast today?"
+
+model.invoke([
+    SystemMessage(system_instr),
+    HumanMessage(prompt)]).content
+```
+
+## Context Engineering
+
+But perhaps a better way to think about this is context engineering. Consider this quote:
+
+> Why the shift from "prompts" to "context"? Early on, developers focused on phrasing prompts cleverly to coax better answers. But as applications grow more complex, it's becoming clear that **providing complete and structured context** to the AI is far more important than any magic wording.
+> \- [Harrison's Hot Takes](https://www.blog.langchain.com/the-rise-of-context-engineering/)
+
+It may be worth giving the above article a read.
+
+## More on LangChain
+
+You may have noticed The model's response was more than just text.
+
+```python
+from langchain.chat_models import init_chat_model
+
+model = init_chat_model(model="gemini-2.5-flash-lite", model_provider="google-genai")
+
+response = model.invoke("Be an angsty teen")
+
+print(response)
+```
+
+You can access just the text response with .content
+
+```python
+response.content
+```
+
+...But there is a lot of other useful information, too. To see everything you can access with dot notation, you can use this function.
+
+```python
+response.model_dump()
+```
+
+Some items are nested, like 'usage_metadata', and you may have to use bracket notation as well.
+
+```python
+response.usage_metadata['input_tokens']
+```
+
+## Chaining
+
+See what happens if you take the above `response.content` and throw it into another model call. This is called chaining. What use cases can you think of for it?
+
+```python
+
+```
+
+## Model Parameters
+
+```python
+model = init_chat_model(
+    model="gemini-2.5-flash", 
+    model_provider="google_genai",
+    temperature=0,
+    max_tokens=50,
+    timeout=60,
+    max_retries=3)
+
+model.invoke("Hello world!")
+```

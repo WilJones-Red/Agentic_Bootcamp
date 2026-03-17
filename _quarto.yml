@@ -8,15 +8,16 @@ project:
     - "!docs/"
 
 website:
-  favicon: Assets/Images/byui_logo.png
-  navbar:
-    background: primary
-    logo: Assets/Images/byui_logo.png
-    left:
+  favicon: Assets/Images/DS_Logo.png
+  sidebar:
+    style: "docked"
+    background: light
+    logo: Assets/Images/DS_Logo.png
+    contents:
       - text: "Home"
         href: index.qmd
-      - text: "Course Modules"
-        menu:
+      - section: "Course Modules"
+        contents:
           - text: "Module 1"
             href: modules/module1.qmd
           - text: "Module 2"
@@ -31,18 +32,21 @@ website:
             href: modules/module6.qmd
           - text: "Module 7"
             href: modules/module7.qmd
-          - text: "---"
-          - text: "Interactive Marimo Notebook"
-            href: modules/jupyterlite-demo.qmd
-            
-            
-
-    #right: - We can add links here later
+      - section: "Resources"
+        contents:
+          - text: "Notebooks"
+            href: resources/colabs.qmd
+          - text: "Reference"
+            href: resources/dictionary.qmd
+          - text: "Contributors"
+            href: resources/contributors.qmd
 
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme: sandstone
+    css: 
+      - styles.css
+      - cosmo-colors.css
     toc: true
     toc-depth: 2

@@ -1,6 +1,6 @@
 # AI Agentic Boot Camp
 
-A 7-week intensive program teaching practical AI agent development, created for the BYU-I Data Science Society.
+A 7-week bootcamp teaching practical AI agent development, created for the BYU-I Data Science Society.
 
 ## Live Site
 

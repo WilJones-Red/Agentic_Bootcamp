@@ -26,6 +26,42 @@ All notebooks are hosted on Google Colab for easy access and execution. It's rec
 
 ---
 
+### Week 1 - Getting Started with AI Agents
+
+**Project:** Introduction to LangChain and LLM Basics
+
+**Description:** Get started with AI agents by learning the fundamentals of LangChain and Google's Gemini API. This notebook walks you through setting up your development environment, securing API keys using Colab Secrets, and building your first simple chat agent. Perfect for beginners with hands-on exercises in prompt engineering and context management.
+
+**Topics Covered:**
+- Gemini API setup and authentication
+- LangChain basics and message types
+- Prompt engineering techniques
+- Context engineering principles
+- Model parameters and customization
+- Chaining LLM calls
+
+[**Open in Colab →**](https://colab.research.google.com/drive/15ZFkH4kTNaOSL_bmFmcmhLB75HiEg3Zu?usp=sharing)
+
+---
+
+### Week 2 - Workflows and Agents
+
+**Project:** Understanding LLM Architecture Patterns
+
+**Description:** Learn the critical differences between workflows and agents, and when to use each pattern. This notebook provides hands-on experience with LangGraph for building structured workflows and introduces you to agent-based architectures. You'll diagram real-world use cases and translate them into code.
+
+**Topics Covered:**
+- Workflows vs. Agents comparison
+- LangGraph fundamentals
+- Structured workflow design
+- Agent routing patterns
+- Multi-step task orchestration
+- Choosing the right architecture pattern
+
+[**Open in Colab →**](https://colab.research.google.com/drive/1EMKPgSxGH9fzK0o6lx5zxrkyKr06bSou?authuser=1#scrollTo=beea18a3)
+
+---
+
 ### Week 3 - MCP Lesson
 
 **Project:** Building AI Agents with Model Context Protocol (MCP)
@@ -76,6 +112,24 @@ All notebooks are hosted on Google Colab for easy access and execution. It's rec
 
 ---
 
+### Week 5 - SQL Assistant with Progressive Disclosure
+
+**Project:** Building Smart Database Agents
+
+**Description:** Master the progressive disclosure pattern by building an SQL assistant that loads database schemas on-demand instead of overwhelming the context window. This notebook teaches you to create skill-based tools that inject knowledge only when needed, dramatically reducing token costs while maintaining accuracy. Scale to massive databases with 100+ tables efficiently.
+
+**Topics Covered:**
+- Progressive disclosure pattern for context management
+- On-demand skill loading
+- Database schema organization
+- Stateful agents with memory
+- Constrained tools with prerequisites
+- Cost optimization strategies (10-50x reduction)
+
+[**Open in Colab →**](https://colab.research.google.com/drive/1cgE8z-aaDIDFx9irPam31kXCLIeIbr8S?usp=sharing)
+
+---
+
 ### Week 6 - Wellness Agent (Production & Scaling - BROKEN)
 
 **Project:** Production-Ready Multi-User Wellness Agent (Debugging Exercise)
@@ -100,22 +154,23 @@ All notebooks are hosted on Google Colab for easy access and execution. It's rec
 
 **Description:** Simulate data drift scenarios and learn when and how to retrain machine learning models. This notebook demonstrates how model weights become outdated as data distributions change over time, and teaches you systematic approaches to detecting drift and maintaining model accuracy in production environments.
 
-**T
+**Topics Covered:**
+- Understanding data drift and concept drift
+- Simulating distribution changes
+- Detecting model degradation
+- Retraining strategies and triggers
+- Weight update methodologies
+- Production monitoring techniques
 
-## Getting Started with Colab
+[**Open in Colab →**](https://colab.research.google.com/drive/1NyLKwT7f76_msFzcdkZUDO3VtjPqN1Os?usp=sharing)
 
-If you're new to Google Colab, here are some tips:
-
-1. **Save a Copy:** Always use "File → Save a copy in Drive" before editing
-2. **Runtime:** Make sure you select the appropriate runtime (usually Python 3)
-3. **API Keys:** Store sensitive keys in Colab Secrets, never hardcode them
-4. **Dependencies:** Run the pip install cells at the beginning of each notebook
-5. **Execution:** Run cells in order from top to bottom for best results
+---
 
 ## Support
 
 If you encounter issues with any notebook:
 - Check that all dependencies are installed
-- Verify your API keys are correctly configured
+- Verify your API keys are correctly configured in Colab Secrets
 - Review the error messages carefully
 - Consult the course modules for additional context
+- Ask for help in the course discussion forum

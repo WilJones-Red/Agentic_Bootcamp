@@ -1,5 +1,5 @@
 ---
-title: "AI Agents Diagnostics with LangSmith"
+title: "Week 4 - AI Agents Diagnostics with LangSmith"
 subtitle: "Debugging, Tracing, and Evaluating AI Agents"
 format:
   html:

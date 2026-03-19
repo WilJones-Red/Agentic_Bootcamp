@@ -27,6 +27,11 @@ format:
 - Introduce LLM concepts and services
 - Start exploring LangChain and LLM concepts generally
 
+**Colab Notebook for Today:**
+
+> [Week 1 - Getting Started with AI Agents](https://colab.research.google.com/drive/15ZFkH4kTNaOSL_bmFmcmhLB75HiEg3Zu?usp=sharing)  
+> *(It is recommended to download a copy of the notebook to your own google colab)*
+
 ---
 
 # Lecture (15 min): Why, What, and How?
@@ -72,6 +77,32 @@ An API key is a password for someone's services. It opens the door of communicat
 
 ## I have a key, now what?
 
+::: {.callout-tip}
+## Choose Your Platform
+You can follow along using either **Google Colab** (recommended for beginners - no setup required!) or **local development** (requires Python environment setup). The code examples below include instructions for both.
+:::
+
+### For Google Colab:
+
+In Google Colab, we'll use Colab's built-in secrets feature to store your API key securely.
+
+**Steps:**
+1. Click the 🔑 key icon in the left sidebar ("Secrets")
+2. Click "Add a new secret"
+3. Name it: `GOOGLE_API_KEY`
+4. Paste your Gemini API key as the value
+5. Toggle on "Notebook access" for this notebook
+
+```python
+# Set up API key from Colab secrets
+import os
+from google.colab import userdata
+
+os.environ['GOOGLE_API_KEY'] = userdata.get('GOOGLE_API_KEY')
+```
+
+### For Local Development:
+
 **DO NOT** paste it in this file
 **DO NOT** paste it in `.env.example`
 
@@ -85,33 +116,28 @@ An API key is a password for someone's services. It opens the door of communicat
 
 This is safe only when the `.gitignore` file has `.env` listed.
 
-### Why `.env`?
+#### Why `.env`?
 
 API keys are coveted (especially for LLM's). If it gets published to GitHub, it will be stolen and used by strangers. To keep yours safe, store it in the `.env` file in the main directory. This environment variable file stays local to your machine and will not be pushed to GitHub (because the `.gitignore` file says to ignore it. You can open the `.gitignore` file to see `.env` listed as files it won't publish to GitHub). The file `.env.template` is just a template. **Please rename `.env.template` to `.env` before adding API keys.**
 
+```python
+# Load environment variables from .env file (local development only)
+from dotenv import load_dotenv
+load_dotenv()
+```
+
 ## Finally
 
-You can now run the below code to install needed packages and load the environment variables from `.env` into this file. (You will need to rerun `load_dotenv()` every time you open the file again, but not `pip install`, which is a one time run.)
+You can now run the below code to install needed packages. (You only need to run `pip install` once.)
 
 ```python
 # This installs the dependencies you need
-# Windows:
-%pip install -q -U langchain langchain-google-genai python-dotenv
-
-# Mac:
-# %pip3 install -q -U langchain langchain-google-genai python-dotenv
-```
-
-```python
-# Load environment variables from .env file
-from dotenv import load_dotenv
-load_dotenv()
+!pip install -q -U langchain langchain-google-genai
 ```
 
 After saving your API key, you can run the below code to see if it worked. 
 
 ```python
-# Paste code here
 from langchain.chat_models import init_chat_model
 
 model = init_chat_model(
@@ -186,7 +212,7 @@ Prompt engineering is the real meat of customizing LLM's. Consider the impact of
 ```python
 from langchain_google_genai import ChatGoogleGenerativeAI
 
-model = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite")
+model = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
 
 prompt = "What did you have for breakfast today?"
 ```
@@ -247,7 +273,7 @@ You may have noticed The model's response was more than just text.
 ```python
 from langchain.chat_models import init_chat_model
 
-model = init_chat_model(model="gemini-2.5-flash-lite", model_provider="google-genai")
+model = init_chat_model(model="gemini-2.5-flash", model_provider="google_genai")
 
 response = model.invoke("Be an angsty teen")
 

@@ -27,6 +27,11 @@ format:
 - Plan workflows and agents conceptually
 - Translate workflows into code
 
+**Colab Notebook for Today:**
+
+> [Week 2 - Workflows and Agents](https://colab.research.google.com/drive/1EMKPgSxGH9fzK0o6lx5zxrkyKr06bSou?authuser=1#scrollTo=beea18a3)  
+> *(It is recommended to download a copy of the notebook to your own google colab)*
+
 ---
 
 # Lecture (5-10 min): Agents and Workflows
@@ -167,13 +172,44 @@ There is an alternative installation route using the command line that you can f
 
 Try running the code from the earlier [LangChain article](https://docs.langchain.com/oss/python/langgraph/workflows-agents) or exploring their docs.
 
+::: {.callout-tip}
+## Choose Your Platform
+You can follow along using either **Google Colab** (recommended for beginners - no setup required!) or **local development** (requires Python environment setup). The code examples below include instructions for both.
+:::
+
+### Setup for Google Colab
+
+First, set up your API key using Colab's secrets (same as Week 1):
+
+1. Click the 🔑 key icon in the left sidebar ("Secrets")
+2. Add a secret named `GOOGLE_API_KEY` with your Gemini API key
+3. Toggle on "Notebook access"
+
+```python
+# Set up API key from Colab secrets
+import os
+from google.colab import userdata
+
+os.environ['GOOGLE_API_KEY'] = userdata.get('GOOGLE_API_KEY')
+```
+
+Install required packages:
+
+```python
+!pip install -q -U langchain langchain-google-genai langgraph
+```
+
+### For Local Development:
+
+```python
+# Load environment variables from .env file (local development only)
+from dotenv import load_dotenv
+load_dotenv()
+```
+
 Just replace their first two code chunks with this more relevant code:
 
 ```python
-# Load environment variables from .env file
-from dotenv import load_dotenv
-load_dotenv()
-
 from langchain.chat_models import init_chat_model
 
 # Instantiate model

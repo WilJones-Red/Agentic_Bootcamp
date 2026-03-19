@@ -1,5 +1,54 @@
 # AI Boot Camp - Change Log
 
+## March 19, 2026
+
+### Resource Consolidation
+- Updated `resources/colabs.qmd` with all new Google Colab notebooks
+- Added Week 1, Week 2, and Week 5 entries to central Colab directory
+- Fixed truncated Week 7 description in Colab resource page
+- Removed duplicate "Getting Started with Colab" section
+- Added comprehensive support section for troubleshooting
+
+### Files Modified
+- `resources/colabs.qmd` - Complete update with all seven weeks
+
+---
+
+## March 18, 2026
+
+### Google Colab Integration
+- Created `week1_lesson.ipynb` for Google Colab with LangChain basics and prompt engineering
+- Created `week2_lesson.ipynb` for Google Colab with workflows vs agents content
+- Created `week5_lesson.ipynb` with progressive disclosure pedagogy for SQL assistant
+- Updated all notebooks from gemini-2.0-flash-exp to gemini-2.5-flash (free tier)
+- Implemented dual-path setup instructions for both Colab Secrets and local .env files
+
+### Module Updates
+- Updated `module1.qmd` with Colab setup instructions and notebook link
+- Updated `module2.qmd` with Colab setup instructions and notebook link  
+- Completely rewrote `module5.qmd` with:
+  - Lesson overview and learning objectives
+  - Progressive disclosure lecture with cost comparison examples
+  - Skills-based architecture explanation
+  - API setup instructions for both Colab and local development
+  - Code workflow walkthrough and extension ideas
+  - Colab notebook link
+
+### Technical Corrections
+- Corrected model name across 9+ files from gemini-2.0-flash-exp to gemini-2.5-flash
+- Added callout tips to guide students between Colab and local setups
+- Implemented consistent Colab link formatting matching Module 6 style
+
+### Files Modified
+- `modules/week1_lesson.ipynb` - New Colab notebook
+- `modules/week2_lesson.ipynb` - New Colab notebook
+- `modules/week5_lesson.ipynb` - New pedagogically-structured Colab notebook
+- `modules/module1.qmd` - Colab integration and model update
+- `modules/module2.qmd` - Colab integration and model update
+- `modules/module5.qmd` - Complete rewrite with progressive disclosure content
+
+---
+
 ## March 17, 2026
 
 ### Theme Refinements

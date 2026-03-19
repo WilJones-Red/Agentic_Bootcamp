@@ -4,7 +4,21 @@
     "href": "CHANGELOG.html",
     "title": "AI Boot Camp - Change Log",
     "section": "",
-    "text": "Fixed TOC active item text color to use cosmo blue instead of sandstone green\nAdded Contributors page under Resources section\nCorrected Warren Buffett image path in Module 6\n\n\n\n\n\nToned down homepage introduction for more professional tone\nUpdated Module 4 subtitle to “Debugging, Tracing, and Evaluating AI Agents”\nClarified target audience on homepage to mention BYU-I Data Science Society\n\n\n\n\n\ncosmo-colors.css - TOC active item styling\nresources/contributors.qmd - New empty contributors page\nmodules/module6.qmd - Fixed image path\nindex.qmd - Updated intro and target audience\nmodules/module4.qmd - Updated subtitle\n\n\n\n\n\n\n\n\n\nCompletely rewrote Module 7 to match course formatting standards\nAdded comprehensive drift detection content (data drift, concept drift, prediction drift)\nIncluded real-world examples and discussion questions\nAdded coding activity instructions with statistical tests and retraining workflows\nExpanded learning objectives and best practices for production AI\n\n\n\n\n\nmodules/module7.qmd - Full content restructure\n\n\n\n\n\n\n\n\n\nImplemented hybrid sandstone/cosmo theme approach\nCreated cosmo-colors.css for color variable overrides\nChanged global theme from cosmo to sandstone while preserving cosmo colors\nUpdated all module files to use sandstone theme consistently\nMaintained sandstone structure with cosmo blue color scheme\n\n\n\n\n\n_quarto.yml - Updated theme and CSS files\ncosmo-colors.css - New CSS variable override file\nmodules/module1-7.qmd - Theme declarations updated\nresources/colabs.qmd - Theme updated\nresources/dictionary.qmd - Theme updated\n\n\n\n\n\n\n\n\n\nAdded spacing between sidebar navigation items (8px/12px margins)\nCompacted logo and navigation positioning with negative margins\nMoved logo up and reduced space between logo and search bar\nFine-tuned sidebar layout for cleaner appearance\n\n\n\n\n\nstyles.css - Sidebar item spacing, logo positioning adjustments\n\n\n\n\n\n\n\n\n\nCreated comprehensive Notebooks page documenting all 6 Google Colab projects\nBuilt Reference page with documentation links and 30+ terminology definitions\nAdded getting started guides and project descriptions\nOrganized documentation by LLM providers, frameworks, and tools\nHidden TOC on home, notebooks, and reference pages for cleaner layout\n\n\n\n\n\nresources/colabs.qmd - Notebooks documentation\nresources/dictionary.qmd - Reference and terminology\n\n\n\n\n\nindex.qmd - Added TOC: false\n_quarto.yml - Added Resources section to sidebar\n\n\n\n\n\n\n\n\n\nCreated complete landing page with hero section\nAdded course overview and learning outcomes\nBuilt prerequisite list focused on Google Colab (no local Python install)\nIncluded comprehensive weekly breakdown with descriptions\nStyled all links consistently with bold formatting and arrows\n\n\n\n\n\nindex.qmd - Complete homepage content\n\n\n\n\n\n\n\n\n\nReplaced BYUI logo with DS_Logo.png\nIncreased logo size from 120px to 250px\nAdded background-vector.png at 9% opacity\nFixed logo CSS selector specificity issue\nCentered logo with proper positioning\n\n\n\n\n\n_quarto.yml - Logo path updated\nstyles.css - Logo sizing and background image styling\n\n\n\n\n\n\n\n\n\nConverted top navbar to left sidebar navigation\nImplemented docked sidebar style with light background\nAdded logo to sidebar\nOrganized modules and resources in collapsible sections\nRemoved top navbar completely\n\n\n\n\n\n_quarto.yml - Sidebar navigation configuration\nstyles.css - Sidebar-specific styling\n\n\n\n\n\n\n\n\n\nUpdated JupyterLite iframe source from demo site to more stable jupyter.org hosted version\nRemoved embedded REPL console due to persistent CSP and Pyodide errors\nAdded instructions for using console within JupyterLab (File → New → Console)\nAdded documentation on saving/downloading notebooks\nClarified that notebooks auto-save to browser local storage\n\n\n\n\n\nMarimo demo integration - Taking longer than expected due to requirement for locally running server to handle backend operations\n\n\n\n\n\nmodules/jupyterlite-demo.qmd - Updated iframe sources and added save instructions\n\n\n\n\n\n\n\n\n\nCreated Quarto website structure with basic architecture\nSet up navigation bar with Home, Course Modules (1-7), and Resources\nAdded BYU-I logo to navbar and as favicon\nCreated placeholder pages for all 7 modules\n\n\n\n\n\nApplied Cosmo theme\nAdded custom blue navbar color (#4a90e2)\nAdjusted BYU-I logo size to 90px height\nAdded navbar shadow effect\n\n\n\n\n\n_quarto.yml - Main configuration file\nindex.qmd - Home page\nmodules/module1.qmd through modules/module7.qmd - Module pages\nstyles.css - Custom styling"
+    "text": "Updated resources/colabs.qmd with all new Google Colab notebooks\nAdded Week 1, Week 2, and Week 5 entries to central Colab directory\nFixed truncated Week 7 description in Colab resource page\nRemoved duplicate “Getting Started with Colab” section\nAdded comprehensive support section for troubleshooting\n\n\n\n\n\nresources/colabs.qmd - Complete update with all seven weeks\n\n\n\n\n\n\n\n\n\nCreated week1_lesson.ipynb for Google Colab with LangChain basics and prompt engineering\nCreated week2_lesson.ipynb for Google Colab with workflows vs agents content\nCreated week5_lesson.ipynb with progressive disclosure pedagogy for SQL assistant\nUpdated all notebooks from gemini-2.0-flash-exp to gemini-2.5-flash (free tier)\nImplemented dual-path setup instructions for both Colab Secrets and local .env files\n\n\n\n\n\nUpdated module1.qmd with Colab setup instructions and notebook link\nUpdated module2.qmd with Colab setup instructions and notebook link\n\nCompletely rewrote module5.qmd with:\n\nLesson overview and learning objectives\nProgressive disclosure lecture with cost comparison examples\nSkills-based architecture explanation\nAPI setup instructions for both Colab and local development\nCode workflow walkthrough and extension ideas\nColab notebook link\n\n\n\n\n\n\nCorrected model name across 9+ files from gemini-2.0-flash-exp to gemini-2.5-flash\nAdded callout tips to guide students between Colab and local setups\nImplemented consistent Colab link formatting matching Module 6 style\n\n\n\n\n\nmodules/week1_lesson.ipynb - New Colab notebook\nmodules/week2_lesson.ipynb - New Colab notebook\nmodules/week5_lesson.ipynb - New pedagogically-structured Colab notebook\nmodules/module1.qmd - Colab integration and model update\nmodules/module2.qmd - Colab integration and model update\nmodules/module5.qmd - Complete rewrite with progressive disclosure content\n\n\n\n\n\n\n\n\n\nFixed TOC active item text color to use cosmo blue instead of sandstone green\nAdded Contributors page under Resources section\nCorrected Warren Buffett image path in Module 6\n\n\n\n\n\nToned down homepage introduction for more professional tone\nUpdated Module 4 subtitle to “Debugging, Tracing, and Evaluating AI Agents”\nClarified target audience on homepage to mention BYU-I Data Science Society\n\n\n\n\n\ncosmo-colors.css - TOC active item styling\nresources/contributors.qmd - New empty contributors page\nmodules/module6.qmd - Fixed image path\nindex.qmd - Updated intro and target audience\nmodules/module4.qmd - Updated subtitle\n\n\n\n\n\n\n\n\n\nCompletely rewrote Module 7 to match course formatting standards\nAdded comprehensive drift detection content (data drift, concept drift, prediction drift)\nIncluded real-world examples and discussion questions\nAdded coding activity instructions with statistical tests and retraining workflows\nExpanded learning objectives and best practices for production AI\n\n\n\n\n\nmodules/module7.qmd - Full content restructure\n\n\n\n\n\n\n\n\n\nImplemented hybrid sandstone/cosmo theme approach\nCreated cosmo-colors.css for color variable overrides\nChanged global theme from cosmo to sandstone while preserving cosmo colors\nUpdated all module files to use sandstone theme consistently\nMaintained sandstone structure with cosmo blue color scheme\n\n\n\n\n\n_quarto.yml - Updated theme and CSS files\ncosmo-colors.css - New CSS variable override file\nmodules/module1-7.qmd - Theme declarations updated\nresources/colabs.qmd - Theme updated\nresources/dictionary.qmd - Theme updated\n\n\n\n\n\n\n\n\n\nAdded spacing between sidebar navigation items (8px/12px margins)\nCompacted logo and navigation positioning with negative margins\nMoved logo up and reduced space between logo and search bar\nFine-tuned sidebar layout for cleaner appearance\n\n\n\n\n\nstyles.css - Sidebar item spacing, logo positioning adjustments\n\n\n\n\n\n\n\n\n\nCreated comprehensive Notebooks page documenting all 6 Google Colab projects\nBuilt Reference page with documentation links and 30+ terminology definitions\nAdded getting started guides and project descriptions\nOrganized documentation by LLM providers, frameworks, and tools\nHidden TOC on home, notebooks, and reference pages for cleaner layout\n\n\n\n\n\nresources/colabs.qmd - Notebooks documentation\nresources/dictionary.qmd - Reference and terminology\n\n\n\n\n\nindex.qmd - Added TOC: false\n_quarto.yml - Added Resources section to sidebar\n\n\n\n\n\n\n\n\n\nCreated complete landing page with hero section\nAdded course overview and learning outcomes\nBuilt prerequisite list focused on Google Colab (no local Python install)\nIncluded comprehensive weekly breakdown with descriptions\nStyled all links consistently with bold formatting and arrows\n\n\n\n\n\nindex.qmd - Complete homepage content\n\n\n\n\n\n\n\n\n\nReplaced BYUI logo with DS_Logo.png\nIncreased logo size from 120px to 250px\nAdded background-vector.png at 9% opacity\nFixed logo CSS selector specificity issue\nCentered logo with proper positioning\n\n\n\n\n\n_quarto.yml - Logo path updated\nstyles.css - Logo sizing and background image styling\n\n\n\n\n\n\n\n\n\nConverted top navbar to left sidebar navigation\nImplemented docked sidebar style with light background\nAdded logo to sidebar\nOrganized modules and resources in collapsible sections\nRemoved top navbar completely\n\n\n\n\n\n_quarto.yml - Sidebar navigation configuration\nstyles.css - Sidebar-specific styling\n\n\n\n\n\n\n\n\n\nUpdated JupyterLite iframe source from demo site to more stable jupyter.org hosted version\nRemoved embedded REPL console due to persistent CSP and Pyodide errors\nAdded instructions for using console within JupyterLab (File → New → Console)\nAdded documentation on saving/downloading notebooks\nClarified that notebooks auto-save to browser local storage\n\n\n\n\n\nMarimo demo integration - Taking longer than expected due to requirement for locally running server to handle backend operations\n\n\n\n\n\nmodules/jupyterlite-demo.qmd - Updated iframe sources and added save instructions\n\n\n\n\n\n\n\n\n\nCreated Quarto website structure with basic architecture\nSet up navigation bar with Home, Course Modules (1-7), and Resources\nAdded BYU-I logo to navbar and as favicon\nCreated placeholder pages for all 7 modules\n\n\n\n\n\nApplied Cosmo theme\nAdded custom blue navbar color (#4a90e2)\nAdjusted BYU-I logo size to 90px height\nAdded navbar shadow effect\n\n\n\n\n\n_quarto.yml - Main configuration file\nindex.qmd - Home page\nmodules/module1.qmd through modules/module7.qmd - Module pages\nstyles.css - Custom styling"
+  },
+  {
+    "objectID": "CHANGELOG.html#march-19-2026",
+    "href": "CHANGELOG.html#march-19-2026",
+    "title": "AI Boot Camp - Change Log",
+    "section": "",
+    "text": "Updated resources/colabs.qmd with all new Google Colab notebooks\nAdded Week 1, Week 2, and Week 5 entries to central Colab directory\nFixed truncated Week 7 description in Colab resource page\nRemoved duplicate “Getting Started with Colab” section\nAdded comprehensive support section for troubleshooting\n\n\n\n\n\nresources/colabs.qmd - Complete update with all seven weeks"
+  },
+  {
+    "objectID": "CHANGELOG.html#march-18-2026",
+    "href": "CHANGELOG.html#march-18-2026",
+    "title": "AI Boot Camp - Change Log",
+    "section": "",
+    "text": "Created week1_lesson.ipynb for Google Colab with LangChain basics and prompt engineering\nCreated week2_lesson.ipynb for Google Colab with workflows vs agents content\nCreated week5_lesson.ipynb with progressive disclosure pedagogy for SQL assistant\nUpdated all notebooks from gemini-2.0-flash-exp to gemini-2.5-flash (free tier)\nImplemented dual-path setup instructions for both Colab Secrets and local .env files\n\n\n\n\n\nUpdated module1.qmd with Colab setup instructions and notebook link\nUpdated module2.qmd with Colab setup instructions and notebook link\n\nCompletely rewrote module5.qmd with:\n\nLesson overview and learning objectives\nProgressive disclosure lecture with cost comparison examples\nSkills-based architecture explanation\nAPI setup instructions for both Colab and local development\nCode workflow walkthrough and extension ideas\nColab notebook link\n\n\n\n\n\n\nCorrected model name across 9+ files from gemini-2.0-flash-exp to gemini-2.5-flash\nAdded callout tips to guide students between Colab and local setups\nImplemented consistent Colab link formatting matching Module 6 style\n\n\n\n\n\nmodules/week1_lesson.ipynb - New Colab notebook\nmodules/week2_lesson.ipynb - New Colab notebook\nmodules/week5_lesson.ipynb - New pedagogically-structured Colab notebook\nmodules/module1.qmd - Colab integration and model update\nmodules/module2.qmd - Colab integration and model update\nmodules/module5.qmd - Complete rewrite with progressive disclosure content"
   },
   {
     "objectID": "CHANGELOG.html#march-17-2026",
@@ -233,9 +247,196 @@
   {
     "objectID": "modules/module5.html",
     "href": "modules/module5.html",
-    "title": "Week 5",
+    "title": "Week 5 - SQL Assistant with Progressive Disclosure",
     "section": "",
-    "text": "Week 5 Content",
+    "text": "Segment\nDuration\n\n\n\n\nLecture: Progressive Disclosure Concept\n10 minutes\n\n\nSetup: Environment & Skills\n15 minutes\n\n\nGuided Coding: Building the SQL Agent\n20 minutes\n\n\nExploration: Advanced Constraints & Multi-turn\n15+ minutes\n\n\n\nLearning Objectives: By the end of this lesson, students will be able to:\n\nUnderstand the progressive disclosure pattern for context management\nBuild an agent that loads database schemas on-demand\nCreate skill-based tools that inject knowledge when needed\nImplement stateful agents that remember loaded context\nDesign constrained tools that enforce prerequisites\n\nColab Notebook for Today:\n\nWeek 5 - SQL Assistant with Progressive Disclosure\n(It is recommended to download a copy of the notebook to your own google colab)\n\nBased on: LangChain SQL Skills Assistant tutorial",
+    "crumbs": [
+      "Course Modules",
+      "Module 5"
+    ]
+  },
+  {
+    "objectID": "modules/module5.html#what-is-progressive-disclosure",
+    "href": "modules/module5.html#what-is-progressive-disclosure",
+    "title": "Week 5 - SQL Assistant with Progressive Disclosure",
+    "section": "What is Progressive Disclosure?",
+    "text": "What is Progressive Disclosure?\nProgressive disclosure is a design pattern where you show only the minimum information needed upfront, and load details on-demand. In the context of AI agents and databases:\nTraditional Approach (❌ Wasteful): - Load ALL database schemas into the agent’s context upfront - For a database with 100 tables, this fills the entire context window - Extremely high cost and token usage - Agent is overwhelmed with irrelevant information\nProgressive Disclosure (✅ Efficient): - Show only lightweight skill descriptions in the system prompt - Agent calls load_skill() on-demand to retrieve full schemas - Only loads what it needs for the current task - Scales to massive databases",
+    "crumbs": [
+      "Course Modules",
+      "Module 5"
+    ]
+  },
+  {
+    "objectID": "modules/module5.html#real-world-example",
+    "href": "modules/module5.html#real-world-example",
+    "title": "Week 5 - SQL Assistant with Progressive Disclosure",
+    "section": "Real-World Example",
+    "text": "Real-World Example\nImagine you work at a company with 50 different database schemas (sales, inventory, HR, finance, marketing, etc.).\n\nOld way: Load all 50 schemas → 500,000 tokens → $10 per query\nNew way: Agent sees 50 one-sentence descriptions → loads 1 schema when needed → 10,000 tokens → $0.20 per query\n\nThat’s a 50x cost reduction while maintaining the same functionality!",
+    "crumbs": [
+      "Course Modules",
+      "Module 5"
+    ]
+  },
+  {
+    "objectID": "modules/module5.html#core-concept",
+    "href": "modules/module5.html#core-concept",
+    "title": "Week 5 - SQL Assistant with Progressive Disclosure",
+    "section": "Core Concept",
+    "text": "Core Concept\nInstead of this:\nSystem: Here are all 100 database schemas...\n[500 pages of schema details]\nUser: What were our top customers last month?\nWe do this:\nSystem: You have access to these skills:\n- sales_analytics: Customer and order data\n- inventory_management: Product and stock data\n- ...\nUser: What were our top customers last month?\nAgent: I need sales_analytics. Let me load it.\n[Loads only that one schema]\nAgent: Here's your query based on the sales schema.",
+    "crumbs": [
+      "Course Modules",
+      "Module 5"
+    ]
+  },
+  {
+    "objectID": "modules/module5.html#about-api-keys",
+    "href": "modules/module5.html#about-api-keys",
+    "title": "Week 5 - SQL Assistant with Progressive Disclosure",
+    "section": "About API keys",
+    "text": "About API keys\nAn API key gives you access to Google’s Gemini AI models. You’ll need one to run this lesson.",
+    "crumbs": [
+      "Course Modules",
+      "Module 5"
+    ]
+  },
+  {
+    "objectID": "modules/module5.html#do-this",
+    "href": "modules/module5.html#do-this",
+    "title": "Week 5 - SQL Assistant with Progressive Disclosure",
+    "section": "Do This",
+    "text": "Do This\n\nAccess the developer’s site for Gemini here: Gemini API key\nSign in with your Google account\nA key should be created automatically. Copy the string of characters and numbers.\n\n\nIf it doesn’t work\n\nMake sure you are using a personal Google account, not your school email\nIf it says you don’t have access in your region, you may need to verify your age in your Google account settings",
+    "crumbs": [
+      "Course Modules",
+      "Module 5"
+    ]
+  },
+  {
+    "objectID": "modules/module5.html#for-google-colab",
+    "href": "modules/module5.html#for-google-colab",
+    "title": "Week 5 - SQL Assistant with Progressive Disclosure",
+    "section": "For Google Colab:",
+    "text": "For Google Colab:\nIn Google Colab, we’ll use Colab’s built-in secrets feature to store your API key securely.\nSteps: 1. Click the 🔑 key icon in the left sidebar (“Secrets”) 2. Click “Add a new secret” 3. Name it: GOOGLE_API_KEY 4. Paste your Gemini API key as the value 5. Toggle on “Notebook access” for this notebook\n# Set up API key from Colab secrets\nimport os\nfrom google.colab import userdata\n\nos.environ['GOOGLE_API_KEY'] = userdata.get('GOOGLE_API_KEY')\nprint(\"Google API key configured!\")",
+    "crumbs": [
+      "Course Modules",
+      "Module 5"
+    ]
+  },
+  {
+    "objectID": "modules/module5.html#for-local-development",
+    "href": "modules/module5.html#for-local-development",
+    "title": "Week 5 - SQL Assistant with Progressive Disclosure",
+    "section": "For Local Development:",
+    "text": "For Local Development:\n# Load environment variables from .env file (local development only)\nfrom dotenv import load_dotenv\nload_dotenv()",
+    "crumbs": [
+      "Course Modules",
+      "Module 5"
+    ]
+  },
+  {
+    "objectID": "modules/module5.html#install-required-packages",
+    "href": "modules/module5.html#install-required-packages",
+    "title": "Week 5 - SQL Assistant with Progressive Disclosure",
+    "section": "Install Required Packages",
+    "text": "Install Required Packages\n!pip install -q -U langchain langchain-google-genai langgraph",
+    "crumbs": [
+      "Course Modules",
+      "Module 5"
+    ]
+  },
+  {
+    "objectID": "modules/module5.html#initialize-the-gemini-model",
+    "href": "modules/module5.html#initialize-the-gemini-model",
+    "title": "Week 5 - SQL Assistant with Progressive Disclosure",
+    "section": "Initialize the Gemini Model",
+    "text": "Initialize the Gemini Model\nfrom langchain.chat_models import init_chat_model\n\nmodel = init_chat_model(\n    model=\"gemini-2.5-flash\",\n    model_provider=\"google_genai\",\n)\n\n# Sanity check\nresponse = model.invoke(\"Hello world!\")\nprint(\"✅ Gemini 2.5 Flash model ready!\")\nprint(f\"Response: {response.content}\")",
+    "crumbs": [
+      "Course Modules",
+      "Module 5"
+    ]
+  },
+  {
+    "objectID": "modules/module5.html#what-are-skills",
+    "href": "modules/module5.html#what-are-skills",
+    "title": "Week 5 - SQL Assistant with Progressive Disclosure",
+    "section": "What are Skills?",
+    "text": "What are Skills?\nA skill is a package of domain-specific knowledge that the agent can load on-demand. Each skill has three components:\n\nname — unique identifier (e.g., \"sales_analytics\")\ndescription — short 1-2 sentence summary shown in the system prompt upfront\ncontent — the full schema and business logic, loaded only when needed\n\nThis is the heart of progressive disclosure: descriptions are cheap, full content is loaded only when needed.",
+    "crumbs": [
+      "Course Modules",
+      "Module 5"
+    ]
+  },
+  {
+    "objectID": "modules/module5.html#example-skill-structure",
+    "href": "modules/module5.html#example-skill-structure",
+    "title": "Week 5 - SQL Assistant with Progressive Disclosure",
+    "section": "Example Skill Structure",
+    "text": "Example Skill Structure\nSkill(\n    name=\"sales_analytics\",\n    description=\"Database schema and business logic for sales data analysis.\",\n    content=\"\"\"\n    # Full database schema here\n    Tables: customers, orders, order_items\n    Columns: ...\n    Business rules: ...\n    \"\"\"\n)\nThe description goes in the system prompt. The content is loaded via the load_skill() tool.",
+    "crumbs": [
+      "Course Modules",
+      "Module 5"
+    ]
+  },
+  {
+    "objectID": "modules/module5.html#step-1-define-skills",
+    "href": "modules/module5.html#step-1-define-skills",
+    "title": "Week 5 - SQL Assistant with Progressive Disclosure",
+    "section": "Step 1: Define Skills",
+    "text": "Step 1: Define Skills\nCreate skill objects with lightweight descriptions and full content.",
+    "crumbs": [
+      "Course Modules",
+      "Module 5"
+    ]
+  },
+  {
+    "objectID": "modules/module5.html#step-2-create-the-load_skill-tool",
+    "href": "modules/module5.html#step-2-create-the-load_skill-tool",
+    "title": "Week 5 - SQL Assistant with Progressive Disclosure",
+    "section": "Step 2: Create the load_skill Tool",
+    "text": "Step 2: Create the load_skill Tool\nThis tool fetches skill content on-demand:\n@tool\ndef load_skill(skill_name: str) -&gt; str:\n    \\\"\\\"\\\"Load the full content of a skill into the agent's context.\\\"\\\"\\\"\n    skill = SKILLS_MAP.get(skill_name)\n    if skill:\n        return f\"Loaded skill: {skill_name}\\\\n\\\\n{skill.content}\"\n    return f\"Skill '{skill_name}' not found.\"",
+    "crumbs": [
+      "Course Modules",
+      "Module 5"
+    ]
+  },
+  {
+    "objectID": "modules/module5.html#step-3-build-system-prompt-with-skill-descriptions",
+    "href": "modules/module5.html#step-3-build-system-prompt-with-skill-descriptions",
+    "title": "Week 5 - SQL Assistant with Progressive Disclosure",
+    "section": "Step 3: Build System Prompt with Skill Descriptions",
+    "text": "Step 3: Build System Prompt with Skill Descriptions\nskills_list = \"\\\\n\".join(\n    f\"- **{skill.name}**: {skill.description}\"\n    for skill in SKILLS\n)\n\nSYSTEM_PROMPT = f\\\"\\\"\\\"You are a SQL query assistant.\n\n## Available Skills\n{skills_list}\n\nBefore writing SQL, call load_skill to get the schema.\\\"\\\"\\\"",
+    "crumbs": [
+      "Course Modules",
+      "Module 5"
+    ]
+  },
+  {
+    "objectID": "modules/module5.html#step-4-create-the-agent",
+    "href": "modules/module5.html#step-4-create-the-agent",
+    "title": "Week 5 - SQL Assistant with Progressive Disclosure",
+    "section": "Step 4: Create the Agent",
+    "text": "Step 4: Create the Agent\nagent = create_react_agent(\n    model=model,\n    tools=[load_skill],\n    prompt=SYSTEM_PROMPT,\n    checkpointer=MemorySaver(),  # Remembers loaded skills\n)",
+    "crumbs": [
+      "Course Modules",
+      "Module 5"
+    ]
+  },
+  {
+    "objectID": "modules/module5.html#step-5-test-it",
+    "href": "modules/module5.html#step-5-test-it",
+    "title": "Week 5 - SQL Assistant with Progressive Disclosure",
+    "section": "Step 5: Test It!",
+    "text": "Step 5: Test It!\nask_agent(\"Find customers who made orders over $1000 last month.\")\nThe agent will: 1. Recognize it needs sales data 2. Call load_skill(\"sales_analytics\") 3. Get the full schema 4. Write the SQL query",
+    "crumbs": [
+      "Course Modules",
+      "Module 5"
+    ]
+  },
+  {
+    "objectID": "modules/module5.html#extending-this-pattern",
+    "href": "modules/module5.html#extending-this-pattern",
+    "title": "Week 5 - SQL Assistant with Progressive Disclosure",
+    "section": "Extending This Pattern",
+    "text": "Extending This Pattern\nAdd more skills: Just add entries to the SKILLS list — no other code changes needed.\nLarge databases: For 100+ tables, use vector search to find relevant skills:\nfrom langchain_community.vectorstores import FAISS\n# Embed skill descriptions, retrieve top-k relevant\nReal query execution: Combine with LangChain’s SQL Agent to actually run queries against a database.\nRemote skill storage: Store skill content in S3, a database, or an API instead of in-memory.",
     "crumbs": [
       "Course Modules",
       "Module 5"
@@ -345,7 +546,7 @@
     "href": "modules/module1.html",
     "title": "Week 1 - LLM Bootcamp",
     "section": "",
-    "text": "Segment\nDuration\n\n\n\n\nLecture: Why, What, and How?\n15 minutes\n\n\nActivity: API Key Setup\n10 minutes\n\n\nGuided Coding: LangChain Basics\n15 minutes\n\n\nExploration: Prompt & Context Engineering\n20+ minutes\n\n\n\nLearning Objectives: By the end of this lesson, students will be able to:\n\nCreate a simple custom chat using API calls\nGet and secure a Gemini API key\nIntroduce LLM concepts and services\nStart exploring LangChain and LLM concepts generally",
+    "text": "Segment\nDuration\n\n\n\n\nLecture: Why, What, and How?\n15 minutes\n\n\nActivity: API Key Setup\n10 minutes\n\n\nGuided Coding: LangChain Basics\n15 minutes\n\n\nExploration: Prompt & Context Engineering\n20+ minutes\n\n\n\nLearning Objectives: By the end of this lesson, students will be able to:\n\nCreate a simple custom chat using API calls\nGet and secure a Gemini API key\nIntroduce LLM concepts and services\nStart exploring LangChain and LLM concepts generally\n\nColab Notebook for Today:\n\nWeek 1 - Getting Started with AI Agents\n(It is recommended to download a copy of the notebook to your own google colab)",
     "crumbs": [
       "Course Modules",
       "Module 1"
@@ -378,7 +579,7 @@
     "href": "modules/module1.html#i-have-a-key-now-what",
     "title": "Week 1 - LLM Bootcamp",
     "section": "I have a key, now what?",
-    "text": "I have a key, now what?\nDO NOT paste it in this file DO NOT paste it in .env.example\nDO:\n\nRename .env.example to .env\nPaste key in .env\nSave .env\n\nThis is safe only when the .gitignore file has .env listed.\n\nWhy .env?\nAPI keys are coveted (especially for LLM’s). If it gets published to GitHub, it will be stolen and used by strangers. To keep yours safe, store it in the .env file in the main directory. This environment variable file stays local to your machine and will not be pushed to GitHub (because the .gitignore file says to ignore it. You can open the .gitignore file to see .env listed as files it won’t publish to GitHub). The file .env.template is just a template. Please rename .env.template to .env before adding API keys.",
+    "text": "I have a key, now what?\n\n\n\n\n\n\nChoose Your Platform\n\n\n\nYou can follow along using either Google Colab (recommended for beginners - no setup required!) or local development (requires Python environment setup). The code examples below include instructions for both.\n\n\n\nFor Google Colab:\nIn Google Colab, we’ll use Colab’s built-in secrets feature to store your API key securely.\nSteps: 1. Click the 🔑 key icon in the left sidebar (“Secrets”) 2. Click “Add a new secret” 3. Name it: GOOGLE_API_KEY 4. Paste your Gemini API key as the value 5. Toggle on “Notebook access” for this notebook\n# Set up API key from Colab secrets\nimport os\nfrom google.colab import userdata\n\nos.environ['GOOGLE_API_KEY'] = userdata.get('GOOGLE_API_KEY')\n\n\nFor Local Development:\nDO NOT paste it in this file DO NOT paste it in .env.example\nDO:\n\nRename .env.example to .env\nPaste key in .env\nSave .env\n\nThis is safe only when the .gitignore file has .env listed.\n\nWhy .env?\nAPI keys are coveted (especially for LLM’s). If it gets published to GitHub, it will be stolen and used by strangers. To keep yours safe, store it in the .env file in the main directory. This environment variable file stays local to your machine and will not be pushed to GitHub (because the .gitignore file says to ignore it. You can open the .gitignore file to see .env listed as files it won’t publish to GitHub). The file .env.template is just a template. Please rename .env.template to .env before adding API keys.\n# Load environment variables from .env file (local development only)\nfrom dotenv import load_dotenv\nload_dotenv()",
     "crumbs": [
       "Course Modules",
       "Module 1"
@@ -389,7 +590,7 @@
     "href": "modules/module1.html#finally",
     "title": "Week 1 - LLM Bootcamp",
     "section": "Finally",
-    "text": "Finally\nYou can now run the below code to install needed packages and load the environment variables from .env into this file. (You will need to rerun load_dotenv() every time you open the file again, but not pip install, which is a one time run.)\n# This installs the dependencies you need\n# Windows:\n%pip install -q -U langchain langchain-google-genai python-dotenv\n\n# Mac:\n# %pip3 install -q -U langchain langchain-google-genai python-dotenv\n# Load environment variables from .env file\nfrom dotenv import load_dotenv\nload_dotenv()\nAfter saving your API key, you can run the below code to see if it worked.\n# Paste code here\nfrom langchain.chat_models import init_chat_model\n\nmodel = init_chat_model(\n    model=\"gemini-2.5-flash\", \n    model_provider=\"google_genai\"\n)\n\nmodel.invoke(\"Hello world!\")\nYou should see something like:\nAIMessage(content='Hello there! How can I help you today?', additional_kwargs={}, ...",
+    "text": "Finally\nYou can now run the below code to install needed packages. (You only need to run pip install once.)\n# This installs the dependencies you need\n!pip install -q -U langchain langchain-google-genai\nAfter saving your API key, you can run the below code to see if it worked.\nfrom langchain.chat_models import init_chat_model\n\nmodel = init_chat_model(\n    model=\"gemini-2.5-flash\", \n    model_provider=\"google_genai\"\n)\n\nmodel.invoke(\"Hello world!\")\nYou should see something like:\nAIMessage(content='Hello there! How can I help you today?', additional_kwargs={}, ...",
     "crumbs": [
       "Course Modules",
       "Module 1"
@@ -400,7 +601,7 @@
     "href": "modules/module1.html#prompt-engineering",
     "title": "Week 1 - LLM Bootcamp",
     "section": "Prompt Engineering",
-    "text": "Prompt Engineering\nIf you think you understand prompt engineering, consider the following quote speaking for more complicated agent systems.\n\nThe prompts for deep agents often span hundreds if not thousands of lines — usually containing a general persona, instructions on calling tools, important guidelines, and few-shot examples. - LangChain Blog\n\nPrompt engineering is the real meat of customizing LLM’s. Consider the impact of changing just a few words. Run these a few times, and try intentional word changes.\nfrom langchain_google_genai import ChatGoogleGenerativeAI\n\nmodel = ChatGoogleGenerativeAI(model=\"gemini-2.5-flash-lite\")\n\nprompt = \"What did you have for breakfast today?\"\n# Arnold 1\nmodel.invoke(\"You are Arnold Schwarzenegger. \" + prompt).content\n# Arnold 2\nmodel.invoke(\"Act like Arnold Schwarzenegger. \" + prompt).content\n# Arnold 3\nmodel.invoke(\"Speak in the tone of Arnold Schwarzenegger. \" + prompt).content\n# Arnold 4\nmodel.invoke(\"You are Arnold Schwarzenegger. Respond briefly.\" + prompt).content\nIn general, the best prompting advice is: be specific. It often helps to give examples.\nTo get a good feel of prompting best practices and types of prompts, look at these resources:\n\nClaude docs\nGemini docs\nGemini prompting with files\n\nfrom langchain_core.messages import HumanMessage, SystemMessage\n\nsystem_instr = \"You are Arnold Schwarzenegger\"\n\nprompt = \"What did you have for breakfast today?\"\n\nmodel.invoke([\n    SystemMessage(system_instr),\n    HumanMessage(prompt)]).content",
+    "text": "Prompt Engineering\nIf you think you understand prompt engineering, consider the following quote speaking for more complicated agent systems.\n\nThe prompts for deep agents often span hundreds if not thousands of lines — usually containing a general persona, instructions on calling tools, important guidelines, and few-shot examples. - LangChain Blog\n\nPrompt engineering is the real meat of customizing LLM’s. Consider the impact of changing just a few words. Run these a few times, and try intentional word changes.\nfrom langchain_google_genai import ChatGoogleGenerativeAI\n\nmodel = ChatGoogleGenerativeAI(model=\"gemini-2.5-flash\")\n\nprompt = \"What did you have for breakfast today?\"\n# Arnold 1\nmodel.invoke(\"You are Arnold Schwarzenegger. \" + prompt).content\n# Arnold 2\nmodel.invoke(\"Act like Arnold Schwarzenegger. \" + prompt).content\n# Arnold 3\nmodel.invoke(\"Speak in the tone of Arnold Schwarzenegger. \" + prompt).content\n# Arnold 4\nmodel.invoke(\"You are Arnold Schwarzenegger. Respond briefly.\" + prompt).content\nIn general, the best prompting advice is: be specific. It often helps to give examples.\nTo get a good feel of prompting best practices and types of prompts, look at these resources:\n\nClaude docs\nGemini docs\nGemini prompting with files\n\nfrom langchain_core.messages import HumanMessage, SystemMessage\n\nsystem_instr = \"You are Arnold Schwarzenegger\"\n\nprompt = \"What did you have for breakfast today?\"\n\nmodel.invoke([\n    SystemMessage(system_instr),\n    HumanMessage(prompt)]).content",
     "crumbs": [
       "Course Modules",
       "Module 1"
@@ -422,7 +623,7 @@
     "href": "modules/module1.html#more-on-langchain",
     "title": "Week 1 - LLM Bootcamp",
     "section": "More on LangChain",
-    "text": "More on LangChain\nYou may have noticed The model’s response was more than just text.\nfrom langchain.chat_models import init_chat_model\n\nmodel = init_chat_model(model=\"gemini-2.5-flash-lite\", model_provider=\"google-genai\")\n\nresponse = model.invoke(\"Be an angsty teen\")\n\nprint(response)\nYou can access just the text response with .content\nresponse.content\n…But there is a lot of other useful information, too. To see everything you can access with dot notation, you can use this function.\nresponse.model_dump()\nSome items are nested, like ‘usage_metadata’, and you may have to use bracket notation as well.\nresponse.usage_metadata['input_tokens']",
+    "text": "More on LangChain\nYou may have noticed The model’s response was more than just text.\nfrom langchain.chat_models import init_chat_model\n\nmodel = init_chat_model(model=\"gemini-2.5-flash\", model_provider=\"google_genai\")\n\nresponse = model.invoke(\"Be an angsty teen\")\n\nprint(response)\nYou can access just the text response with .content\nresponse.content\n…But there is a lot of other useful information, too. To see everything you can access with dot notation, you can use this function.\nresponse.model_dump()\nSome items are nested, like ‘usage_metadata’, and you may have to use bracket notation as well.\nresponse.usage_metadata['input_tokens']",
     "crumbs": [
       "Course Modules",
       "Module 1"
@@ -525,7 +726,7 @@
     "href": "modules/module2.html",
     "title": "Week 2 - Workflows and Agents",
     "section": "",
-    "text": "Segment\nDuration\n\n\n\n\nLecture: Agents and Workflows\n5-10 minutes\n\n\nActivity: Workflow vs. Agents\n20 minutes\n\n\nExploration: Workflows\n20+ minutes\n\n\n\nLearning Objectives: By the end of this lesson, students will be able to:\n\nExplain common features of LLM providers\nExplain the difference between workflows and agents\nIdentify when to use one or the other\nPlan workflows and agents conceptually\nTranslate workflows into code",
+    "text": "Segment\nDuration\n\n\n\n\nLecture: Agents and Workflows\n5-10 minutes\n\n\nActivity: Workflow vs. Agents\n20 minutes\n\n\nExploration: Workflows\n20+ minutes\n\n\n\nLearning Objectives: By the end of this lesson, students will be able to:\n\nExplain common features of LLM providers\nExplain the difference between workflows and agents\nIdentify when to use one or the other\nPlan workflows and agents conceptually\nTranslate workflows into code\n\nColab Notebook for Today:\n\nWeek 2 - Workflows and Agents\n(It is recommended to download a copy of the notebook to your own google colab)",
     "crumbs": [
       "Course Modules",
       "Module 2"
@@ -580,7 +781,7 @@
     "href": "modules/module2.html#option-2-langgraph-python",
     "title": "Week 2 - Workflows and Agents",
     "section": "Option 2: LangGraph (Python)",
-    "text": "Option 2: LangGraph (Python)\nTry running the code from the earlier LangChain article or exploring their docs.\nJust replace their first two code chunks with this more relevant code:\n# Load environment variables from .env file\nfrom dotenv import load_dotenv\nload_dotenv()\n\nfrom langchain.chat_models import init_chat_model\n\n# Instantiate model\nllm = init_chat_model(\n    model=\"gemini-2.5-flash\", \n    model_provider=\"google_genai\"\n)",
+    "text": "Option 2: LangGraph (Python)\nTry running the code from the earlier LangChain article or exploring their docs.\n\n\n\n\n\n\nChoose Your Platform\n\n\n\nYou can follow along using either Google Colab (recommended for beginners - no setup required!) or local development (requires Python environment setup). The code examples below include instructions for both.\n\n\n\nSetup for Google Colab\nFirst, set up your API key using Colab’s secrets (same as Week 1):\n\nClick the 🔑 key icon in the left sidebar (“Secrets”)\nAdd a secret named GOOGLE_API_KEY with your Gemini API key\nToggle on “Notebook access”\n\n# Set up API key from Colab secrets\nimport os\nfrom google.colab import userdata\n\nos.environ['GOOGLE_API_KEY'] = userdata.get('GOOGLE_API_KEY')\nInstall required packages:\n!pip install -q -U langchain langchain-google-genai langgraph\n\n\nFor Local Development:\n# Load environment variables from .env file (local development only)\nfrom dotenv import load_dotenv\nload_dotenv()\nJust replace their first two code chunks with this more relevant code:\nfrom langchain.chat_models import init_chat_model\n\n# Instantiate model\nllm = init_chat_model(\n    model=\"gemini-2.5-flash\", \n    model_provider=\"google_genai\"\n)",
     "crumbs": [
       "Course Modules",
       "Module 2"
@@ -589,7 +790,7 @@
   {
     "objectID": "modules/module4.html#review-mcps-tools",
     "href": "modules/module4.html#review-mcps-tools",
-    "title": "AI Agents Diagnostics with LangSmith",
+    "title": "Week 4 - AI Agents Diagnostics with LangSmith",
     "section": "Review: MCPs & Tools",
     "text": "Review: MCPs & Tools\nBefore we dive into observability, let’s revisit the building blocks that let agents do things.\n\nWhat is an MCP Server?\nAn MCP (Model Context Protocol) server is a standardized interface that exposes real-world capabilities file access, API calls, database lookups to an AI model. The model doesn’t “know” how to read a CSV or call a web API; it asks an MCP server to do the actual work.\nUser Prompt\n    │\n    ▼\nAI Model (LLM)\n    │  decides to call a tool\n    ▼\nMCP Server ──► External Service (Canvas API, Google Drive, etc)\n    │\n    ▼\nTool Result returns to model\n    │\n    ▼\nFinal Response to User\nThe model is the brain; MCP servers and tools are the hands.\n\n\nWhat are Tools?\nTools are the individual functions an agent can invoke. In LangChain, you create tools with the @tool decorator. Three things every tool must have:\n\nA name how the agent refers to it\nA description (the docstring) what the LLM reads to decide when to call it\nA schema the parameter types, inferred from the function signature\n\nfrom langchain_core.tools import tool\n\n@tool\ndef log_food(name: str, calories: int, protein: int = 0) -&gt; str:\n    \"\"\"Log a food item to the wellness tracker.\n    Use this whenever the user mentions eating something.\n    Estimate calories and macros if the user does not give exact numbers.\n    \"\"\"\n    # ... implementation\nThe docstring is not just documentation it is part of the prompt the model receives. Vague docstrings produce wrong tool choices, and the effect shows up immediately in LangSmith.",
     "crumbs": [
@@ -600,7 +801,7 @@
   {
     "objectID": "modules/module4.html#langgraph-agent-architecture",
     "href": "modules/module4.html#langgraph-agent-architecture",
-    "title": "AI Agents Diagnostics with LangSmith",
+    "title": "Week 4 - AI Agents Diagnostics with LangSmith",
     "section": "LangGraph Agent Architecture",
     "text": "LangGraph Agent Architecture\nBoth agents use the same structure. The key import:\n# CORRECT: works with current LangChain/LangGraph\nfrom langgraph.prebuilt import create_react_agent\n\n# BROKEN: removed in LangChain v0.2\nfrom langchain.agents import create_react_agent\nNOTE: This is something AI will mess up a lot, if you are using AI you need to specify to use are using LangChain v1.x instead of v0.3\ncreate_react_agent builds a ReAct graph. The agent reasons step-by-step before every tool call, making behavior predictable and easy to trace. You invoke it with a messages list and read the final reply from result[\"messages\"][-1].content.",
     "crumbs": [
@@ -611,7 +812,7 @@
   {
     "objectID": "modules/module4.html#langsmith-three-layers-of-observability",
     "href": "modules/module4.html#langsmith-three-layers-of-observability",
-    "title": "AI Agents Diagnostics with LangSmith",
+    "title": "Week 4 - AI Agents Diagnostics with LangSmith",
     "section": "LangSmith: Three Layers of Observability",
     "text": "LangSmith: Three Layers of Observability\n\nLayer 1 Automatic Tracing\nSet four environment variables before your agent runs. LangChain and LangGraph automatically send every run to LangSmith no code changes needed.\nos.environ[\"LANGCHAIN_TRACING_V2\"] = \"true\"\nos.environ[\"LANGCHAIN_ENDPOINT\"]   = \"https://api.smith.langchain.com\"\nos.environ[\"LANGCHAIN_API_KEY\"]    = LANGSMITH_API_KEY\nos.environ[\"LANGCHAIN_PROJECT\"]    = \"wellness-agent\"\nThis gives you traces for every agent.invoke() call, with LLM nodes and tool nodes visible.\n\n\nLayer 2 @traceable for Custom Functions\nAutomatic tracing captures LangChain objects, but what about your own Python functions like the Canvas API calls or the CSV writes? That’s where @traceable comes in.\nfrom langsmith import traceable\n\n@traceable(name=\"Canvas API: list_courses\")\ndef _get_all_courses_raw() -&gt; list:\n    # This HTTP call is now a named span in the trace\n    ...\nWith @traceable, the trace tree goes from flat to fully nested:\n# WITHOUT @traceable   opaque single node:\n▼ tools\n  ▼ get_upcoming_assignments     [2.1s] ✅\n\n# WITH @traceable   full call tree:\n▼ tools\n  ▼ get_upcoming_assignments              [2.1s] ✅\n    ▼ Canvas API: get_upcoming_assignments [2.0s] ✅\n      ▼ Canvas API: list_courses           [0.4s] ✅\n      ▼ Canvas API: list_assignments       [0.3s] ✅  ← CSE 490R\n      ▼ Canvas API: list_assignments       [0.3s] ✅  ← DS 460\n      ▼ Canvas API: list_assignments       [0.9s] ⚠️  ← MATH 488 (slow!)\nNow you can see which endpoint is slow, which API call returned a 404, and exactly how long each step took. This is the biggest diagnostic improvement from the original notebooks.\nThe pattern we use throughout both notebooks is: @traceable on the raw implementation, @tool on the wrapper the agent calls.\n@traceable(name=\"CSV: write_food_entry\")   # ← becomes a child span in LangSmith\ndef _write_food(name, calories, ...):\n    # actual CSV write\n    ...\n\n@tool\ndef log_food(name: str, calories: int, ...) -&gt; str:\n    \"\"\"Log a food item...\"\"\"\n    _write_food(name, calories, ...)        # ← calls the traceable helper\n    return \"✅ Logged...\"\n\n\nLayer 3 Evaluations with Datasets\nTracing tells you what happened in a single run. Evaluations tell you how well your agent performs repeatably, across many inputs at once.\nA LangSmith evaluation has three parts:\n1. A dataset input/output example pairs stored in LangSmith:\nfrom langsmith import Client\n\nclient = Client()\ndataset = client.create_dataset(\"wellness-agent-eval\")\nclient.create_examples(\n    inputs=[\n        {\"input\": \"I just ate oatmeal for breakfast\"},\n        {\"input\": \"I went for a 30-minute run\"},\n    ],\n    outputs=[\n        {\"expected_tool\": \"log_food\"},\n        {\"expected_tool\": \"log_workout\"},\n    ],\n    dataset_id=dataset.id,\n)\n2. An evaluator a function that scores each run:\ndef correct_tool_called(inputs, outputs, reference_outputs):\n    expected = reference_outputs.get(\"expected_tool\", \"\")\n    for msg in outputs.get(\"messages\", []):\n        if hasattr(msg, \"tool_calls\"):\n            for call in msg.tool_calls:\n                if call.get(\"name\") == expected:\n                    return {\"score\": 1, \"comment\": f\"Called '{expected}' ✅\"}\n    return {\"score\": 0, \"comment\": f\"Expected '{expected}' ❌\"}\n3. evaluate() runs every dataset example through your agent, scores the results, and saves the experiment to LangSmith:\nfrom langsmith.evaluation import evaluate\n\nresults = evaluate(\n    run_agent,                              # your agent wrapper function\n    data=\"wellness-agent-eval\",             # dataset name\n    evaluators=[correct_tool_called],\n    experiment_prefix=\"wellness-tool-selection\",\n)\nAfter evaluate() finishes, open LangSmith → your project → Experiments tab. You get a scored table for every input. Run it again after a fix and the two experiments appear side by side you now have data proving the fix worked.",
     "crumbs": [
@@ -622,7 +823,7 @@
   {
     "objectID": "modules/module4.html#reading-a-full-trace",
     "href": "modules/module4.html#reading-a-full-trace",
-    "title": "AI Agents Diagnostics with LangSmith",
+    "title": "Week 4 - AI Agents Diagnostics with LangSmith",
     "section": "Reading a Full Trace",
     "text": "Reading a Full Trace\nHere is what a complete trace looks like in the Canvas tutor with all three layers active:\n▼ LangGraph                                           [4.3s] ✅\n  ▼ agent  (LLM: decides what tool to call)          [1.1s] ✅\n      input:  [user: \"What's due this week?\"]\n      output: [tool_call: get_upcoming_assignments({days_ahead: 7})]\n  ▼ tools                                             [3.1s] ✅\n    ▼ get_upcoming_assignments                        [3.1s] ✅\n      ▼ Canvas API: get_upcoming_assignments          [3.0s] ✅\n        ▼ Canvas API: list_courses                   [0.5s] ✅\n            output: 6 courses found\n        ▼ Canvas API: list_assignments               [0.4s] ✅  CSE 490R\n        ▼ Canvas API: list_assignments               [0.4s] ✅  DS 460\n        ▼ Canvas API: list_assignments               [0.3s] ✅  MATH 488\n  ▼ agent  (LLM: writes final reply)                 [1.1s] ✅\n      output: [ai: \"You have 3 assignments due this week...\"]\nWhat to look for on every trace:\n\nRed nodes unhandled exceptions with the exact error message right there\nDuration outliers one list_assignments span taking 3s when others take 0.3s\nTool inputs did the agent pass days_ahead: 7 or days_ahead: 30? The LLM’s extraction is visible\nMissing tool nodes if the agent answered without any tools node, the docstrings may be too vague",
     "crumbs": [
@@ -633,7 +834,7 @@
   {
     "objectID": "modules/module4.html#common-bugs-and-their-trace-signatures",
     "href": "modules/module4.html#common-bugs-and-their-trace-signatures",
-    "title": "AI Agents Diagnostics with LangSmith",
+    "title": "Week 4 - AI Agents Diagnostics with LangSmith",
     "section": "Common Bugs and Their Trace Signatures",
     "text": "Common Bugs and Their Trace Signatures\n\n\n\n\n\n\n\nBug\nWhere to look\n\n\n\n\nWrong tool selected\nTool name in the tools node doesn’t match intent\n\n\nVague tool description\nLLM agent node shows reasoning that ignores the right tool\n\n\n404 from an API\n@traceable span for that endpoint is red with HTTP 404\n\n\nSlow response\nCompare durations across @traceable API spans\n\n\nAgent skips tools entirely\nNo tools node at all in the trace\n\n\nBad argument extraction\nTool input in the trace shows wrong parameter values\n\n\n\n\nThe Diagnostic Loop\n1. Reproduce the bug\n      │\n      ▼\n2. Open the trace in LangSmith\n      │\n      ▼\n3. Find the failing node (red, wrong tool, missing span)\n      │\n      ▼\n4. Inspect: inputs, outputs, duration, error message\n      │\n      ▼\n5. Fix in code → re-run → compare new trace to old\n      │\n      ▼\n6. Add the failing input to your eval dataset\n   so regressions are caught automatically next time",
     "crumbs": [
@@ -644,7 +845,7 @@
   {
     "objectID": "modules/module4.html#setup",
     "href": "modules/module4.html#setup",
-    "title": "AI Agents Diagnostics with LangSmith",
+    "title": "Week 4 - AI Agents Diagnostics with LangSmith",
     "section": "Setup",
     "text": "Setup\nOpen both agents in Google Colab:\n\n\n\nNotebook\nLink\n\n\n\n\nWellness Agent\nOpen in Colab\n\n\nCanvas AI Tutor\nOpen in Colab\n\n\n\nLangSmith account: go to smith.langchain.com, sign up, create an API key under Settings → API Keys, and add it to your .env file:\nLANGSMITH_API_KEY=ls__your_key_here",
     "crumbs": [
@@ -655,7 +856,7 @@
   {
     "objectID": "modules/module4.html#activity-1-observe-traceable-nested-spans",
     "href": "modules/module4.html#activity-1-observe-traceable-nested-spans",
-    "title": "AI Agents Diagnostics with LangSmith",
+    "title": "Week 4 - AI Agents Diagnostics with LangSmith",
     "section": "Activity 1 Observe @traceable Nested Spans",
     "text": "Activity 1 Observe @traceable Nested Spans\nRun Steps 1–7 in the Wellness Agent, then:\ndef ask(msg):\n    result = agent.invoke({\"messages\": [{\"role\": \"user\", \"content\": msg}]})\n    print(\"Assistant:\", result[\"messages\"][-1].content)\n\nask(\"I just ate oatmeal with banana for breakfast\")\nask(\"I went for a 30-minute run\")\nask(\"I had a big breakfast\")      # intentionally vague\nask(\"Show me today's summary\")\nOpen each trace in LangSmith → wellness-agent.\nFor the first prompt, expand the log_food tool node:\n\nDo you see a CSV: write_food_entry child span? What does its output say?\nHow long did the CSV write take compared to the LLM call?\nWhat values did the agent pass for protein, carbs, and fat? How did it estimate these?\n\nFor the vague prompt (“I had a big breakfast”):\n\nWhich tool was called? What calorie number was passed?\nIs this a reasonable estimate? Would you flag this run?",
     "crumbs": [
@@ -666,7 +867,7 @@
   {
     "objectID": "modules/module4.html#activity-2-break-a-tool-description-read-the-trace",
     "href": "modules/module4.html#activity-2-break-a-tool-description-read-the-trace",
-    "title": "AI Agents Diagnostics with LangSmith",
+    "title": "Week 4 - AI Agents Diagnostics with LangSmith",
     "section": "Activity 2 Break a Tool Description, Read the Trace",
     "text": "Activity 2 Break a Tool Description, Read the Trace\nStep 1 In the Wellness Agent Step 5, change the log_food docstring:\n# ORIGINAL\n\"\"\"Log a food item to the wellness tracker.\nUse this whenever the user mentions eating something.\nEstimate calories and macros if the user does not give exact numbers.\n\"\"\"\n\n# BROKEN\n\"\"\"Does something with food data.\"\"\"\nRe-run Steps 5 and 6 to rebuild the agent.\nStep 2 Re-run two prompts:\nask(\"I just ate a chicken sandwich for lunch\")\nask(\"I had a big breakfast\")\nStep 3 Compare the old trace and new trace side-by-side in LangSmith.\nDiscuss as a class:\n\nDid the tools node appear in the broken trace, or did the agent skip it entirely?\nLook at the first agent node output. How did the reasoning change?\nIs there a CSV: write_food_entry child span? What does its presence or absence tell you?\n\nStep 4 Restore the original docstring before continuing.",
     "crumbs": [
@@ -677,7 +878,7 @@
   {
     "objectID": "modules/module4.html#activity-3-run-the-evaluation-dataset",
     "href": "modules/module4.html#activity-3-run-the-evaluation-dataset",
-    "title": "AI Agents Diagnostics with LangSmith",
+    "title": "Week 4 - AI Agents Diagnostics with LangSmith",
     "section": "Activity 3 Run the Evaluation Dataset",
     "text": "Activity 3 Run the Evaluation Dataset\nIn the Wellness Agent, run Steps 9a, 9b, and 9c.\nWhile it runs, watch LangSmith you will see five new traces appear in the wellness-agent project, one per dataset example.\nAfter it finishes, go to LangSmith → wellness-agent → Experiments tab.\nAnswer:\n\nWhat was the overall correct_tool_called score (out of 5)?\nWhich example(s) scored 0? What tool did the agent call instead?\nNow break the log_workout docstring (same approach as Activity 2) and re-run the eval. How did the score change? Which examples were newly affected?",
     "crumbs": [
@@ -688,7 +889,7 @@
   {
     "objectID": "modules/module4.html#your-turn-diagnose-and-evaluate-the-canvas-tutor",
     "href": "modules/module4.html#your-turn-diagnose-and-evaluate-the-canvas-tutor",
-    "title": "AI Agents Diagnostics with LangSmith",
+    "title": "Week 4 - AI Agents Diagnostics with LangSmith",
     "section": "Your Turn: Diagnose and Evaluate the Canvas Tutor",
     "text": "Your Turn: Diagnose and Evaluate the Canvas Tutor\nTask 1 Run the Canvas tutor and analyze the trace (3 min)\nRun Steps 1–7. Ask:\ndef ask(msg):\n    result = agent.invoke({\"messages\": [{\"role\": \"user\", \"content\": msg}]})\n    display(Markdown(f\"**Tutor:** {result['messages'][-1].content}\"))\n\nask(\"What assignments do I have due this week?\")\nOpen the trace in LangSmith → canvas-tutor. Fill in this table:\n\n\n\nSpan\nDuration\nWhat it returned\n\n\n\n\nCanvas API: list_courses\n\n\n\n\nCanvas API: list_assignments (first course)\n\n\n\n\nFull get_upcoming_assignments\n\n\n\n\nFull LangGraph run\n\n\n\n\n\nTask 2 Break a tool description and run the eval (5 min)\nChange get_upcoming_assignments’s docstring to:\n\"\"\"Retrieves some data from Canvas.\"\"\"\nRe-run Steps 5 and 6, then run the evaluation (Steps 8a and 8b):\nresults = evaluate(\n    run_agent,\n    data=\"canvas-tutor-eval\",\n    evaluators=[correct_tool_called],\n    experiment_prefix=\"canvas-broken-description\",\n)\nCompare the two experiments in LangSmith → canvas-tutor → Experiments.\nTask 3 Reflection (2 min)\nAnswer in 3–4 sentences:\n\nWhat advantage does running evaluate() give you over just reading traces manually?\nHow would you use eval datasets in a real project to prevent regressions when you change a tool description or system prompt?\n\nSubmit your duration table and reflection to Canvas before leaving class.",
     "crumbs": [
@@ -932,18 +1133,7 @@
     "href": "resources/colabs.html#course-colab-notebooks",
     "title": "Google Colab Notebooks",
     "section": "Course Colab Notebooks",
-    "text": "Course Colab Notebooks\nAll notebooks are hosted on Google Colab for easy access and execution. It’s recommended to save a copy to your own Google Drive before making changes.\n\n\nWeek 3 - MCP Lesson\nProject: Building AI Agents with Model Context Protocol (MCP)\nDescription: Learn how to connect AI agents to external services using the Model Context Protocol (MCP). This hands-on notebook teaches you to set up Canvas MCP connections, build agents that use tools, and understand the complete flow from user input to tool execution and back. You’ll create an agent that can interact with Canvas API and other external services.\nTopics Covered: - MCP Server setup and configuration - Creating and using tools within an agent - Canvas MCP integration - Understanding the User → AI → MCP Client → MCP Server → Tool flow\nOpen in Colab →\n\n\n\nWeek 4 - Wellness Agent (LangSmith Diagnostics)\nProject: Health and Wellness Tracking Agent with Observability\nDescription: Build a wellness tracking agent that logs food intake, exercise, and sleep patterns while learning production-level observability with LangSmith. This notebook demonstrates how to trace agent execution, identify bottlenecks, and debug complex agent behaviors. Perfect for understanding how to monitor AI systems in production.\nTopics Covered: - LangSmith tracing and observability - Building stateful agents with memory - Creating custom tools for wellness tracking - Debugging agent tool calls and responses - Using @traceable decorators for visibility\nOpen in Colab →\n\n\n\nWeek 4 - Canvas AI Tutor (LangSmith Diagnostics)\nProject: Intelligent Canvas Integration Agent\nDescription: Create an AI tutor that integrates with Canvas LMS using MCP to help students access assignments, grades, and course materials. This notebook focuses on real-world agent diagnostics, showing how to trace complex MCP interactions and optimize agent performance using LangSmith’s evaluation tools.\nTopics Covered: - Canvas API integration via MCP - Multi-step agent workflows - LangSmith evaluation datasets - Trace tree analysis for debugging - Production-ready error handling\nOpen in Colab →\n\n\n\nWeek 6 - Wellness Agent (Production & Scaling - BROKEN)\nProject: Production-Ready Multi-User Wellness Agent (Debugging Exercise)\nDescription: This is an intentionally broken production deployment of the Wellness Agent designed as a hands-on debugging and scaling exercise. Learn to identify and fix common production issues including token explosion, context overflow, memory leaks, and concurrency problems. Experience real-world challenges of scaling AI agents from prototype to production.\nTopics Covered: - Context management at scale - Token cost optimization - Multi-user state management - Production hardening techniques - Identifying scaling bottlenecks - Memory management strategies\nOpen in Colab →\n\n\n\nWeek 7 - Data Drift and Retraining Simulation\nProject: Understanding Model Drift and Weight Updates\nDescription: Simulate data drift scenarios and learn when and how to retrain machine learning models. This notebook demonstrates how model weights become outdated as data distributions change over time, and teaches you systematic approaches to detecting drift and maintaining model accuracy in production environments.\n**T",
-    "crumbs": [
-      "Resources",
-      "Notebooks"
-    ]
-  },
-  {
-    "objectID": "resources/colabs.html#getting-started-with-colab-1",
-    "href": "resources/colabs.html#getting-started-with-colab-1",
-    "title": "Google Colab Notebooks",
-    "section": "Getting Started with Colab",
-    "text": "Getting Started with Colab\nIf you’re new to Google Colab, here are some tips:\n\nSave a Copy: Always use “File → Save a copy in Drive” before editing\nRuntime: Make sure you select the appropriate runtime (usually Python 3)\nAPI Keys: Store sensitive keys in Colab Secrets, never hardcode them\nDependencies: Run the pip install cells at the beginning of each notebook\nExecution: Run cells in order from top to bottom for best results",
+    "text": "Course Colab Notebooks\nAll notebooks are hosted on Google Colab for easy access and execution. It’s recommended to save a copy to your own Google Drive before making changes.\n\n\nWeek 1 - Getting Started with AI Agents\nProject: Introduction to LangChain and LLM Basics\nDescription: Get started with AI agents by learning the fundamentals of LangChain and Google’s Gemini API. This notebook walks you through setting up your development environment, securing API keys using Colab Secrets, and building your first simple chat agent. Perfect for beginners with hands-on exercises in prompt engineering and context management.\nTopics Covered: - Gemini API setup and authentication - LangChain basics and message types - Prompt engineering techniques - Context engineering principles - Model parameters and customization - Chaining LLM calls\nOpen in Colab →\n\n\n\nWeek 2 - Workflows and Agents\nProject: Understanding LLM Architecture Patterns\nDescription: Learn the critical differences between workflows and agents, and when to use each pattern. This notebook provides hands-on experience with LangGraph for building structured workflows and introduces you to agent-based architectures. You’ll diagram real-world use cases and translate them into code.\nTopics Covered: - Workflows vs. Agents comparison - LangGraph fundamentals - Structured workflow design - Agent routing patterns - Multi-step task orchestration - Choosing the right architecture pattern\nOpen in Colab →\n\n\n\nWeek 3 - MCP Lesson\nProject: Building AI Agents with Model Context Protocol (MCP)\nDescription: Learn how to connect AI agents to external services using the Model Context Protocol (MCP). This hands-on notebook teaches you to set up Canvas MCP connections, build agents that use tools, and understand the complete flow from user input to tool execution and back. You’ll create an agent that can interact with Canvas API and other external services.\nTopics Covered: - MCP Server setup and configuration - Creating and using tools within an agent - Canvas MCP integration - Understanding the User → AI → MCP Client → MCP Server → Tool flow\nOpen in Colab →\n\n\n\nWeek 4 - Wellness Agent (LangSmith Diagnostics)\nProject: Health and Wellness Tracking Agent with Observability\nDescription: Build a wellness tracking agent that logs food intake, exercise, and sleep patterns while learning production-level observability with LangSmith. This notebook demonstrates how to trace agent execution, identify bottlenecks, and debug complex agent behaviors. Perfect for understanding how to monitor AI systems in production.\nTopics Covered: - LangSmith tracing and observability - Building stateful agents with memory - Creating custom tools for wellness tracking - Debugging agent tool calls and responses - Using @traceable decorators for visibility\nOpen in Colab →\n\n\n\nWeek 4 - Canvas AI Tutor (LangSmith Diagnostics)\nProject: Intelligent Canvas Integration Agent\nDescription: Create an AI tutor that integrates with Canvas LMS using MCP to help students access assignments, grades, and course materials. This notebook focuses on real-world agent diagnostics, showing how to trace complex MCP interactions and optimize agent performance using LangSmith’s evaluation tools.\nTopics Covered: - Canvas API integration via MCP - Multi-step agent workflows - LangSmith evaluation datasets - Trace tree analysis for debugging - Production-ready error handling\nOpen in Colab →\n\n\n\nWeek 5 - SQL Assistant with Progressive Disclosure\nProject: Building Smart Database Agents\nDescription: Master the progressive disclosure pattern by building an SQL assistant that loads database schemas on-demand instead of overwhelming the context window. This notebook teaches you to create skill-based tools that inject knowledge only when needed, dramatically reducing token costs while maintaining accuracy. Scale to massive databases with 100+ tables efficiently.\nTopics Covered: - Progressive disclosure pattern for context management - On-demand skill loading - Database schema organization - Stateful agents with memory - Constrained tools with prerequisites - Cost optimization strategies (10-50x reduction)\nOpen in Colab →\n\n\n\nWeek 6 - Wellness Agent (Production & Scaling - BROKEN)\nProject: Production-Ready Multi-User Wellness Agent (Debugging Exercise)\nDescription: This is an intentionally broken production deployment of the Wellness Agent designed as a hands-on debugging and scaling exercise. Learn to identify and fix common production issues including token explosion, context overflow, memory leaks, and concurrency problems. Experience real-world challenges of scaling AI agents from prototype to production.\nTopics Covered: - Context management at scale - Token cost optimization - Multi-user state management - Production hardening techniques - Identifying scaling bottlenecks - Memory management strategies\nOpen in Colab →\n\n\n\nWeek 7 - Data Drift and Retraining Simulation\nProject: Understanding Model Drift and Weight Updates\nDescription: Simulate data drift scenarios and learn when and how to retrain machine learning models. This notebook demonstrates how model weights become outdated as data distributions change over time, and teaches you systematic approaches to detecting drift and maintaining model accuracy in production environments.\nTopics Covered: - Understanding data drift and concept drift - Simulating distribution changes - Detecting model degradation - Retraining strategies and triggers - Weight update methodologies - Production monitoring techniques\nOpen in Colab →",
     "crumbs": [
       "Resources",
       "Notebooks"
@@ -954,7 +1144,7 @@
     "href": "resources/colabs.html#support",
     "title": "Google Colab Notebooks",
     "section": "Support",
-    "text": "Support\nIf you encounter issues with any notebook: - Check that all dependencies are installed - Verify your API keys are correctly configured - Review the error messages carefully - Consult the course modules for additional context",
+    "text": "Support\nIf you encounter issues with any notebook: - Check that all dependencies are installed - Verify your API keys are correctly configured in Colab Secrets - Review the error messages carefully - Consult the course modules for additional context - Ask for help in the course discussion forum",
     "crumbs": [
       "Resources",
       "Notebooks"

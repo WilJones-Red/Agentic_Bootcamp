@@ -3982,7 +3982,8 @@ vertical-align: -.125em;
   </ul></li>
   <li><a href="#i-have-a-key-now-what" id="toc-i-have-a-key-now-what" class="nav-link" data-scroll-target="#i-have-a-key-now-what">I have a key, now what?</a>
   <ul class="collapse">
-  <li><a href="#why-.env" id="toc-why-.env" class="nav-link" data-scroll-target="#why-.env">Why <code>.env</code>?</a></li>
+  <li><a href="#for-google-colab" id="toc-for-google-colab" class="nav-link" data-scroll-target="#for-google-colab">For Google Colab:</a></li>
+  <li><a href="#for-local-development" id="toc-for-local-development" class="nav-link" data-scroll-target="#for-local-development">For Local Development:</a></li>
   </ul></li>
   <li><a href="#finally" id="toc-finally" class="nav-link" data-scroll-target="#finally">Finally</a></li>
   </ul></li>
@@ -4058,6 +4059,11 @@ vertical-align: -.125em;
 <li>Introduce LLM concepts and services</li>
 <li>Start exploring LangChain and LLM concepts generally</li>
 </ul>
+<p><strong>Colab Notebook for Today:</strong></p>
+<blockquote class="blockquote">
+<p><a href="https://colab.research.google.com/drive/15ZFkH4kTNaOSL_bmFmcmhLB75HiEg3Zu?usp=sharing">Week 1 - Getting Started with AI Agents</a><br>
+<em>(It is recommended to download a copy of the notebook to your own google colab)</em></p>
+</blockquote>
 <hr>
 </section>
 <section id="lecture-15-min-why-what-and-how" class="level1">
@@ -4110,6 +4116,31 @@ vertical-align: -.125em;
 </section>
 <section id="i-have-a-key-now-what" class="level2">
 <h2 class="anchored" data-anchor-id="i-have-a-key-now-what">I have a key, now what?</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Choose Your Platform
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can follow along using either <strong>Google Colab</strong> (recommended for beginners - no setup required!) or <strong>local development</strong> (requires Python environment setup). The code examples below include instructions for both.</p>
+</div>
+</div>
+<section id="for-google-colab" class="level3">
+<h3 class="anchored" data-anchor-id="for-google-colab">For Google Colab:</h3>
+<p>In Google Colab, we’ll use Colab’s built-in secrets feature to store your API key securely.</p>
+<p><strong>Steps:</strong> 1. Click the 🔑 key icon in the left sidebar (“Secrets”) 2. Click “Add a new secret” 3. Name it: <code>GOOGLE_API_KEY</code> 4. Paste your Gemini API key as the value 5. Toggle on “Notebook access” for this notebook</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up API key from Colab secrets</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> userdata</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>os.environ[<span class="st">&#39;GOOGLE_API_KEY&#39;</span>] <span class="op">=</span> userdata.get(<span class="st">&#39;GOOGLE_API_KEY&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="for-local-development" class="level3">
+<h3 class="anchored" data-anchor-id="for-local-development">For Local Development:</h3>
 <p><strong>DO NOT</strong> paste it in this file <strong>DO NOT</strong> paste it in <code>.env.example</code></p>
 <p><strong>DO</strong>:</p>
 <ol type="1">
@@ -4118,33 +4149,29 @@ vertical-align: -.125em;
 <li><p>Save <code>.env</code></p></li>
 </ol>
 <p>This is safe only when the <code>.gitignore</code> file has <code>.env</code> listed.</p>
-<section id="why-.env" class="level3">
-<h3 class="anchored" data-anchor-id="why-.env">Why <code>.env</code>?</h3>
+<section id="why-.env" class="level4">
+<h4 class="anchored" data-anchor-id="why-.env">Why <code>.env</code>?</h4>
 <p>API keys are coveted (especially for LLM’s). If it gets published to GitHub, it will be stolen and used by strangers. To keep yours safe, store it in the <code>.env</code> file in the main directory. This environment variable file stays local to your machine and will not be pushed to GitHub (because the <code>.gitignore</code> file says to ignore it. You can open the <code>.gitignore</code> file to see <code>.env</code> listed as files it won’t publish to GitHub). The file <code>.env.template</code> is just a template. <strong>Please rename <code>.env.template</code> to <code>.env</code> before adding API keys.</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load environment variables from .env file (local development only)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dotenv <span class="im">import</span> load_dotenv</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>load_dotenv()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 </section>
 </section>
 <section id="finally" class="level2">
 <h2 class="anchored" data-anchor-id="finally">Finally</h2>
-<p>You can now run the below code to install needed packages and load the environment variables from <code>.env</code> into this file. (You will need to rerun <code>load_dotenv()</code> every time you open the file again, but not <code>pip install</code>, which is a one time run.)</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This installs the dependencies you need</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Windows:</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install <span class="op">-</span>q <span class="op">-</span>U langchain langchain<span class="op">-</span>google<span class="op">-</span>genai python<span class="op">-</span>dotenv</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Mac:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># %pip3 install -q -U langchain langchain-google-genai python-dotenv</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load environment variables from .env file</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dotenv <span class="im">import</span> load_dotenv</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>load_dotenv()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You can now run the below code to install needed packages. (You only need to run <code>pip install</code> once.)</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This installs the dependencies you need</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">-</span>q <span class="op">-</span>U langchain langchain<span class="op">-</span>google<span class="op">-</span>genai</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>After saving your API key, you can run the below code to see if it worked.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Paste code here</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain.chat_models <span class="im">import</span> init_chat_model</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> init_chat_model(</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">&quot;gemini-2.5-flash&quot;</span>, </span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    model_provider<span class="op">=</span><span class="st">&quot;google_genai&quot;</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>model.invoke(<span class="st">&quot;Hello world!&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain.chat_models <span class="im">import</span> init_chat_model</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> init_chat_model(</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">&quot;gemini-2.5-flash&quot;</span>, </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    model_provider<span class="op">=</span><span class="st">&quot;google_genai&quot;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>model.invoke(<span class="st">&quot;Hello world!&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You should see something like:</p>
 <p><code>AIMessage(content=&#39;Hello there! How can I help you today?&#39;, additional_kwargs={}, ...</code></p>
 <hr>
@@ -4160,7 +4187,7 @@ vertical-align: -.125em;
 <h1>LangChain Basics</h1>
 <p>Start going through <a href="https://docs.langchain.com/oss/python/langchain/messages">this tutorial</a> from LangChain. Stop after reading the section “AI Message”.</p>
 <p>In the space below, write down what you want to remember.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <hr>
 </section>
 <section id="stop-1" class="level1">
@@ -4192,19 +4219,19 @@ vertical-align: -.125em;
 <p>The prompts for deep agents often span hundreds if not thousands of lines — usually containing a general persona, instructions on calling tools, important guidelines, and few-shot examples. - <a href="https://www.blog.langchain.com/debugging-deep-agents-with-langsmith/">LangChain Blog</a></p>
 </blockquote>
 <p>Prompt engineering is the real meat of customizing LLM’s. Consider the impact of changing just a few words. Run these a few times, and try intentional word changes.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain_google_genai <span class="im">import</span> ChatGoogleGenerativeAI</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> ChatGoogleGenerativeAI(model<span class="op">=</span><span class="st">&quot;gemini-2.5-flash-lite&quot;</span>)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>prompt <span class="op">=</span> <span class="st">&quot;What did you have for breakfast today?&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Arnold 1</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>model.invoke(<span class="st">&quot;You are Arnold Schwarzenegger. &quot;</span> <span class="op">+</span> prompt).content</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Arnold 2</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>model.invoke(<span class="st">&quot;Act like Arnold Schwarzenegger. &quot;</span> <span class="op">+</span> prompt).content</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Arnold 3</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>model.invoke(<span class="st">&quot;Speak in the tone of Arnold Schwarzenegger. &quot;</span> <span class="op">+</span> prompt).content</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Arnold 4</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>model.invoke(<span class="st">&quot;You are Arnold Schwarzenegger. Respond briefly.&quot;</span> <span class="op">+</span> prompt).content</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain_google_genai <span class="im">import</span> ChatGoogleGenerativeAI</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> ChatGoogleGenerativeAI(model<span class="op">=</span><span class="st">&quot;gemini-2.5-flash&quot;</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>prompt <span class="op">=</span> <span class="st">&quot;What did you have for breakfast today?&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Arnold 1</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>model.invoke(<span class="st">&quot;You are Arnold Schwarzenegger. &quot;</span> <span class="op">+</span> prompt).content</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Arnold 2</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>model.invoke(<span class="st">&quot;Act like Arnold Schwarzenegger. &quot;</span> <span class="op">+</span> prompt).content</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Arnold 3</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>model.invoke(<span class="st">&quot;Speak in the tone of Arnold Schwarzenegger. &quot;</span> <span class="op">+</span> prompt).content</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Arnold 4</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>model.invoke(<span class="st">&quot;You are Arnold Schwarzenegger. Respond briefly.&quot;</span> <span class="op">+</span> prompt).content</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>In general, the best prompting advice is: be specific. It often helps to give examples.</p>
 <p>To get a good feel of prompting best practices and types of prompts, look at these resources:</p>
 <ul>
@@ -4212,15 +4239,15 @@ vertical-align: -.125em;
 <li><a href="https://ai.google.dev/gemini-api/docs/prompting-strategies">Gemini docs</a></li>
 <li><a href="https://ai.google.dev/gemini-api/docs/files#prompt-guide">Gemini prompting with files</a></li>
 </ul>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain_core.messages <span class="im">import</span> HumanMessage, SystemMessage</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>system_instr <span class="op">=</span> <span class="st">&quot;You are Arnold Schwarzenegger&quot;</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>prompt <span class="op">=</span> <span class="st">&quot;What did you have for breakfast today?&quot;</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>model.invoke([</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    SystemMessage(system_instr),</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    HumanMessage(prompt)]).content</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain_core.messages <span class="im">import</span> HumanMessage, SystemMessage</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>system_instr <span class="op">=</span> <span class="st">&quot;You are Arnold Schwarzenegger&quot;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>prompt <span class="op">=</span> <span class="st">&quot;What did you have for breakfast today?&quot;</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>model.invoke([</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    SystemMessage(system_instr),</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    HumanMessage(prompt)]).content</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="context-engineering" class="level2">
 <h2 class="anchored" data-anchor-id="context-engineering">Context Engineering</h2>
@@ -4233,36 +4260,36 @@ vertical-align: -.125em;
 <section id="more-on-langchain" class="level2">
 <h2 class="anchored" data-anchor-id="more-on-langchain">More on LangChain</h2>
 <p>You may have noticed The model’s response was more than just text.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain.chat_models <span class="im">import</span> init_chat_model</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> init_chat_model(model<span class="op">=</span><span class="st">&quot;gemini-2.5-flash-lite&quot;</span>, model_provider<span class="op">=</span><span class="st">&quot;google-genai&quot;</span>)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> model.invoke(<span class="st">&quot;Be an angsty teen&quot;</span>)</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(response)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain.chat_models <span class="im">import</span> init_chat_model</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> init_chat_model(model<span class="op">=</span><span class="st">&quot;gemini-2.5-flash&quot;</span>, model_provider<span class="op">=</span><span class="st">&quot;google_genai&quot;</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> model.invoke(<span class="st">&quot;Be an angsty teen&quot;</span>)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(response)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You can access just the text response with .content</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>response.content</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>response.content</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>…But there is a lot of other useful information, too. To see everything you can access with dot notation, you can use this function.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>response.model_dump()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>response.model_dump()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Some items are nested, like ‘usage_metadata’, and you may have to use bracket notation as well.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>response.usage_metadata[<span class="st">&#39;input_tokens&#39;</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>response.usage_metadata[<span class="st">&#39;input_tokens&#39;</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="chaining" class="level2">
 <h2 class="anchored" data-anchor-id="chaining">Chaining</h2>
 <p>See what happens if you take the above <code>response.content</code> and throw it into another model call. This is called chaining. What use cases can you think of for it?</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="model-parameters" class="level2">
 <h2 class="anchored" data-anchor-id="model-parameters">Model Parameters</h2>
-<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> init_chat_model(</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">&quot;gemini-2.5-flash&quot;</span>, </span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    model_provider<span class="op">=</span><span class="st">&quot;google_genai&quot;</span>,</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    temperature<span class="op">=</span><span class="dv">0</span>,</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    max_tokens<span class="op">=</span><span class="dv">50</span>,</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    timeout<span class="op">=</span><span class="dv">60</span>,</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    max_retries<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>model.invoke(<span class="st">&quot;Hello world!&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> init_chat_model(</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">&quot;gemini-2.5-flash&quot;</span>, </span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    model_provider<span class="op">=</span><span class="st">&quot;google_genai&quot;</span>,</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    temperature<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    max_tokens<span class="op">=</span><span class="dv">50</span>,</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    timeout<span class="op">=</span><span class="dv">60</span>,</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    max_retries<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>model.invoke(<span class="st">&quot;Hello world!&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

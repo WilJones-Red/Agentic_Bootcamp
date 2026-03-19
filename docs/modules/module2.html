@@ -3987,7 +3987,11 @@ vertical-align: -.125em;
   <li><a href="#n8n" id="toc-n8n" class="nav-link" data-scroll-target="#n8n">n8n</a></li>
   <li><a href="#langflow" id="toc-langflow" class="nav-link" data-scroll-target="#langflow">LangFlow</a></li>
   </ul></li>
-  <li><a href="#option-2-langgraph-python" id="toc-option-2-langgraph-python" class="nav-link" data-scroll-target="#option-2-langgraph-python">Option 2: LangGraph (Python)</a></li>
+  <li><a href="#option-2-langgraph-python" id="toc-option-2-langgraph-python" class="nav-link" data-scroll-target="#option-2-langgraph-python">Option 2: LangGraph (Python)</a>
+  <ul class="collapse">
+  <li><a href="#setup-for-google-colab" id="toc-setup-for-google-colab" class="nav-link" data-scroll-target="#setup-for-google-colab">Setup for Google Colab</a></li>
+  <li><a href="#for-local-development" id="toc-for-local-development" class="nav-link" data-scroll-target="#for-local-development">For Local Development:</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -4047,6 +4051,11 @@ vertical-align: -.125em;
 <li>Plan workflows and agents conceptually</li>
 <li>Translate workflows into code</li>
 </ul>
+<p><strong>Colab Notebook for Today:</strong></p>
+<blockquote class="blockquote">
+<p><a href="https://colab.research.google.com/drive/1EMKPgSxGH9fzK0o6lx5zxrkyKr06bSou?authuser=1#scrollTo=beea18a3">Week 2 - Workflows and Agents</a><br>
+<em>(It is recommended to download a copy of the notebook to your own google colab)</em></p>
+</blockquote>
 <hr>
 </section>
 <section id="lecture-5-10-min-agents-and-workflows" class="level1">
@@ -4166,20 +4175,51 @@ vertical-align: -.125em;
 <section id="option-2-langgraph-python" class="level2">
 <h2 class="anchored" data-anchor-id="option-2-langgraph-python">Option 2: LangGraph (Python)</h2>
 <p>Try running the code from the earlier <a href="https://docs.langchain.com/oss/python/langgraph/workflows-agents">LangChain article</a> or exploring their docs.</p>
-<p>Just replace their first two code chunks with this more relevant code:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load environment variables from .env file</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dotenv <span class="im">import</span> load_dotenv</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>load_dotenv()</span>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Choose Your Platform
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can follow along using either <strong>Google Colab</strong> (recommended for beginners - no setup required!) or <strong>local development</strong> (requires Python environment setup). The code examples below include instructions for both.</p>
+</div>
+</div>
+<section id="setup-for-google-colab" class="level3">
+<h3 class="anchored" data-anchor-id="setup-for-google-colab">Setup for Google Colab</h3>
+<p>First, set up your API key using Colab’s secrets (same as Week 1):</p>
+<ol type="1">
+<li>Click the 🔑 key icon in the left sidebar (“Secrets”)</li>
+<li>Add a secret named <code>GOOGLE_API_KEY</code> with your Gemini API key</li>
+<li>Toggle on “Notebook access”</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up API key from Colab secrets</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> userdata</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain.chat_models <span class="im">import</span> init_chat_model</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Instantiate model</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>llm <span class="op">=</span> init_chat_model(</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">&quot;gemini-2.5-flash&quot;</span>, </span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    model_provider<span class="op">=</span><span class="st">&quot;google_genai&quot;</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>os.environ[<span class="st">&#39;GOOGLE_API_KEY&#39;</span>] <span class="op">=</span> userdata.get(<span class="st">&#39;GOOGLE_API_KEY&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Install required packages:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">-</span>q <span class="op">-</span>U langchain langchain<span class="op">-</span>google<span class="op">-</span>genai langgraph</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="for-local-development" class="level3">
+<h3 class="anchored" data-anchor-id="for-local-development">For Local Development:</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load environment variables from .env file (local development only)</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dotenv <span class="im">import</span> load_dotenv</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>load_dotenv()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Just replace their first two code chunks with this more relevant code:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain.chat_models <span class="im">import</span> init_chat_model</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Instantiate model</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>llm <span class="op">=</span> init_chat_model(</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">&quot;gemini-2.5-flash&quot;</span>, </span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    model_provider<span class="op">=</span><span class="st">&quot;google_genai&quot;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
 </section>
 </section>
 

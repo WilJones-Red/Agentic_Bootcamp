@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 5</title>
+<title>Week 5 - SQL Assistant with Progressive Disclosure</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -18,6 +18,41 @@ ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
 width: 0.8em;
 margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+}
+pre.numberSource { margin-left: 3em; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -3936,7 +3971,44 @@ vertical-align: -.125em;
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#week-5-content" id="toc-week-5-content" class="nav-link active" data-scroll-target="#week-5-content">Week 5 Content</a></li>
+  <li><a href="#lesson-overview" id="toc-lesson-overview" class="nav-link active" data-scroll-target="#lesson-overview">Lesson Overview</a></li>
+  <li><a href="#lecture-10-min-progressive-disclosure-concept" id="toc-lecture-10-min-progressive-disclosure-concept" class="nav-link" data-scroll-target="#lecture-10-min-progressive-disclosure-concept">Lecture (10 min): Progressive Disclosure Concept</a>
+  <ul class="collapse">
+  <li><a href="#what-is-progressive-disclosure" id="toc-what-is-progressive-disclosure" class="nav-link" data-scroll-target="#what-is-progressive-disclosure">What is Progressive Disclosure?</a></li>
+  <li><a href="#real-world-example" id="toc-real-world-example" class="nav-link" data-scroll-target="#real-world-example">Real-World Example</a></li>
+  <li><a href="#core-concept" id="toc-core-concept" class="nav-link" data-scroll-target="#core-concept">Core Concept</a></li>
+  </ul></li>
+  <li><a href="#getting-started-api-key-setup" id="toc-getting-started-api-key-setup" class="nav-link" data-scroll-target="#getting-started-api-key-setup">Getting Started: API Key Setup</a>
+  <ul class="collapse">
+  <li><a href="#about-api-keys" id="toc-about-api-keys" class="nav-link" data-scroll-target="#about-api-keys">About API keys</a></li>
+  <li><a href="#do-this" id="toc-do-this" class="nav-link" data-scroll-target="#do-this">Do This</a>
+  <ul class="collapse">
+  <li><a href="#if-it-doesnt-work" id="toc-if-it-doesnt-work" class="nav-link" data-scroll-target="#if-it-doesnt-work">If it doesn’t work</a></li>
+  </ul></li>
+  <li><a href="#for-google-colab" id="toc-for-google-colab" class="nav-link" data-scroll-target="#for-google-colab">For Google Colab:</a></li>
+  <li><a href="#for-local-development" id="toc-for-local-development" class="nav-link" data-scroll-target="#for-local-development">For Local Development:</a></li>
+  <li><a href="#install-required-packages" id="toc-install-required-packages" class="nav-link" data-scroll-target="#install-required-packages">Install Required Packages</a></li>
+  <li><a href="#initialize-the-gemini-model" id="toc-initialize-the-gemini-model" class="nav-link" data-scroll-target="#initialize-the-gemini-model">Initialize the Gemini Model</a></li>
+  </ul></li>
+  <li><a href="#stop" id="toc-stop" class="nav-link" data-scroll-target="#stop">STOP</a></li>
+  <li><a href="#understanding-skills" id="toc-understanding-skills" class="nav-link" data-scroll-target="#understanding-skills">Understanding Skills</a>
+  <ul class="collapse">
+  <li><a href="#what-are-skills" id="toc-what-are-skills" class="nav-link" data-scroll-target="#what-are-skills">What are Skills?</a></li>
+  <li><a href="#example-skill-structure" id="toc-example-skill-structure" class="nav-link" data-scroll-target="#example-skill-structure">Example Skill Structure</a></li>
+  </ul></li>
+  <li><a href="#building-the-sql-agent" id="toc-building-the-sql-agent" class="nav-link" data-scroll-target="#building-the-sql-agent">Building the SQL Agent</a>
+  <ul class="collapse">
+  <li><a href="#step-1-define-skills" id="toc-step-1-define-skills" class="nav-link" data-scroll-target="#step-1-define-skills">Step 1: Define Skills</a></li>
+  <li><a href="#step-2-create-the-load_skill-tool" id="toc-step-2-create-the-load_skill-tool" class="nav-link" data-scroll-target="#step-2-create-the-load_skill-tool">Step 2: Create the <code>load_skill</code> Tool</a></li>
+  <li><a href="#step-3-build-system-prompt-with-skill-descriptions" id="toc-step-3-build-system-prompt-with-skill-descriptions" class="nav-link" data-scroll-target="#step-3-build-system-prompt-with-skill-descriptions">Step 3: Build System Prompt with Skill Descriptions</a></li>
+  <li><a href="#step-4-create-the-agent" id="toc-step-4-create-the-agent" class="nav-link" data-scroll-target="#step-4-create-the-agent">Step 4: Create the Agent</a></li>
+  <li><a href="#step-5-test-it" id="toc-step-5-test-it" class="nav-link" data-scroll-target="#step-5-test-it">Step 5: Test It!</a></li>
+  </ul></li>
+  <li><a href="#exploration-advanced-features" id="toc-exploration-advanced-features" class="nav-link" data-scroll-target="#exploration-advanced-features">Exploration: Advanced Features</a>
+  <ul class="collapse">
+  <li><a href="#extending-this-pattern" id="toc-extending-this-pattern" class="nav-link" data-scroll-target="#extending-this-pattern">Extending This Pattern</a></li>
+  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   </ul>
 </nav>
     </div>
@@ -3945,8 +4017,8 @@ vertical-align: -.125em;
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/module1.html">Course Modules</a></li><li class="breadcrumb-item"><a href="../modules/module5.html">Module 5</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Week 5</h1>
-<p class="subtitle lead">AI</p>
+<h1 class="title">Week 5 - SQL Assistant with Progressive Disclosure</h1>
+<p class="subtitle lead">Building Smart Database Agents</p>
 </div>
 
 
@@ -3963,8 +4035,268 @@ vertical-align: -.125em;
 </header>
 
 
-<section id="week-5-content" class="level1">
-<h1>Week 5 Content</h1>
+<section id="lesson-overview" class="level1">
+<h1>Lesson Overview</h1>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Segment</th>
+<th>Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lecture: Progressive Disclosure Concept</td>
+<td>10 minutes</td>
+</tr>
+<tr class="even">
+<td>Setup: Environment &amp; Skills</td>
+<td>15 minutes</td>
+</tr>
+<tr class="odd">
+<td>Guided Coding: Building the SQL Agent</td>
+<td>20 minutes</td>
+</tr>
+<tr class="even">
+<td>Exploration: Advanced Constraints &amp; Multi-turn</td>
+<td>15+ minutes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Learning Objectives:</strong> By the end of this lesson, students will be able to:</p>
+<ul>
+<li>Understand the progressive disclosure pattern for context management</li>
+<li>Build an agent that loads database schemas on-demand</li>
+<li>Create skill-based tools that inject knowledge when needed</li>
+<li>Implement stateful agents that remember loaded context</li>
+<li>Design constrained tools that enforce prerequisites</li>
+</ul>
+<p><strong>Colab Notebook for Today:</strong></p>
+<blockquote class="blockquote">
+<p><a href="https://colab.research.google.com/drive/1cgE8z-aaDIDFx9irPam31kXCLIeIbr8S?usp=sharing">Week 5 - SQL Assistant with Progressive Disclosure</a><br>
+<em>(It is recommended to download a copy of the notebook to your own google colab)</em></p>
+</blockquote>
+<p><strong>Based on:</strong> <a href="https://docs.langchain.com/oss/javascript/langchain/multi-agent/skills-sql-assistant">LangChain SQL Skills Assistant tutorial</a></p>
+<hr>
+</section>
+<section id="lecture-10-min-progressive-disclosure-concept" class="level1">
+<h1>Lecture (10 min): Progressive Disclosure Concept</h1>
+<section id="what-is-progressive-disclosure" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-progressive-disclosure">What is Progressive Disclosure?</h2>
+<p>Progressive disclosure is a design pattern where you show only the minimum information needed upfront, and load details on-demand. In the context of AI agents and databases:</p>
+<p><strong>Traditional Approach (❌ Wasteful):</strong> - Load ALL database schemas into the agent’s context upfront - For a database with 100 tables, this fills the entire context window - Extremely high cost and token usage - Agent is overwhelmed with irrelevant information</p>
+<p><strong>Progressive Disclosure (✅ Efficient):</strong> - Show only lightweight skill <em>descriptions</em> in the system prompt - Agent calls <code>load_skill()</code> on-demand to retrieve full schemas - Only loads what it needs for the current task - Scales to massive databases</p>
+</section>
+<section id="real-world-example" class="level2">
+<h2 class="anchored" data-anchor-id="real-world-example">Real-World Example</h2>
+<p>Imagine you work at a company with 50 different database schemas (sales, inventory, HR, finance, marketing, etc.).</p>
+<ul>
+<li><strong>Old way</strong>: Load all 50 schemas → 500,000 tokens → $10 per query</li>
+<li><strong>New way</strong>: Agent sees 50 one-sentence descriptions → loads 1 schema when needed → 10,000 tokens → $0.20 per query</li>
+</ul>
+<p>That’s a <strong>50x cost reduction</strong> while maintaining the same functionality!</p>
+</section>
+<section id="core-concept" class="level2">
+<h2 class="anchored" data-anchor-id="core-concept">Core Concept</h2>
+<p>Instead of this:</p>
+<pre><code>System: Here are all 100 database schemas...
+[500 pages of schema details]
+User: What were our top customers last month?</code></pre>
+<p>We do this:</p>
+<pre><code>System: You have access to these skills:
+- sales_analytics: Customer and order data
+- inventory_management: Product and stock data
+- ...
+User: What were our top customers last month?
+Agent: I need sales_analytics. Let me load it.
+[Loads only that one schema]
+Agent: Here&#39;s your query based on the sales schema.</code></pre>
+<hr>
+</section>
+</section>
+<section id="getting-started-api-key-setup" class="level1">
+<h1>Getting Started: API Key Setup</h1>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Choose Your Platform
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can follow along using either <strong>Google Colab</strong> (recommended for beginners - no setup required!) or <strong>local development</strong> (requires Python environment setup). The code examples below include instructions for both.</p>
+</div>
+</div>
+<section id="about-api-keys" class="level2">
+<h2 class="anchored" data-anchor-id="about-api-keys">About API keys</h2>
+<p>An API key gives you access to Google’s Gemini AI models. You’ll need one to run this lesson.</p>
+</section>
+<section id="do-this" class="level2">
+<h2 class="anchored" data-anchor-id="do-this">Do This</h2>
+<ol type="1">
+<li><p>Access the developer’s site for Gemini here: <a href="https://aistudio.google.com/apikey">Gemini API key</a></p></li>
+<li><p>Sign in with your Google account</p></li>
+<li><p>A key should be created automatically. Copy the string of characters and numbers.</p></li>
+</ol>
+<section id="if-it-doesnt-work" class="level3">
+<h3 class="anchored" data-anchor-id="if-it-doesnt-work">If it doesn’t work</h3>
+<ol type="1">
+<li><p>Make sure you are using a personal Google account, not your school email</p></li>
+<li><p>If it says you don’t have access in your region, you may need to verify your age in your Google account settings</p></li>
+</ol>
+</section>
+</section>
+<section id="for-google-colab" class="level2">
+<h2 class="anchored" data-anchor-id="for-google-colab">For Google Colab:</h2>
+<p>In Google Colab, we’ll use Colab’s built-in secrets feature to store your API key securely.</p>
+<p><strong>Steps:</strong> 1. Click the 🔑 key icon in the left sidebar (“Secrets”) 2. Click “Add a new secret” 3. Name it: <code>GOOGLE_API_KEY</code> 4. Paste your Gemini API key as the value 5. Toggle on “Notebook access” for this notebook</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up API key from Colab secrets</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> userdata</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>os.environ[<span class="st">&#39;GOOGLE_API_KEY&#39;</span>] <span class="op">=</span> userdata.get(<span class="st">&#39;GOOGLE_API_KEY&#39;</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Google API key configured!&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="for-local-development" class="level2">
+<h2 class="anchored" data-anchor-id="for-local-development">For Local Development:</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load environment variables from .env file (local development only)</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dotenv <span class="im">import</span> load_dotenv</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>load_dotenv()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="install-required-packages" class="level2">
+<h2 class="anchored" data-anchor-id="install-required-packages">Install Required Packages</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">-</span>q <span class="op">-</span>U langchain langchain<span class="op">-</span>google<span class="op">-</span>genai langgraph</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="initialize-the-gemini-model" class="level2">
+<h2 class="anchored" data-anchor-id="initialize-the-gemini-model">Initialize the Gemini Model</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain.chat_models <span class="im">import</span> init_chat_model</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> init_chat_model(</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">&quot;gemini-2.5-flash&quot;</span>,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    model_provider<span class="op">=</span><span class="st">&quot;google_genai&quot;</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Sanity check</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> model.invoke(<span class="st">&quot;Hello world!&quot;</span>)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;✅ Gemini 2.5 Flash model ready!&quot;</span>)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Response: </span><span class="sc">{</span>response<span class="sc">.</span>content<span class="sc">}</span><span class="ss">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+<section id="stop" class="level1">
+<h1>STOP</h1>
+<p>If you got things working, great!</p>
+<p>Make sure to help your neighbor get there too. Then you can continue.</p>
+<hr>
+</section>
+<section id="understanding-skills" class="level1">
+<h1>Understanding Skills</h1>
+<section id="what-are-skills" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-skills">What are Skills?</h2>
+<p>A <strong>skill</strong> is a package of domain-specific knowledge that the agent can load on-demand. Each skill has three components:</p>
+<ol type="1">
+<li><strong>name</strong> — unique identifier (e.g., <code>&quot;sales_analytics&quot;</code>)</li>
+<li><strong>description</strong> — short 1-2 sentence summary shown in the system prompt upfront</li>
+<li><strong>content</strong> — the <strong>full</strong> schema and business logic, loaded only when needed</li>
+</ol>
+<p>This is the heart of <strong>progressive disclosure</strong>: descriptions are cheap, full content is loaded only when needed.</p>
+</section>
+<section id="example-skill-structure" class="level2">
+<h2 class="anchored" data-anchor-id="example-skill-structure">Example Skill Structure</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Skill(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">&quot;sales_analytics&quot;</span>,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    description<span class="op">=</span><span class="st">&quot;Database schema and business logic for sales data analysis.&quot;</span>,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    content<span class="op">=</span><span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="st">    # Full database schema here</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="st">    Tables: customers, orders, order_items</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="st">    Columns: ...</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="st">    Business rules: ...</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="st">    &quot;&quot;&quot;</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The description goes in the system prompt. The content is loaded via the <code>load_skill()</code> tool.</p>
+<hr>
+</section>
+</section>
+<section id="building-the-sql-agent" class="level1">
+<h1>Building the SQL Agent</h1>
+<p>The complete code for building the agent is in the Colab notebook. Here’s the workflow:</p>
+<section id="step-1-define-skills" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-define-skills">Step 1: Define Skills</h2>
+<p>Create skill objects with lightweight descriptions and full content.</p>
+</section>
+<section id="step-2-create-the-load_skill-tool" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-create-the-load_skill-tool">Step 2: Create the <code>load_skill</code> Tool</h2>
+<p>This tool fetches skill content on-demand:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="at">@tool</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> load_skill(skill_name: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    \<span class="st">&quot;</span><span class="ch">\&quot;\&quot;</span><span class="st">Load the full content of a skill into the agent&#39;s context.</span><span class="ch">\&quot;\&quot;\&quot;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="er">    skill = SKILLS_MAP.get</span>(skill_name)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> skill:</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f&quot;Loaded skill: </span><span class="sc">{</span>skill_name<span class="sc">}</span><span class="ch">\\</span><span class="ss">n</span><span class="ch">\\</span><span class="ss">n</span><span class="sc">{</span>skill<span class="sc">.</span>content<span class="sc">}</span><span class="ss">&quot;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="ss">f&quot;Skill &#39;</span><span class="sc">{</span>skill_name<span class="sc">}</span><span class="ss">&#39; not found.&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="step-3-build-system-prompt-with-skill-descriptions" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-build-system-prompt-with-skill-descriptions">Step 3: Build System Prompt with Skill Descriptions</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>skills_list <span class="op">=</span> <span class="st">&quot;</span><span class="ch">\\</span><span class="st">n&quot;</span>.join(</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f&quot;- **</span><span class="sc">{</span>skill<span class="sc">.</span>name<span class="sc">}</span><span class="ss">**: </span><span class="sc">{</span>skill<span class="sc">.</span>description<span class="sc">}</span><span class="ss">&quot;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> skill <span class="kw">in</span> SKILLS</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>SYSTEM_PROMPT <span class="op">=</span> f\<span class="st">&quot;</span><span class="ch">\&quot;\&quot;</span><span class="st">You are a SQL query assistant.</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="er">## Available Skills</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>{skills_list}</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>Before writing SQL, call load_skill to get the schema.\<span class="st">&quot;</span><span class="ch">\&quot;\&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="step-4-create-the-agent" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-create-the-agent">Step 4: Create the Agent</h2>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>agent <span class="op">=</span> create_react_agent(</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span>model,</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    tools<span class="op">=</span>[load_skill],</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    prompt<span class="op">=</span>SYSTEM_PROMPT,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    checkpointer<span class="op">=</span>MemorySaver(),  <span class="co"># Remembers loaded skills</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="step-5-test-it" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-test-it">Step 5: Test It!</h2>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>ask_agent(<span class="st">&quot;Find customers who made orders over $1000 last month.&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The agent will: 1. Recognize it needs sales data 2. Call <code>load_skill(&quot;sales_analytics&quot;)</code> 3. Get the full schema 4. Write the SQL query</p>
+<hr>
+</section>
+</section>
+<section id="exploration-advanced-features" class="level1">
+<h1>Exploration: Advanced Features</h1>
+<p>The Colab notebook includes advanced sections on:</p>
+<ul>
+<li><strong>Multi-turn conversations</strong> with persistent memory</li>
+<li><strong>Constrained tools</strong> that enforce prerequisites (must load skill before validating query)</li>
+<li><strong>Custom state management</strong> to track which skills are loaded</li>
+</ul>
+<section id="extending-this-pattern" class="level2">
+<h2 class="anchored" data-anchor-id="extending-this-pattern">Extending This Pattern</h2>
+<p><strong>Add more skills</strong>: Just add entries to the <code>SKILLS</code> list — no other code changes needed.</p>
+<p><strong>Large databases</strong>: For 100+ tables, use vector search to find relevant skills:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain_community.vectorstores <span class="im">import</span> FAISS</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Embed skill descriptions, retrieve top-k relevant</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Real query execution</strong>: Combine with LangChain’s SQL Agent to actually run queries against a database.</p>
+<p><strong>Remote skill storage</strong>: Store skill content in S3, a database, or an API instead of in-memory.</p>
+<hr>
+</section>
+</section>
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<p>Progressive disclosure is a powerful pattern for managing context in AI agents. By showing lightweight descriptions upfront and loading details on-demand, you can:</p>
+<ul>
+<li><strong>Reduce costs</strong> by 10-50x</li>
+<li><strong>Scale to massive databases</strong> (100s of tables)</li>
+<li><strong>Keep context focused</strong> on what matters</li>
+<li><strong>Maintain accuracy</strong> by loading complete schemas when needed</li>
+</ul>
+<p>This pattern applies beyond just database schemas — think of it for: - API documentation - Code repositories - Knowledge bases - Tool libraries</p>
+<p>The key insight: Don’t load everything upfront. Load what you need, when you need it.</p>
 
 
 </section>

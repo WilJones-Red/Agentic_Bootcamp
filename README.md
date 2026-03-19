@@ -1,12 +1,12 @@
 # AI Agentic Boot Camp
 
-A 7-week intensive program teaching practical AI agent development, created for the BYU-I Data Science Society.
+A 7-week bootcamp teaching practical AI agent development, created for the BYU-I Data Science Society.
 
-## 🔗 Live Site
+## Live Site
 
 **[View the Bootcamp →](https://wiljones-red.github.io/Agentic_Bootcamp/)**
 
-## 📚 What You'll Learn
+## What You'll Learn
 
 This bootcamp teaches you how to build production-ready AI agents using modern frameworks and tools:
 
@@ -16,7 +16,7 @@ This bootcamp teaches you how to build production-ready AI agents using modern f
 - **Production Deployment** - Scaling agents for real users
 - **Model Maintenance** - Understanding drift and retraining
 
-## 🎯 Who This Is For
+## Who This Is For
 
 Anyone interested in learning agentic AI. All coursework is done in **Google Colab** - no local Python installation required.
 
@@ -25,7 +25,7 @@ Anyone interested in learning agentic AI. All coursework is done in **Google Col
 - Google account (for Colab and Gemini API)
 - Willingness to learn through hands-on projects
 
-## 📖 Course Structure
+## Course Structure
 
 | Week | Topic | Focus |
 |------|-------|-------|
@@ -37,14 +37,14 @@ Anyone interested in learning agentic AI. All coursework is done in **Google Col
 | 6 | Production & Scaling | Multi-user deployments and cost management |
 | 7 | Model Drift | Maintenance and retraining strategies |
 
-## 🚀 Getting Started
+## Getting Started
 
 1. Visit the [live bootcamp site](https://wiljones-red.github.io/Agentic_Bootcamp/)
 2. Start with [Module 1](https://wiljones-red.github.io/Agentic_Bootcamp/modules/module1.html)
 3. Access the [Colab notebooks](https://wiljones-red.github.io/Agentic_Bootcamp/resources/colabs.html)
 4. Follow along with the lessons
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Quarto** - Static site generator
 - **Google Gemini API** - Primary LLM provider
@@ -52,7 +52,7 @@ Anyone interested in learning agentic AI. All coursework is done in **Google Col
 - **Google Colab** - Interactive coding environment
 - **GitHub Pages** - Hosting
 
-## 📝 Local Development
+## Local Development
 
 To build this site locally:
 
@@ -72,16 +72,13 @@ quarto preview
 
 The rendered site will be in the `docs/` directory.
 
-## 🤝 Contributing
+## Contributing
 
 This bootcamp is maintained by the BYU-I Data Science Society. Contributions and suggestions are welcome!
 
 See [Contributors](https://your-username.github.io/AI_Boot_Camp/resources/contributors.html) for acknowledgments.
 
-## 📜 License
+## License
 
 Educational content - free to use for learning purposes.
 
----
-
-**Built with ❤️ for the BYU-I Data Science Society**

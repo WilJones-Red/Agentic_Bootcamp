@@ -40,7 +40,7 @@ All notebooks are hosted on Google Colab for easy access and execution. It's rec
 - Model parameters and customization
 - Chaining LLM calls
 
-[**Open in Colab →**](https://colab.research.google.com/drive/15ZFkH4kTNaOSL_bmFmcmhLB75HiEg3Zu?usp=sharing)
+[**Open in Colab →**](../Projects/week1_lesson.ipynb)
 
 ---
 
@@ -58,7 +58,7 @@ All notebooks are hosted on Google Colab for easy access and execution. It's rec
 - Multi-step task orchestration
 - Choosing the right architecture pattern
 
-[**Open in Colab →**](https://colab.research.google.com/drive/1EMKPgSxGH9fzK0o6lx5zxrkyKr06bSou?authuser=1#scrollTo=beea18a3)
+[**Open in Colab →**](../Projects/week2_lesson.ipynb)
 
 ---
 
@@ -74,7 +74,7 @@ All notebooks are hosted on Google Colab for easy access and execution. It's rec
 - Canvas MCP integration
 - Understanding the User → AI → MCP Client → MCP Server → Tool flow
 
-[**Open in Colab →**](https://colab.research.google.com/drive/1VqAAmSfB9W8xkZ2S5a8uK_3VwG7aupQo?usp=sharing)
+[**Open in Colab →**](../Projects/MCP_lesson.ipynb)
 
 ---
 
@@ -91,7 +91,7 @@ All notebooks are hosted on Google Colab for easy access and execution. It's rec
 - Debugging agent tool calls and responses
 - Using `@traceable` decorators for visibility
 
-[**Open in Colab →**](https://drive.google.com/file/d/1Qn4HPOvW30CWQJCCondY8bDYw-RmQDPF/view?usp=sharing)
+[**Open in Colab →**](../Projects/wellness_agent_langchain.ipynb)
 
 ---
 
@@ -108,7 +108,7 @@ All notebooks are hosted on Google Colab for easy access and execution. It's rec
 - Trace tree analysis for debugging
 - Production-ready error handling
 
-[**Open in Colab →**](https://drive.google.com/file/d/1uyP9BbDNVTBBQ7lmsEIqh47DkS-U4-O_/view?usp=sharing)
+[**Open in Colab →**](../Projects/canvas_ai_langchain.ipynb)
 
 ---
 
@@ -126,7 +126,7 @@ All notebooks are hosted on Google Colab for easy access and execution. It's rec
 - Constrained tools with prerequisites
 - Cost optimization strategies (10-50x reduction)
 
-[**Open in Colab →**](https://colab.research.google.com/drive/1cgE8z-aaDIDFx9irPam31kXCLIeIbr8S?usp=sharing)
+[**Open in Colab →**](../Projects/week5_lesson.ipynb)
 
 ---
 
@@ -144,7 +144,7 @@ All notebooks are hosted on Google Colab for easy access and execution. It's rec
 - Identifying scaling bottlenecks
 - Memory management strategies
 
-[**Open in Colab →**](https://colab.research.google.com/drive/1J6j0KAN3gWNgizbEiVdiTtlQ5Sha8GNw?usp=sharing)
+[**Open in Colab →**](../Projects/Wellness_Agent_BROKEN.ipynb)
 
 ---
 
@@ -162,7 +162,7 @@ All notebooks are hosted on Google Colab for easy access and execution. It's rec
 - Weight update methodologies
 - Production monitoring techniques
 
-[**Open in Colab →**](https://colab.research.google.com/drive/1NyLKwT7f76_msFzcdkZUDO3VtjPqN1Os?usp=sharing)
+[**Open in Colab →**](../Projects/Retraining2.ipynb)
 
 ---
 

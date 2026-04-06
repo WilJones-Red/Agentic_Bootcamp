@@ -31,8 +31,8 @@ format:
 
 **Colab Notebooks for Today:**
 
-> [Wellness Agent](https://drive.google.com/file/d/1Qn4HPOvW30CWQJCCondY8bDYw-RmQDPF/view?usp=sharing)  
-> [Canvas AI Tutor](https://drive.google.com/file/d/1uyP9BbDNVTBBQ7lmsEIqh47DkS-U4-O_/view?usp=sharing)  
+> [Wellness Agent](https://colab.research.google.com/github/WilJones-Red/Agentic_Bootcamp/blob/main/Projects/wellness_agent_langchain.ipynb)  
+> [Canvas AI Tutor](https://colab.research.google.com/github/WilJones-Red/Agentic_Bootcamp/blob/main/Projects/canvas_ai_langchain.ipynb)  
 > *(It is recommended to download a copy of the notebook to your own google colab)*
 
 **Reference Video:**
@@ -303,8 +303,8 @@ Open both agents in Google Colab:
 
 | Notebook | Link |
 |---|---|
-| Wellness Agent | [Open in Colab](https://colab.research.google.com/github/your-org/your-repo/blob/main/wellness_agent_langchain.ipynb) |
-| Canvas AI Tutor | [Open in Colab](https://colab.research.google.com/github/your-org/your-repo/blob/main/canvas_ai_langchain.ipynb) |
+| Wellness Agent | [Open in Colab](https://colab.research.google.com/github/WilJones-Red/Agentic_Bootcamp/blob/main/Projects/wellness_agent_langchain.ipynb) |
+| Canvas AI Tutor | [Open in Colab](https://colab.research.google.com/github/WilJones-Red/Agentic_Bootcamp/blob/main/Projects/canvas_ai_langchain.ipynb) |
 
 **LangSmith account:** go to [smith.langchain.com](https://smith.langchain.com), sign up, create an API key under **Settings → API Keys**, and add it to your `.env` file:
 

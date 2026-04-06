@@ -30,7 +30,7 @@ format:
 
 **Colab Notebook for Today:**
 
-> [Week 5 - SQL Assistant with Progressive Disclosure](https://colab.research.google.com/drive/1cgE8z-aaDIDFx9irPam31kXCLIeIbr8S?usp=sharing)  
+> [Week 5 - SQL Assistant with Progressive Disclosure](https://colab.research.google.com/github/WilJones-Red/Agentic_Bootcamp/blob/main/Projects/week5_lesson.ipynb)  
 > *(It is recommended to download a copy of the notebook to your own google colab)*
 
 **Based on:** [LangChain SQL Skills Assistant tutorial](https://docs.langchain.com/oss/javascript/langchain/multi-agent/skills-sql-assistant)

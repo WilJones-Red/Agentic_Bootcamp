@@ -28,7 +28,7 @@ format:
 
 **Colab Notebook for Today:**
 
-> [Week 3 - MCP Lesson](https://colab.research.google.com/drive/1VqAAmSfB9W8xkZ2S5a8uK_3VwG7aupQo?usp=sharing)  
+> [Week 3 - MCP Lesson](https://colab.research.google.com/github/WilJones-Red/Agentic_Bootcamp/blob/main/Projects/MCP_lesson.ipynb)  
 > *(It is recommended to download a copy of the notebook to your own google colab)*
 
 ---

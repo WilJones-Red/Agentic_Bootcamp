@@ -29,7 +29,7 @@ format:
 
 **Colab Notebook for Today:**
 
-> [Week 1 - Getting Started with AI Agents](https://colab.research.google.com/drive/15ZFkH4kTNaOSL_bmFmcmhLB75HiEg3Zu?usp=sharing)  
+> [Week 1 - Getting Started with AI Agents](https://colab.research.google.com/github/WilJones-Red/Agentic_Bootcamp/blob/main/Projects/week1_lesson.ipynb)  
 > *(It is recommended to download a copy of the notebook to your own google colab)*
 
 ---
@@ -121,7 +121,7 @@ This is safe only when the `.gitignore` file has `.env` listed.
 API keys are coveted (especially for LLM's). If it gets published to GitHub, it will be stolen and used by strangers. To keep yours safe, store it in the `.env` file in the main directory. This environment variable file stays local to your machine and will not be pushed to GitHub (because the `.gitignore` file says to ignore it. You can open the `.gitignore` file to see `.env` listed as files it won't publish to GitHub). The file `.env.template` is just a template. **Please rename `.env.template` to `.env` before adding API keys.**
 
 ```python
-# Load environment variables from .env file (local development only)
+# Load environment variables from .env file (local development only) 
 from dotenv import load_dotenv
 load_dotenv()
 ```

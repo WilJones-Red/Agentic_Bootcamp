@@ -29,7 +29,7 @@ format:
 
 **Colab Notebook for Today:**
 
-> [Week 2 - Workflows and Agents](https://colab.research.google.com/drive/1EMKPgSxGH9fzK0o6lx5zxrkyKr06bSou?authuser=1#scrollTo=beea18a3)  
+> [Week 2 - Workflows and Agents](https://colab.research.google.com/github/WilJones-Red/Agentic_Bootcamp/blob/main/Projects/week2_lesson.ipynb)  
 > *(It is recommended to download a copy of the notebook to your own google colab)*
 
 ---

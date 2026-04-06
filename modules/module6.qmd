@@ -44,7 +44,7 @@ format:
 
 **Colab Notebook for Today:**
 
-> [Wellness Agent - BROKEN (Activity Notebook)](https://colab.research.google.com/drive/1J6j0KAN3gWNgizbEiVdiTtlQ5Sha8GNw?usp=sharing)  
+> [Wellness Agent - BROKEN (Activity Notebook)](https://colab.research.google.com/github/WilJones-Red/Agentic_Bootcamp/blob/main/Projects/Wellness_Agent_BROKEN.ipynb)  
 > *(It is recommended to download a copy of the notebook to your own google colab)*
 
 **Reference Video/Material:**
@@ -322,7 +322,7 @@ from langchain_core.messages import HumanMessage, AIMessage
 from langchain.tools import tool
 
 # LLM setup
-llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=0.4)
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.4)
 
 # Tools
 @tool

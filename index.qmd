@@ -153,7 +153,7 @@ Access all notebooks on the [**Notebooks →**](resources/colabs.qmd) page.
 - Implement User → AI → MCP → Tool flow
 - Create real-world integrations
 
-[**View Module 3 →**](modules/module3.qmd) | [**Open in Colab →**](https://colab.research.google.com/drive/1VqAAmSfB9W8xkZ2S5a8uK_3VwG7aupQo?usp=sharing)
+[**View Module 3 →**](modules/module3.qmd) | [**Open in Colab →**](Projects/MCP_lesson.ipynb)
 
 ---
 
@@ -166,7 +166,7 @@ Access all notebooks on the [**Notebooks →**](resources/colabs.qmd) page.
 - Build evaluation datasets
 - Analyze trace trees for optimization
 
-[**View Module 4 →**](modules/module4.qmd) | [**Wellness Agent →**](https://drive.google.com/file/d/1Qn4HPOvW30CWQJCCondY8bDYw-RmQDPF/view?usp=sharing) | [**Canvas Tutor →**](https://drive.google.com/file/d/1uyP9BbDNVTBBQ7lmsEIqh47DkS-U4-O_/view?usp=sharing)
+[**View Module 4 →**](modules/module4.qmd) | [**Wellness Agent →**](Projects/wellness_agent_langchain.ipynb) | [**Canvas Tutor →**](Projects/canvas_ai_langchain.ipynb)
 
 ---
 
@@ -185,7 +185,7 @@ Access all notebooks on the [**Notebooks →**](resources/colabs.qmd) page.
 - Prevent context overflow and runaway costs
 - Design resilient, scalable architectures
 
-[**View Module 6 →**](modules/module6.qmd) | [**Open in Colab →**](https://colab.research.google.com/drive/1J6j0KAN3gWNgizbEiVdiTtlQ5Sha8GNw?usp=sharing)
+[**View Module 6 →**](modules/module6.qmd) | [**Open in Colab →**](Projects/Wellness_Agent_BROKEN.ipynb)
 
 ---
 
@@ -198,7 +198,7 @@ Access all notebooks on the [**Notebooks →**](resources/colabs.qmd) page.
 - Build authentic, maintainable AI systems
 - Plan long-term model lifecycle
 
-[**View Module 7 →**](modules/module7.qmd) | [**Open in Colab →**](https://colab.research.google.com/drive/1NyLKwT7f76_msFzcdkZUDO3VtjPqN1Os?usp=sharing)
+[**View Module 7 →**](modules/module7.qmd) | [**Open in Colab →**](Projects/Retraining2.ipynb)
 
 ---
 

@@ -4,3 +4,63 @@ format:
   html:
     toc: false
 ---
+
+The AI Boot Camp was built by students and mentors who designed the curriculum, created the notebooks, and assembled the website.
+
+```{=html}
+<div class="contributors-grid">
+  <div class="contributor-card">
+    <img src="../Assets/Group_Members/James.jpg" alt="James Beeson" class="contributor-photo">
+    <div class="contributor-content">
+      <h3>James Beeson</h3>
+      <p class="contributor-role">Course Developer</p>
+      <p class="contributor-bio">Data Science &amp; Educator</p>
+    </div>
+  </div>
+
+  <div class="contributor-card">
+    <img src="../Assets/Group_Members/Ethan.png" alt="Ethan Saline" class="contributor-photo">
+    <div class="contributor-content">
+      <h3>Ethan Saline</h3>
+      <p class="contributor-role">Website / Course Developer</p>
+      <p class="contributor-bio">Data Scientist / ML Engineer</p>
+    </div>
+  </div>
+
+  <div class="contributor-card">
+    <img src="../Assets/Group_Members/Wil.jpg" alt="Wil Jones" class="contributor-photo">
+    <div class="contributor-content">
+      <h3>Wil Jones</h3>
+      <p class="contributor-role">Website / Course Developer</p>
+      <p class="contributor-bio">Loves playing the tenor saxophone</p>
+    </div>
+  </div>
+
+  <div class="contributor-card">
+    <img src="../Assets/Group_Members/Ian.jpg" alt="Ian Blad" class="contributor-photo">
+    <div class="contributor-content">
+      <h3>Ian Blad</h3>
+      <p class="contributor-role">Course Developer</p>
+      <p class="contributor-bio">I/O Psych Major</p>
+    </div>
+  </div>
+
+  <div class="contributor-card">
+    <img src="../Assets/Group_Members/Kimberly.png" alt="Kimberly Juarez" class="contributor-photo">
+    <div class="contributor-content">
+      <h3>Kimberly Juarez</h3>
+      <p class="contributor-role">Course Developer</p>
+      <p class="contributor-bio">Data Scientist</p>
+    </div>
+  </div>
+
+  <div class="contributor-card">
+    <img src="../Assets/Group_Members/Camilla.JPEG" alt="Camila Ramirez" class="contributor-photo">
+    <div class="contributor-content">
+      <h3>Camila Ramirez</h3>
+      <p class="contributor-role">Course Developer</p>
+      <p class="contributor-bio">Data Scientist</p>
+    </div>
+  </div>
+</div>
+```

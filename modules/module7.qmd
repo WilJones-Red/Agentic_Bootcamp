@@ -30,7 +30,7 @@ format:
 
 **Colab Notebook for Today:**
 
-> [Week 7 - Data Drift and Retraining Simulation](https://colab.research.google.com/drive/1NyLKwT7f76_msFzcdkZUDO3VtjPqN1Os?usp=sharing)  
+> [Week 7 - Data Drift and Retraining Simulation](https://colab.research.google.com/github/WilJones-Red/Agentic_Bootcamp/blob/main/Projects/Retraining2.ipynb)  
 > *(It is recommended to download a copy of the notebook to your own Google Colab)*
 
 ---
@@ -197,7 +197,7 @@ When ready, open the Colab notebook and let's see drift in action!
 
 Open the guided coding activity in Google Colab:
 
-> [Week 7 - Data Drift and Retraining Simulation](https://colab.research.google.com/drive/1NyLKwT7f76_msFzcdkZUDO3VtjPqN1Os?usp=sharing)
+> [Week 7 - Data Drift and Retraining Simulation](https://colab.research.google.com/github/WilJones-Red/Agentic_Bootcamp/blob/main/Projects/Retraining2.ipynb)
 
 ## What You'll Build
 

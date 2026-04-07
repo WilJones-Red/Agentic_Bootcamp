@@ -40,7 +40,7 @@ All notebooks are hosted on Google Colab for easy access and execution. It's rec
 - Model parameters and customization
 - Chaining LLM calls
 
-[**Open in Colab →**](../Projects/week1_lesson.ipynb)
+[**Open in Colab →**](https://colab.research.google.com/github/WilJones-Red/Agentic_Bootcamp/blob/main/Projects/week1_lesson.ipynb)
 
 ---
 
@@ -58,7 +58,7 @@ All notebooks are hosted on Google Colab for easy access and execution. It's rec
 - Multi-step task orchestration
 - Choosing the right architecture pattern
 
-[**Open in Colab →**](../Projects/week2_lesson.ipynb)
+[**Open in Colab →**](https://colab.research.google.com/github/WilJones-Red/Agentic_Bootcamp/blob/main/Projects/week2_lesson.ipynb)
 
 ---
 
@@ -74,7 +74,7 @@ All notebooks are hosted on Google Colab for easy access and execution. It's rec
 - Canvas MCP integration
 - Understanding the User → AI → MCP Client → MCP Server → Tool flow
 
-[**Open in Colab →**](../Projects/MCP_lesson.ipynb)
+[**Open in Colab →**](https://colab.research.google.com/github/WilJones-Red/Agentic_Bootcamp/blob/main/Projects/MCP_lesson.ipynb)
 
 ---
 
@@ -91,7 +91,7 @@ All notebooks are hosted on Google Colab for easy access and execution. It's rec
 - Debugging agent tool calls and responses
 - Using `@traceable` decorators for visibility
 
-[**Open in Colab →**](../Projects/wellness_agent_langchain.ipynb)
+[**Open in Colab →**](https://colab.research.google.com/github/WilJones-Red/Agentic_Bootcamp/blob/main/Projects/wellness_agent_langchain.ipynb)
 
 ---
 
@@ -108,7 +108,7 @@ All notebooks are hosted on Google Colab for easy access and execution. It's rec
 - Trace tree analysis for debugging
 - Production-ready error handling
 
-[**Open in Colab →**](../Projects/canvas_ai_langchain.ipynb)
+[**Open in Colab →**](https://colab.research.google.com/github/WilJones-Red/Agentic_Bootcamp/blob/main/Projects/canvas_ai_langchain.ipynb)
 
 ---
 
@@ -126,7 +126,7 @@ All notebooks are hosted on Google Colab for easy access and execution. It's rec
 - Constrained tools with prerequisites
 - Cost optimization strategies (10-50x reduction)
 
-[**Open in Colab →**](../Projects/week5_lesson.ipynb)
+[**Open in Colab →**](https://colab.research.google.com/github/WilJones-Red/Agentic_Bootcamp/blob/main/Projects/week5_lesson.ipynb)
 
 ---
 
@@ -144,7 +144,7 @@ All notebooks are hosted on Google Colab for easy access and execution. It's rec
 - Identifying scaling bottlenecks
 - Memory management strategies
 
-[**Open in Colab →**](../Projects/Wellness_Agent_BROKEN.ipynb)
+[**Open in Colab →**](https://colab.research.google.com/github/WilJones-Red/Agentic_Bootcamp/blob/main/Projects/Wellness_Agent_BROKEN.ipynb)
 
 ---
 
@@ -162,7 +162,7 @@ All notebooks are hosted on Google Colab for easy access and execution. It's rec
 - Weight update methodologies
 - Production monitoring techniques
 
-[**Open in Colab →**](../Projects/Retraining2.ipynb)
+[**Open in Colab →**](https://colab.research.google.com/github/WilJones-Red/Agentic_Bootcamp/blob/main/Projects/Retraining2.ipynb)
 
 ---
 
